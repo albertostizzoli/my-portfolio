@@ -1,6 +1,9 @@
 <template>
-    <div>
-
+    <div class="wrapper">
+        <ul>
+            <li><a href="https://github.com/albertostizzoli"><i class="fa-brands fa-github fa-3x"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/alberto-stizzoli-82a676260/"><i class="fa-brands fa-linkedin-in fa-3x"></i></a></li>
+        </ul>
     </div>
 </template>
 
@@ -11,5 +14,34 @@
 </script>
 
 <style lang="scss" scoped>
+
+.wrapper{
+    display: flex;
+    align-items: end;
+    position: fixed;
+    bottom: 0;
+}
+
+ul{
+    list-style-type: none;
+    padding-bottom: 30px;
+
+    li{
+        padding-bottom: 15px;
+        display: flex;
+        justify-content: center;
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    display: none;
+  }
+}
 
 </style>
