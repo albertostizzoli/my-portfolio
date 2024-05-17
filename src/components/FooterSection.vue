@@ -23,12 +23,12 @@ footer {
     display: flex;
     justify-content: center;
     list-style-type: none;
-    padding-bottom: 2rem;
+    padding-bottom: 30px;
 
     li {
-      padding-right: 1rem;
       display: flex;
       justify-content: center;
+      padding-right: 15px;
 
       a {
         text-decoration: none;
@@ -39,7 +39,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   footer ul {
     display: none;
   }
