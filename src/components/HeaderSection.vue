@@ -3,9 +3,9 @@
         <nav class="navbar">
             <div id="navbar-list">
                 <ul>
-                    <li><span class="index">.01</span>Chi sono</li>
-                    <li><span class="index">.02</span>Esperienze</li>
-                    <li><span class="index">.03</span>I miei Progetti</li>
+                    <li><span class="index">01.</span>CHI SONO</li>
+                    <li><span class="index">02.</span>ESPERIENZE</li>
+                    <li><span class="index">03.</span>PROGETTI</li>
                 </ul>
             </div>
             <div id="sidemenu">
@@ -21,13 +21,13 @@
                 <div class="offcanvas-body">
                     <ul class="sidemenu__list">
                         <li data-bs-dismiss="offcanvas">
-                            <span class="index">01.</span>Chi Sono
+                            <span class="index">01.</span>CHI SONO
                         </li>
                         <li data-bs-dismiss="offcanvas">
-                            <span class="index">02.</span>Esperienza
+                            <span class="index">02.</span>ESPERIENZE
                         </li>
                         <li data-bs-dismiss="offcanvas">
-                            <span class="index">03.</span>Progetti
+                            <span class="index">03.</span>PROGETTI
                         </li>
                     </ul>
                 </div>
@@ -62,8 +62,6 @@ header {
     align-items: center;
     position: fixed;
     top: 0;
-    background-color: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);
     z-index: 1000;
 
     nav {
@@ -80,6 +78,17 @@ header {
 
                 li {
                     padding: 10px;
+                    font-size: 1rem;
+                    letter-spacing: 1px;
+                    transition: color .3s;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+
+                    .index {
+                        color: $primary-color;
+                    }
                 }
             }
         }
@@ -99,6 +108,10 @@ header {
 
             li {
                 padding: 10px;
+
+                &:hover {
+                    color: $primary-color;
+                }
 
                 .index {
                     color: $primary-color;
@@ -176,7 +189,7 @@ header {
     }
 
     .offcanvas {
-        background-color: #cececc;
+        background-color: rgb(255, 255, 255);
 
         &.offcanvas-end {
             width: 50%;
