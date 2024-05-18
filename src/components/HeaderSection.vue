@@ -54,7 +54,7 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
 
-header{
+header {
     height: 80px;
     width: 100%;
     display: flex;
@@ -62,29 +62,29 @@ header{
     align-items: center;
     position: fixed;
     top: 0;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(5px);
     z-index: 1000;
 
-    nav{
+    nav {
         width: 90%;
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        #navbar-list{
-            
-            ul{
+        #navbar-list {
+
+            ul {
                 list-style-type: none;
                 display: flex;
 
-                li{
+                li {
                     padding: 10px;
                 }
             }
         }
 
-        .sidemenu__list{
+        .sidemenu__list {
             height: 100%;
             display: flex;
             flex-direction: column;
@@ -97,16 +97,123 @@ header{
             text-align: center;
             list-style-type: none;
 
-            li{
+            li {
                 padding: 10px;
 
-                .index{
+                .index {
                     color: $primary-color;
                 }
             }
         }
+
+        #sidemenu {
+            display: none;
+
+            .sidemenu {
+                &__btn {
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                    background: transparent;
+                    border: none;
+                    position: relative;
+                    z-index: 2000;
+                    appearance: none;
+                    cursor: pointer;
+                    outline: none;
+
+                    span {
+                        display: block;
+                        width: 20px;
+                        height: 3px;
+                        margin: auto;
+                        background: $primary_color;
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        transition: all .4s ease;
+
+                        &.top {
+                            transform: translateY(-8px);
+                        }
+
+                        &.bottom {
+                            transform: translateY(8px);
+                        }
+                    }
+
+                    &.active {
+                        .top {
+                            transform: rotate(-45deg);
+                        }
+
+                        .mid {
+                            transform: translateX(-20px) rotate(360deg);
+                            opacity: 0;
+                        }
+
+                        .bottom {
+                            transform: rotate(45deg);
+                        }
+                    }
+
+                }
+
+                &__wrapper {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 40%;
+                    height: 100vh;
+                    background-color: white;
+                }
+
+
+            }
+        }
     }
+
+    .offcanvas {
+        background-color: #cececc;
+
+        &.offcanvas-end {
+            width: 50%;
+
+            a {
+                font-size: 1.6rem;
+            }
+        }
+
+    }
+
+    .translateX-enter {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+
+    .translateX-enter-active,
+    .translateX-leave-active {
+        transform-origin: top left 0;
+        transition: .4s ease;
+    }
+
+    .translateX-leave-to {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+
 }
 
 
+@media screen and (max-width: 700px) {
+    #navbar-list {
+        display: none;
+    }
+
+    header nav #sidemenu {
+        display: block;
+    }
+}
 </style>
