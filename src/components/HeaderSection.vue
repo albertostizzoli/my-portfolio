@@ -84,7 +84,27 @@ header{
             }
         }
 
-        
+        .sidemenu__list{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-top: 50px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            list-style-type: none;
+
+            li{
+                padding: 10px;
+
+                .index{
+                    color: $primary-color;
+                }
+            }
+        }
     }
 }
 
