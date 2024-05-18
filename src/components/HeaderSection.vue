@@ -53,4 +53,40 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
+
+header{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: rgba(255,255,255,0.2);
+    backdrop-filter: blur(5px);
+    z-index: 1000;
+
+    nav{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        #navbar-list{
+            
+            ul{
+                list-style-type: none;
+                display: flex;
+
+                li{
+                    padding: 10px;
+                }
+            }
+        }
+
+        
+    }
+}
+
+
 </style>

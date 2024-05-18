@@ -1,9 +1,5 @@
 <template>
-  <div>
-    <h1 class="text-center text-bg-danger ">Hello World</h1>
-    <h2>Ciao mi chiamo Alberto</h2>
-    <i class="fa-solid fa-user"></i>
-  </div>
+  <HeaderSection></HeaderSection>
   <main>
     <AppWrapper></AppWrapper>
   </main>
@@ -12,10 +8,12 @@
 </template>
 
 <script>
+import HeaderSection from './components/HeaderSection.vue';
 import AppWrapper from './components/AppWrapper.vue';
 import FooterSection from './components/FooterSection.vue';
   export default {
     components: {
+      HeaderSection,
       AppWrapper,
       FooterSection,
     }
