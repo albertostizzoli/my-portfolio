@@ -130,7 +130,7 @@ export default {
         }
 
         .icon {
-            width: 50px;
+            width: 70px;
             padding-right: 10px;
 
 
