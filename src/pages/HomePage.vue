@@ -2,15 +2,15 @@
     <div class="full-content">
         <!-- home page -->
         <section id="home" class="content">
-            <p class="greeting">Ciao, mi chiamo</p>
+            <p class="hello">Ciao, mi chiamo</p>
             <h1 class="name">Alberto Stizzoli</h1>
-            <p class="description">Sono un Jr Full-Stack Web Developer</p>
+            <p class="job">Sono un Jr Full-Stack Web Developer</p>
         </section>
         <!-- about me -->
         <section id="about-me">
             <div class="container p-0">
                 <div class="row">
-                    <h2 class="heading-sec pb-3"><span class="index">01.</span>CHI SONO</h2>
+                    <h2 class="intro pb-3"><span class="index">01.</span>CHI SONO</h2>
                     <div class="col-lg-5 pe-lg-3 col-md-12 p-md-0 image">
                         <img src="/public/img/myimage.jpg" alt="image-profile">
                     </div>
@@ -38,7 +38,7 @@
                         </div>
                         <!-- skills -->
                         <div>
-                            <h3 class="heading-third"><span class="index">#</span>Skills</h3>
+                            <h3 class="skills"><span class="index">#</span>Skills</h3>
                             <div>
                                 <div class="mb-3 type-skill">
                                     <img class="icon" v-for="(item, index) in store.languages" :key="index"
@@ -71,13 +71,13 @@ export default {
 #about-me {
     padding: 10rem 0;
 
-    .heading-sec {
+    .intro {
         font-size: 4rem;
         font-weight: 600;
         letter-spacing: 1px;
     }
 
-    .heading-third {
+    .skills {
         font-size: 2.8rem;
         font-weight: 600;
     }
@@ -99,8 +99,8 @@ export default {
         align-items: start;
         justify-content: center;
 
-        .greeting,
-        .description {
+        .hello,
+        .job {
 
             font-size: 2.5rem;
             font-weight: 400;
