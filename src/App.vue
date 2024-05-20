@@ -2,6 +2,7 @@
   <HeaderSection></HeaderSection>
   <main>
     <AppWrapper></AppWrapper>
+    <router-view></router-view>
   </main>
   
   <FooterSection></FooterSection>
