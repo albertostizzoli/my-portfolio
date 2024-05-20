@@ -78,9 +78,10 @@ header {
 
                 li {
                     padding: 10px;
-                    font-size: 1rem;
+                    font-size: 1.2rem;
                     letter-spacing: 1px;
                     transition: color .3s;
+                    cursor: pointer;
 
                     &:hover {
                         color: $primary-color;
@@ -108,6 +109,8 @@ header {
 
             li {
                 padding: 10px;
+                cursor: pointer;
+                font-size: 1.2rem;
 
                 &:hover {
                     color: $primary-color;

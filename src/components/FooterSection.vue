@@ -15,6 +15,7 @@
 </script>
 
 <style lang="scss" scoped>
+@use '../assets/styles/partials/variables' as *;
 
 footer {
   padding: 5rem;
@@ -33,6 +34,10 @@ footer {
       a {
         text-decoration: none;
         color: black;
+
+        &:hover {
+          color: $primary-color;
+        }
 
       }
     }
