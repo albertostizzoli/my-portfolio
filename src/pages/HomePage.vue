@@ -94,7 +94,7 @@ export default {
     .content {
         width: 100%;
         height: calc(100vh - 80px);
-        overflow-y: auto;
+        //overflow-y: auto;
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -154,7 +154,7 @@ export default {
 
             img {
 
-                width: 300px;
+                width: 400px;
                 border: 5px solid rgb(0, 74, 173);
             }
         }
