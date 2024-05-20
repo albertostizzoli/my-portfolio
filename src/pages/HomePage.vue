@@ -94,7 +94,6 @@ export default {
     .content {
         width: 100%;
         height: calc(100vh - 80px);
-        //overflow-y: auto;
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -103,14 +102,14 @@ export default {
         .greeting,
         .description {
 
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 400;
         }
 
         .name {
 
             color: $primary-color;
-            font-size: 8rem;
+            font-size: 6rem;
             font-weight: 800;
             letter-spacing: 1px;
         }
@@ -150,7 +149,7 @@ export default {
             flex-direction: column;
             justify-content: start;
             align-items: center;
-            
+
 
             img {
 
