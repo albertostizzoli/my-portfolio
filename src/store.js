@@ -120,6 +120,15 @@ export const store = reactive({
 
         {
             id: 6,
+            title: "Laravel Comics",
+            image: "/img/Laravelcomics.png",
+            description: "Laravel Comics è uno shop online di fumetti della DC Comics con un'interfaccia creata interamente con Laravel con un database MySQL, in cui l'utente può vedere i prodotti più cercati, cliccando su qualsiasi fumetto, si può modificare il prezzo, il nome ecc. o anche cancellarlo. L'utente ha anche la possibilità di agggiungere nuovi fumetti",
+            skills: ["Laravel", "MySQL"],
+            link_github: "https://github.com/albertostizzoli/laravel-comics-2",
+        },
+
+        {
+            id: 7,
             title: "Squiddy Game",
             image: "/img/Squiddygame.jpg",
             description: "Progetto svolto in team che consiste nella realizzazione di un gioco fantasy RPG realizzato con Vue.js per il Front-End e Laravel e MySQL per il Back-End. Il gioco consiste nella scelta di un personaggio con la propria arma e classe attraverso un layout semplice e intuitivo, dopo aver scelto il giocatore viene trasportato in un’arena dove si svolgeranno combattimenti a turni. Ho contribuito a questo progetto lavorando sul layout per il Front-End e il database per il Back-End;",
@@ -128,7 +137,7 @@ export const store = reactive({
         },
 
         {
-            id: 7,
+            id: 8,
             title: "BDoctors",
             image: "/img/BDoctors.png",
             description: "Progetto Finale del corso di Boolean svolto in team che consiste nella realizzazione di un sito web completo con Vue.js per il Front-End e Laravel con un solido database MySQL per il Back-End: la piattaforma comprende una dashboard che consente ai medici di registrarsi, gestire il proprio profilo e di sponsorizzarlo. La parte Front-End del sito, permette ai visitatori di cercare i medici per specializzazione, voti e numero di recensioni, fornendo dettagli completi sui professionisti disponibili. Gli utenti possono inoltre lasciare recensioni e contattare i medici tramite un form che invia messaggi alla loro e-mail per fissare appuntamenti e consultazioni",
