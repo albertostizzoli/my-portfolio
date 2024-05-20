@@ -120,7 +120,7 @@ export default {
 
     #about-me {
         .presentation {
-            font-size: 1rem;
+            font-size: 1.2rem;
         }
 
         .type-skill {
@@ -150,10 +150,12 @@ export default {
             flex-direction: column;
             justify-content: start;
             align-items: center;
+            
 
             img {
 
                 width: 300px;
+                border: 5px solid rgb(0, 74, 173);
             }
         }
     }
