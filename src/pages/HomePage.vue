@@ -10,9 +10,9 @@
         <section id="about-me">
             <div class="container p-0">
                 <div class="row">
-                    <h2 class="intro pb-3"><span class="index">01.</span>CHI SONO</h2>
+                    <h2 class="intro pb-5"><i><span class="index">01.</span>CHI SONO</i></h2>
                     <div class="col-lg-5 pe-lg-3 col-md-12 p-md-0 image">
-                        <img src="/public/img/myimage.jpg" alt="image-profile">
+                        <img src="/img/myimage.jpg" alt="image-profile">
                     </div>
                     <div class="col-lg-7 ps-lg-3 col-md-12 pt-3">
                         <!-- presentazione -->
@@ -50,6 +50,30 @@
                 </div>
             </div>
         </section>
+        <!-- esperienze-->
+        <section id="experience">
+            <h2 class="intro pb-5"><i><span class="index">02.</span>LE MIE ESPERIENZE</i></h2>
+            <div class="container p-0">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-12 col-md-10">
+                        <div class="col-3 d-flex flex-column">
+                            <button type="button" class="work-company" :id="'btn-' + index"
+                                v-for="(item, index) in store.experiences" :key="index"
+                                @click="isActive($event.target.id)">
+                                {{ item.title }}
+                            </button>
+                        </div>
+                        <div class="pt-4" v-for="(item, index) in store.experiences" :key="index"
+                            :class="this.is_active == 'btn-' + index ? 'd-block' : 'd-none'">
+                            <p class="description bold">{{ item.name }}</p>
+                            <p class="description">{{ item.period }}</p>
+                            <hr>
+                            <p class="description" v-html="item.description"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 </template>
 
@@ -58,18 +82,37 @@ import { store } from '../store.js';
 export default {
     data() {
         return {
-            store
+            store,
+            is_active: 'btn-0',
         }
-    }
-
+    },
+    methods: {
+        isActive(id) {
+            if (this.is_active == 'btn-0') {
+                document.getElementById('btn-0').classList.remove('active');
+                this.is_active = id;
+                document.getElementById(this.is_active).classList.add('active');
+            }
+            else {
+                document.getElementById(this.is_active).classList.remove('active');
+                document.getElementById(id).classList.add('active');
+                this.is_active = id;
+            }
+        },
+    },
+    mounted() {
+        document.getElementById(this.is_active).classList.add('active');
+    },
 }
+
 </script>
 
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
 
-#about-me {
-    padding: 10rem 0;
+#about-me,
+#experience {
+    padding: 4rem 0;
 
     .intro {
         font-size: 4rem;
@@ -94,6 +137,7 @@ export default {
     .content {
         width: 100%;
         height: calc(100vh - 80px);
+        overflow-y: auto;
         display: flex;
         flex-direction: column;
         align-items: start;
@@ -107,16 +151,14 @@ export default {
         }
 
         .name {
-
             color: $primary-color;
             font-size: 6rem;
             font-weight: 800;
             letter-spacing: 1px;
         }
-
-
     }
 
+    /*--- ABOUT-ME ---*/
     #about-me {
         .presentation {
             font-size: 1.2rem;
@@ -154,47 +196,87 @@ export default {
             img {
 
                 width: 400px;
-                border: 5px solid rgb(0, 74, 173);
+                border: 5px solid $primary-color;
             }
         }
     }
 
-    @media screen and (max-width:991px) {
-        .full-content {
-            padding: 0 50px;
-        }
-    }
+    /*--- EXPERIENCE ---*/
+    #experience {
+        .work-company {
+            padding: 5px 0;
+            background-color: transparent;
+            border: none;
+            border-left: 2px solid rgba(255, 255, 255, 0.3);
+            font-size: 1.8rem;
 
-    @media screen and (max-width:991px) {
-        .full-content .image {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            &:hover {
+                transition: .3s;
+                background-color: rgba(255, 255, 255, 0.2);
+            }
 
-            img {
-                width: 50%;
+            &:not(:hover) {
+                transition: .3s;
             }
         }
+
+        .description {
+            font-size: 1.7rem;
+
+            &.bold {
+                font-weight: 700;
+            }
+        }
+
+        .d-block,
+        .d-none {
+            transition: 2s;
+        }
+
+
+        .active {
+            border-left: 2px solid $primary-color;
+            color: $primary-color;
+            transition: .3s;
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    .full-content {
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .full-content .image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .full-content {
+        padding: 0;
     }
 
-    @media screen and (max-width: 768px) {
-        .full-content {
-            padding: 0;
-        }
+    #about-me .row {
+        flex-direction: column;
+    }
+}
 
-        #about-me .row {
-            flex-direction: column;
-        }
+@media screen and (max-width: 576px) {
+    .content {
+        padding: 0;
     }
 
-    @media screen and (max-width: 576px) {
-        .content {
-            padding: 0;
-        }
-
-        .full-content #about-me .image img {
-            width: 250px;
-        }
+    .full-content #about-me .image img {
+        width: 250px;
     }
 }
 </style>
