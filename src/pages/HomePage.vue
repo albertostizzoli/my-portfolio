@@ -136,7 +136,6 @@ export default {
 
         .hello,
         .job {
-
             font-size: 2.5rem;
             font-weight: 400;
         }
@@ -161,11 +160,10 @@ export default {
             justify-content: start;
             align-items: center;
 
-
             img {
-
                 width: 400px;
-                border: 5px solid $primary-color;
+                border: 10px solid $primary-color;
+                border-radius: 20px;
             }
         }
     }

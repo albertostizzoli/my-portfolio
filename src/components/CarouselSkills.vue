@@ -84,7 +84,6 @@ export default {
     display: block;
     margin: 0 auto;
 
-
     &:hover {
 
         scale: 1.2;
