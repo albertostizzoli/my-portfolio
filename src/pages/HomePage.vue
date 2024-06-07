@@ -69,15 +69,22 @@
                 </div>
             </div>
         </section>
+        <!-- progetti -->
+         <section id="projects">
+            <h2 class="intro pb-5"><i><span class="index">04.</span>I MIEI PROGETTI</i></h2>
+            <CarouselProjects></CarouselProjects>
+         </section>
     </div>
 </template>
 
 <script>
 import CarouselSkills from '../components/CarouselSkills.vue';
+import CarouselProjects from '../components/CarouselProjects.vue';
 import { store } from '../store.js';
 export default {
     components: {
         CarouselSkills,
+        CarouselProjects,
     },
     data() {
         return {
@@ -102,7 +109,8 @@ export default {
 
 #about-me,
 #skills,
-#experience {
+#experience,
+#projects {
     padding: 4rem 0;
 
     .intro {
