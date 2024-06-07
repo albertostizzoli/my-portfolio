@@ -70,10 +70,27 @@
             </div>
         </section>
         <!-- progetti -->
-         <section id="projects">
+        <section id="projects">
             <h2 class="intro pb-5"><i><span class="index">04.</span>I MIEI PROGETTI</i></h2>
-            
-         </section>
+            <div class="container p-0">
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4" v-for="(item, index) in store.projects" :key="index">
+                        <div class="post-card ">
+                            <div class="post-card-top">
+                                <div class="number"><span>{{ item.id }}</span></div>
+                                <div class="title"><span>{{ item.title }}</span></div>
+                            </div>
+                            <div class="image-preview" :style="{ 'background-image': 'url(./' + item.image + ')' }">
+                            </div>
+                            <div class="comment-like">
+                                <a href="#">Dettagli</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 </template>
 
@@ -190,6 +207,74 @@ export default {
             transition: 2s;
         }
     }
+
+    /*--- PROGETTI --- */
+
+    #projects {
+    
+        .post-card {
+            width: 100%;
+            height: 100%;
+            background-color: $primary_color;
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px 20px;
+
+            .post-card-top {
+                display: flex;
+                align-items: center;
+                
+            }
+        }
+
+        .number {
+            height: 35px;
+            width: 35px;
+            margin-right: 0.5rem;
+            border-radius: 50%;
+            background-color: greenyellow;
+            position: relative;
+
+            span {
+                position: absolute;
+                top: 50%;
+                right: 50%;
+                transform: translate(50%, -50%);
+                font-weight: 600;
+                font-size: 2rem;
+            }
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #fff;
+            transition: all .35s ease-in;
+        }
+
+        .image-preview {
+            min-height: 150px;
+            width: 100%;
+            border-radius: 20px;
+            background-size: cover;
+        }
+
+        .comment-like {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 2px 0;
+
+            .btn {
+                background-color: greenyellow;
+                font-weight: 600;
+                font-size: 1.6rem;
+            }
+        }
+    }
 }
 
 @media screen and (max-width:991px) {
@@ -226,12 +311,12 @@ export default {
         padding-left: 15px;
         padding-right: 15px;
         text-align: center;
-        
+
     }
 
     .content {
-        
-        .hello{
+
+        .hello {
             text-align: right;
         }
 
