@@ -57,11 +57,11 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-12 col-md-10">
                         <div class="col-3 d-flex flex-column">
-                            <button type="button" class="work-company" :id="'btn-' + index"
-                                v-for="(item, index) in store.experiences" :key="index"
-                                @click="isActive($event.target.id)">
-                                {{ item.title }}
-                            </button>
+                            <select class="form-select" @click="isActive($event.target.value)">
+                                <option v-for="(item, index) in store.experiences" :value="'btn-' + index">
+                                    {{ item.title }}
+                                </option>
+                            </select>
                         </div>
                         <div class="pt-4" v-for="(item, index) in store.experiences" :key="index"
                             :class="this.is_active == 'btn-' + index ? 'd-block' : 'd-none'">
@@ -88,20 +88,11 @@ export default {
     },
     methods: {
         isActive(id) {
-            if (this.is_active == 'btn-0') {
-                document.getElementById('btn-0').classList.remove('active');
-                this.is_active = id;
-                document.getElementById(this.is_active).classList.add('active');
-            }
-            else {
-                document.getElementById(this.is_active).classList.remove('active');
-                document.getElementById(id).classList.add('active');
-                this.is_active = id;
-            }
+            this.is_active = id;
         },
     },
     mounted() {
-        document.getElementById(this.is_active).classList.add('active');
+        this.isActive(this.is_active);
     },
 }
 
@@ -203,22 +194,6 @@ export default {
 
     /*--- EXPERIENCE ---*/
     #experience {
-        .work-company {
-            padding: 5px 0;
-            background-color: transparent;
-            border: none;
-            border-left: 2px solid rgba(255, 255, 255, 0.3);
-            font-size: 1.8rem;
-
-            &:hover {
-                transition: .3s;
-                background-color: rgba(255, 255, 255, 0.2);
-            }
-
-            &:not(:hover) {
-                transition: .3s;
-            }
-        }
 
         .description {
             font-size: 1.7rem;
@@ -233,11 +208,10 @@ export default {
             transition: 2s;
         }
 
-
-        .active {
-            border-left: 2px solid $primary-color;
-            color: $primary-color;
-            transition: .3s;
+        .form-select {
+            background-color: rgba(255, 255, 255, 0.2);
+            font-size: 1.6rem;
+            font-style: italic;
         }
     }
 }
