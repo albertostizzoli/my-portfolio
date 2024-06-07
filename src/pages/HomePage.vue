@@ -51,7 +51,7 @@
             <div class="container p-0">
                 <div class="row d-flex justify-content-center">
                     <div class="col-12 col-md-10">
-                        <div class="col-3 d-flex flex-column">
+                        <div class="col-lg-3">
                             <select class="form-select" @click="isActive($event.target.value)">
                                 <option v-for="(item, index) in store.experiences" :value="'btn-' + index">
                                     {{ item.title }}
@@ -151,7 +151,7 @@ export default {
     /*--- ABOUT-ME ---*/
     #about-me {
         .presentation {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
         }
 
         .image {
@@ -172,7 +172,7 @@ export default {
     #experience {
 
         .description {
-            font-size: 1.7rem;
+            font-size: 1.5rem;
 
             &.bold {
                 font-weight: 700;
@@ -217,12 +217,17 @@ export default {
 @media screen and (max-width: 576px) {
 
     .full-content {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        text-align: center;
+        
     }
 
     .content {
-        padding: 0;
+        
+        .hello{
+            text-align: right;
+        }
 
         .name {
             font-size: 20px;
