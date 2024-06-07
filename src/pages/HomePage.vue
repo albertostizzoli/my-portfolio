@@ -6,7 +6,7 @@
             <h1 class="name">Alberto Stizzoli</h1>
             <p class="job">Sono un Jr Full-Stack Web Developer</p>
         </section>
-        <!-- about me -->
+        <!-- chi sono -->
         <section id="about-me">
             <div class="container p-0">
                 <div class="row">
@@ -143,7 +143,7 @@ export default {
 
         .name {
             color: $primary-color;
-            font-size: 6rem;
+            font-size: 5rem;
             font-weight: 800;
             letter-spacing: 1px;
         }
@@ -202,16 +202,9 @@ export default {
                 font-weight: 700;
             }
         }
-
         .d-block,
         .d-none {
             transition: 2s;
-        }
-
-        .form-select {
-            background-color: rgba(255, 255, 255, 0.2);
-            font-size: 1.6rem;
-            font-style: italic;
         }
     }
 }
@@ -245,8 +238,18 @@ export default {
 }
 
 @media screen and (max-width: 576px) {
+
+    .full-content{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
     .content {
         padding: 0;
+
+        .name{
+            font-size: 20px;
+        }
     }
 
     .full-content #about-me .image img {
