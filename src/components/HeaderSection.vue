@@ -4,8 +4,9 @@
             <div id="navbar-list">
                 <ul>
                     <li><span class="index">01.</span>CHI SONO</li>
-                    <li><span class="index">02.</span>ESPERIENZE</li>
-                    <li><span class="index">03.</span>PROGETTI</li>
+                    <li><span class="index">02.</span>SKILLS</li>
+                    <li><span class="index">03.</span>ESPERIENZE</li>
+                    <li><span class="index">04.</span>PROGETTI</li>
                 </ul>
             </div>
             <div id="sidemenu">
@@ -24,10 +25,13 @@
                             <span class="index">01.</span>CHI SONO
                         </li>
                         <li data-bs-dismiss="offcanvas">
-                            <span class="index">02.</span>ESPERIENZE
+                            <span class="index">02.</span>SKILLS
                         </li>
                         <li data-bs-dismiss="offcanvas">
-                            <span class="index">03.</span>PROGETTI
+                            <span class="index">03.</span>ESPERIENZE
+                        </li>
+                        <li data-bs-dismiss="offcanvas">
+                            <span class="index">04.</span>PROGETTI
                         </li>
                     </ul>
                 </div>
