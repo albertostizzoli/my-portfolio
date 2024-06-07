@@ -2,7 +2,7 @@ import { reactive } from "vue";
 
 export const store = reactive({
 
-    languages: [
+    skills: [
         {
             name: "HTML",
             icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg"
@@ -12,15 +12,15 @@ export const store = reactive({
             icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg"
         },
         {
-            name: "Bootstrap",
+            name: "BOOTSTRAP",
             icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/bootstrap-colored.svg"
         },
         {
-            name: "JavaScript",
+            name: "JAVASCRIPT",
             icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
         },
         {
-            name: "VueJS",
+            name: "VUEJS",
             icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vuejs-colored.svg"
         },
         {
@@ -36,7 +36,7 @@ export const store = reactive({
             icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
         },
         {
-            name: "Laravel",
+            name: "LARAVEL",
             icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/laravel-colored.svg"
         },
         {

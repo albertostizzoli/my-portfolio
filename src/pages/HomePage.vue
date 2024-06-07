@@ -8,9 +8,9 @@
         </section>
         <!-- chi sono -->
         <section id="about-me">
+            <h2 class="intro pb-5"><i><span class="index">01.</span>CHI SONO</i></h2>
             <div class="container p-0">
                 <div class="row">
-                    <h2 class="intro pb-5"><i><span class="index">01.</span>CHI SONO</i></h2>
                     <div class="col-lg-5 pe-lg-3 col-md-12 p-md-0 image">
                         <img src="/img/myimage.jpg" alt="image-profile">
                     </div>
@@ -36,23 +36,18 @@
                                     successo del team con il mio entusiasmo e la mia dedizione.</strong>
                             </p>
                         </div>
-                        <!-- skills -->
-                        <div>
-                            <h3 class="skills"><span class="index">#</span>Skills</h3>
-                            <div>
-                                <div class="mb-3 type-skill">
-                                    <img class="icon" v-for="(item, index) in store.languages" :key="index"
-                                        :src="item.icon" :alt="item.name" :name="item.name">
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- skills -->
+        <section id="skills">
+            <h2 class="intro pb-5"><i><span class="index">02.</span>LE MIE SKILLS</i></h2>
+            <CarouselSkills></CarouselSkills>
+        </section>
         <!-- esperienze-->
         <section id="experience">
-            <h2 class="intro pb-5"><i><span class="index">02.</span>LE MIE ESPERIENZE</i></h2>
+            <h2 class="intro pb-5"><i><span class="index">03.</span>LE MIE ESPERIENZE</i></h2>
             <div class="container p-0">
                 <div class="row d-flex justify-content-center">
                     <div class="col-12 col-md-10">
@@ -78,8 +73,12 @@
 </template>
 
 <script>
+import CarouselSkills from '../components/CarouselSkills.vue';
 import { store } from '../store.js';
 export default {
+    components: {
+        CarouselSkills,
+    },
     data() {
         return {
             store,
@@ -102,6 +101,7 @@ export default {
 @use '../assets/styles/partials/variables' as *;
 
 #about-me,
+#skills,
 #experience {
     padding: 4rem 0;
 
@@ -155,28 +155,6 @@ export default {
             font-size: 1.2rem;
         }
 
-        .type-skill {
-            font-weight: 600;
-            font-size: 2rem;
-
-        }
-
-        .icon {
-            width: 70px;
-            padding-right: 10px;
-
-
-            &:hover {
-
-                scale: 1.2;
-                transition: .3s;
-            }
-
-            &:not(:hover) {
-                transition: .3s;
-            }
-        }
-
         .image {
             display: flex;
             flex-direction: column;
@@ -202,6 +180,7 @@ export default {
                 font-weight: 700;
             }
         }
+
         .d-block,
         .d-none {
             transition: 2s;
@@ -239,7 +218,7 @@ export default {
 
 @media screen and (max-width: 576px) {
 
-    .full-content{
+    .full-content {
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -247,7 +226,7 @@ export default {
     .content {
         padding: 0;
 
-        .name{
+        .name {
             font-size: 20px;
         }
     }
