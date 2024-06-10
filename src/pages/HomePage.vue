@@ -83,7 +83,9 @@
                             <div class="image-preview" :style="{ 'background-image': 'url(./' + item.image + ')' }">
                             </div>
                             <div class="comment-like">
-                                <a href="#">Dettagli</a>
+                                <router-link :to="{ name: 'project', params: { id: item.id } }" class="btn btn-sm">
+                                    Continua a leggere
+                                </router-link>
                             </div>
                         </div>
                     </div>
@@ -211,7 +213,7 @@ export default {
     /*--- PROGETTI --- */
 
     #projects {
-    
+
         .post-card {
             width: 100%;
             height: 100%;
@@ -226,7 +228,7 @@ export default {
             .post-card-top {
                 display: flex;
                 align-items: center;
-                
+
             }
         }
 

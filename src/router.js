@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import HomePage from './pages/HomePage.vue';  
+import HomePage from './pages/HomePage.vue'; 
+import SingleProject from './pages/SingleProject.vue'; 
 
 // Definizione delle rotte
 const routes = [
@@ -7,6 +8,11 @@ const routes = [
         path: '/',
         name: 'home',
         component: HomePage
+    },
+    {
+        path: '/project/:id',
+        name: 'project',
+        component: SingleProject,
     },
 ];
 
