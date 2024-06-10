@@ -75,14 +75,14 @@
             <div class="container p-0">
                 <div class="row g-4">
                     <div class="col-12 col-md-6 col-lg-4" v-for="(item, index) in store.projects" :key="index">
-                        <div class="post-card ">
-                            <div class="post-card-top">
+                        <div class="box-card ">
+                            <div class="box-card-top">
                                 <div class="number"><span>{{ item.id }}</span></div>
                                 <div class="title"><span>{{ item.title }}</span></div>
                             </div>
-                            <div class="image-preview" :style="{ 'background-image': 'url(./' + item.image + ')' }">
+                            <div class="preview" :style="{ 'background-image': 'url(./' + item.image + ')' }">
                             </div>
-                            <div class="comment-like">
+                            <div class="project">
                                 <router-link :to="{ name: 'project', params: { id: item.id } }" class="btn btn-sm">
                                     Continua a leggere
                                 </router-link>
@@ -214,7 +214,7 @@ export default {
 
     #projects {
 
-        .post-card {
+        .box-card {
             width: 100%;
             height: 100%;
             background-color: $primary_color;
@@ -225,7 +225,7 @@ export default {
             justify-content: space-between;
             padding: 10px 20px;
 
-            .post-card-top {
+            .box-card-top {
                 display: flex;
                 align-items: center;
 
@@ -257,14 +257,14 @@ export default {
             transition: all .35s ease-in;
         }
 
-        .image-preview {
+        .preview {
             min-height: 150px;
             width: 100%;
             border-radius: 20px;
             background-size: cover;
         }
 
-        .comment-like {
+        .project {
             display: flex;
             justify-content: space-around;
             align-items: center;
