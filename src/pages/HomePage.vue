@@ -237,7 +237,7 @@ export default {
             width: 35px;
             margin-right: 0.5rem;
             border-radius: 50%;
-            background-color: greenyellow;
+            background-color: white;
             position: relative;
 
             span {
@@ -271,7 +271,7 @@ export default {
             padding: 2px 0;
 
             .btn {
-                background-color: greenyellow;
+                background-color: white;
                 font-weight: 600;
                 font-size: 1.6rem;
             }
