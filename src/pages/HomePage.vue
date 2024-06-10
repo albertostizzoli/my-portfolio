@@ -318,15 +318,10 @@ export default {
     .full-content {
         padding-left: 15px;
         padding-right: 15px;
-        text-align: center;
 
     }
 
     .content {
-
-        .hello {
-            text-align: right;
-        }
 
         .name {
             font-size: 20px;

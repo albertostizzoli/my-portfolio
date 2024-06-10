@@ -8,14 +8,17 @@
                 </div>
             </div>
         </div>
+        <!-- immagine del progetto -->
         <div id="details" class="image">
             <img :src="project.image" alt="image-detail">
         </div>
         <div class="content">
+            <!-- descrizione progetto-->
             <div class="description">
                 <h2 class="sub-title mt-5">Descrizione</h2>
                 <p class="paragraph">{{ project.description }}</p>
             </div>
+            <!-- tecnologie progetto-->
             <div class="tools">
                 <h2 class="sub-title mt-5">Tecnologie</h2>
                 <div class="skills">
@@ -23,12 +26,14 @@
                     </div>
                 </div>
             </div>
+            <!-- tipo di progetto-->
             <div class="program">
                 <h2 class="sub-title mt-5">Tipo</h2>
                 <div class="type">
                     <p class="single-type">{{ project.type }}</p>
                 </div>
             </div>
+            <!-- link del progetto -->
             <h2 class="sub-title mt-5">LINKS</h2>
             <div class="links">
                 <a :href="project.link_github" class="btn btn-sm github">Github</a>
@@ -69,7 +74,7 @@ export default {
         .btn {
             font-size: 2rem;
             font-weight: 600;
-            padding: 0.5rem 7rem;
+            padding: 0.5rem 3rem;
             background-color: $primary-color;
             color: white;
             border-radius: 5px;
