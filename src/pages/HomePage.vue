@@ -92,7 +92,6 @@
                 </div>
             </div>
         </section>
-
     </div>
 </template>
 
@@ -253,7 +252,7 @@ export default {
         .title {
             font-size: 2.5rem;
             font-weight: 600;
-            color: #fff;
+            color: white;
             transition: all .35s ease-in;
         }
 
@@ -268,12 +267,19 @@ export default {
             display: flex;
             justify-content: space-around;
             align-items: center;
-            padding: 2px 0;
+            padding-top: 20px;
+            padding-bottom: 10px;
 
             .btn {
                 background-color: white;
                 font-weight: 600;
-                font-size: 1.6rem;
+                font-size: 1.2rem;
+                border-radius: 20px;
+
+                &:hover{
+                    scale: 1.2;
+                    transition: .3s;
+                }
             }
         }
     }
