@@ -65,8 +65,8 @@ export const store = reactive({
             description:
             "<ul class=\"ps-4\">" +
             "<li>Responsabile della preparazione delle serie di capi da mandare in produzione e controllo dell’entrata e uscita delle materie prime attraverso l’azienda;</li>" +
-            "<li>Risolvere problemi legati alla produzione</li>" +
-            "<li>Responsabile della produzione di serie di capi con controllo qualità e quantità del prodotto in modo da poter rispettare le esigenze del cliente</li>" +
+            "<li>Risolvere problemi legati alla produzione;</li>" +
+            "<li>Responsabile della produzione di serie di capi con controllo qualità e quantità del prodotto in modo da poter rispettare le esigenze del cliente;</li>" +
             "<li>Manutenzione e pulizia durante la stagione estiva delle macchine da maglieria;</li>" +
             "</ul>"
         },

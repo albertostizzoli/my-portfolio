@@ -73,15 +73,22 @@
         <section id="projects">
             <h2 class="intro pb-5"><i><span class="index">04.</span>I MIEI PROGETTI</i></h2>
             <div class="container p-0">
+                <div class="select-container mb-4">
+                    <select class="form-select" v-model="selectedType">
+                        <option value="">Tutti</option>
+                        <option value="FRONT-END">Front-End</option>
+                        <option value="BACK-END">Back-End</option>
+                        <option value="FULL-STACK">Full-Stack</option>
+                    </select>
+                </div>
                 <div class="row g-4">
-                    <div class="col-12 col-md-6 col-lg-4" v-for="(item, index) in store.projects" :key="index">
-                        <div class="box-card ">
+                    <div class="col-12 col-md-6 col-lg-4" v-for="(item, index) in filteredProjects" :key="index">
+                        <div class="box-card">
                             <div class="box-card-top">
                                 <div class="number"><span>{{ item.id }}</span></div>
                                 <div class="title"><span>{{ item.title }}</span></div>
                             </div>
-                            <div class="preview" :style="{ 'background-image': 'url(./' + item.image + ')' }">
-                            </div>
+                            <div class="preview" :style="{ 'background-image': 'url(./' + item.image + ')' }"></div>
                             <div class="project">
                                 <router-link :to="{ name: 'project', params: { id: item.id } }" class="btn btn-sm">
                                     Continua a leggere
@@ -92,6 +99,7 @@
                 </div>
             </div>
         </section>
+
     </div>
 </template>
 
@@ -106,6 +114,7 @@ export default {
         return {
             store,
             is_active: 'btn-0',
+            selectedType: '',
         }
     },
     methods: {
@@ -116,8 +125,15 @@ export default {
     mounted() {
         this.isActive(this.is_active);
     },
+    computed: {
+        filteredProjects() {
+            if (this.selectedType) {
+                return this.store.projects.filter(project => project.type === this.selectedType);
+            }
+            return this.store.projects;
+        }
+    }
 }
-
 </script>
 
 <style lang="scss" scoped>
@@ -213,6 +229,12 @@ export default {
 
     #projects {
 
+        .select-container{
+            max-width: 200px;
+            margin-left: 0;
+            padding-left: 15px;
+        }
+
         .box-card {
             width: 100%;
             height: 100%;
@@ -276,7 +298,7 @@ export default {
                 font-size: 1.2rem;
                 border-radius: 20px;
 
-                &:hover{
+                &:hover {
                     scale: 1.2;
                     transition: .3s;
                 }
