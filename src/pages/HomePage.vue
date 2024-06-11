@@ -17,22 +17,16 @@
                     <div class="col-lg-7 ps-lg-3 col-md-12 pt-3">
                         <!-- presentazione -->
                         <div class="pb-3">
-                            <p class="presentation"><strong>Ciao, mi chiamo Alberto Stizzoli. Ho iniziato ad avvicinarmi
-                                    al
-                                    mondo della programmazione spinto dalla pura curiosità, ma con il tempo questa si è
-                                    trasformata in una forte passione e desiderio di apprendere sempre di più. In
-                                    particolare, ho sviluppato un grande interesse per il lato del Front-End, attratto
-                                    dalla
-                                    possibilità di creare interfacce utente intuitive e accattivanti che migliorino
-                                    l'esperienza dell'utente.</strong></p>
+                            <p class="presentation"><strong>Ho iniziato ad avvicinarmi al mondo della programmazione
+                                    spinto dalla pura curiosità, ma con il tempo questa si è trasformata in una forte
+                                    passione e desiderio di apprendere sempre di più. In particolare, ho sviluppato un 
+                                    grande interesse per il lato del Front-End, attratto dalla possibilità di creare 
+                                    interfacce utente intuitive e accattivanti che migliorino l'esperienza dell'utente.</strong></p>
 
-                            <p class="presentation"><strong> Mi considero una persona proattiva, sempre alla ricerca di
-                                    nuove sfide e opportunità per
+                            <p class="presentation"><strong> Sono sempre alla ricerca di nuove sfide e opportunità per
                                     crescere professionalmente. Amo collaborare con gli altri e credo fermamente nel
-                                    valore
-                                    del lavoro di squadra. Sono convinto che le migliori soluzioni nascano dal confronto
-                                    e
-                                    dalla condivisione di idee diverse, e mi impegno costantemente per contribuire al
+                                    valore del lavoro di squadra. Sono convinto che le migliori soluzioni nascano dal confronto
+                                    e dalla condivisione di idee diverse, e mi impegno costantemente per contribuire al
                                     successo del team con il mio entusiasmo e la mia dedizione.</strong>
                             </p>
                         </div>
@@ -229,7 +223,7 @@ export default {
 
     #projects {
 
-        .select-container{
+        .select-container {
             max-width: 200px;
             margin-left: 0;
             padding-left: 15px;
