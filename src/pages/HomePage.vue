@@ -46,7 +46,7 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-12 col-md-10">
                         <div class="col-lg-3">
-                            <select class="form-select" @click="isActive($event.target.value)">
+                            <select class="form-select fs-4" @click="isActive($event.target.value)">
                                 <option v-for="(item, index) in store.experiences" :value="'btn-' + index">
                                     {{ item.title }}
                                 </option>
@@ -68,8 +68,8 @@
             <h2 class="intro pb-5"><i><span class="index">04.</span>I MIEI PROGETTI</i></h2>
             <div class="container p-0">
                 <div class="select-container mb-4">
-                    <select class="form-select" v-model="selectedType">
-                        <option value="">Tutti</option>
+                    <select class="form-select fs-4" v-model="selectedType">
+                        <option value="">Tutti i progetti</option>
                         <option value="FRONT-END">Front-End</option>
                         <option value="BACK-END">Back-End</option>
                         <option value="FULL-STACK">Full-Stack</option>
@@ -334,7 +334,11 @@ export default {
     .full-content {
         padding-left: 15px;
         padding-right: 15px;
+    }
 
+    .select-container{
+        max-width: 250px;
+        font-size: 50px;
     }
 
     .content {

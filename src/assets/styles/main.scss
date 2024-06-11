@@ -8,24 +8,40 @@ $fa-font-path: '../webfonts';
 
 @import 'bootstrap/scss/bootstrap';
 
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+html {
+  font-size: 83%;
+}
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+
+
 body {
-    font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+ul li{
+  list-style-type: none;
+  padding-bottom: 10px;
 }
 
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(0, 74, 173); 
-    border-radius: 10px;
-  }
-  
+  width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 74, 173);
+  border-radius: 10px;
+}
