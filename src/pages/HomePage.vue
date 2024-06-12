@@ -224,8 +224,8 @@ export default {
         }
 
         .select {
-            background-color: rgba(173, 216, 230, 1);
-            border: 2px solid white;
+            background-color: rgba(245, 245, 220, 1);
+            border: 2px solid black;
             font-weight: 600;
         }
 
@@ -245,8 +245,8 @@ export default {
             padding-left: 15px;
 
             .select {
-                background-color: rgba(173, 216, 230, 1);
-                border: 2px solid white;
+                background-color: rgba(245, 245, 220, 1);
+                border: 2px solid black;
                 font-weight: 600;
             }
         }
