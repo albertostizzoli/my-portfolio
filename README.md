@@ -1,29 +1,12 @@
-# .
+![immagine](src/assets/images/screen-home.png)
 
-This template should help get you started developing with Vue 3 in Vite.
+### Benvenuto
 
-## Recommended IDE Setup
+Ciao mi chiamo Alberto Stizzoli e sono un Jr Full-Stack Web Developer.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+### Portfolio
 
-## Customize configuration
+Il Portfolio è composto da 2 pagine: Home-page la pagina principale e Single-Project cioè la pagina che contiene il singolo progetto. Ho inserito un carosello per le Skills e un Wrapper laterale contenente i vari link per CV, Linkedin e GitHub. Infine la navbar è strutturata appositamente in modo che l'utente possa cliccare sopra una sezione e andare su di essa senza scrollare con il mouse.
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
 
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
