@@ -83,6 +83,7 @@ export default {
     font-weight: 600;
     font-size: 2rem;
     text-align: center;
+    color: white;
 
 }
 
@@ -107,5 +108,6 @@ export default {
     font-size: 1.2rem;
     margin-top: 1rem;
     text-align: center;
+    color: white;
 }
 </style>

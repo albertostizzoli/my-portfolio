@@ -115,7 +115,7 @@ header {
                         letter-spacing: 1px;
                         transition: color .3s;
                         text-decoration: none;
-                        color: black;
+                        color: white;
 
                         &:hover {
                             color: $primary-color;
@@ -150,7 +150,7 @@ header {
 
                 a {
                     text-decoration: none;
-                    color: black;
+                    color: white;
 
                     &:hover {
                         color: $primary-color;
@@ -217,23 +217,12 @@ header {
                     }
 
                 }
-
-                &__wrapper {
-                    position: absolute;
-                    top: 0;
-                    right: 0;
-                    width: 40%;
-                    height: 100vh;
-                    background-color: white;
-                }
-
-
             }
         }
     }
 
     .offcanvas {
-        background-color: rgb(255, 255, 255);
+        background-color: rgba(0, 0 ,0, 0.5);
 
         &.offcanvas-end {
             width: 50%;

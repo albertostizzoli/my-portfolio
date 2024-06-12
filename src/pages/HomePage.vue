@@ -38,7 +38,7 @@
         </section>
         <!-- skills -->
         <section id="skills">
-            <h2 class="intro pb-5"><i><span class="index">02.</span>LE MIE SKILLS</i></h2>
+            <h2 class="intro pb-5 text-white"><i><span class="index">02.</span>LE MIE SKILLS</i></h2>
             <CarouselSkills></CarouselSkills>
         </section>
         <!-- esperienze-->
@@ -67,7 +67,7 @@
         </section>
         <!-- progetti -->
         <section id="projects">
-            <h2 class="intro pb-5"><i><span class="index">04.</span>I MIEI PROGETTI</i></h2>
+            <h2 class="intro pb-5 text-white"><i><span class="index">04.</span>I MIEI PROGETTI</i></h2>
             <div class="container p-0">
                 <div class="select-container mb-4">
                     <select class="form-select fs-4 select" v-model="selectedType">
@@ -182,6 +182,7 @@ export default {
         .job {
             font-size: 2.5rem;
             font-weight: 400;
+            color: white;
         }
 
         .name {
@@ -194,8 +195,11 @@ export default {
 
     /*--- ABOUT-ME ---*/
     #about-me {
+        color: white;
+
         .presentation {
             font-size: 1.5rem;
+            
         }
 
         .image {
@@ -214,6 +218,7 @@ export default {
 
     /*--- EXPERIENCE ---*/
     #experience {
+        color: white;
 
         .description {
             font-size: 1.5rem;
@@ -224,9 +229,10 @@ export default {
         }
 
         .select {
-            background-color: rgba(245, 245, 220, 1);
-            border: 2px solid black;
+            background-color: black;
+            border: 2px solid white;
             font-weight: 600;
+            color: white;
         }
 
         .d-block,
@@ -238,6 +244,7 @@ export default {
     /*--- PROGETTI --- */
 
     #projects {
+        
 
         .select-container {
             max-width: 200px;
@@ -245,9 +252,10 @@ export default {
             padding-left: 15px;
 
             .select {
-                background-color: rgba(245, 245, 220, 1);
-                border: 2px solid black;
+                background-color: black;
+                border: 2px solid white;
                 font-weight: 600;
+                color: white;
             }
         }
 

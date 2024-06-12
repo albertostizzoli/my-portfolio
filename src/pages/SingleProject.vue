@@ -34,7 +34,7 @@
                 </div>
             </div>
             <!-- link del progetto -->
-            <h2 class="sub-title mt-5">LINKS</h2>
+            <h2 class="sub-title mt-5 text-white">LINKS</h2>
             <div class="links">
                 <a :href="project.link_github" class="btn btn-sm github">Github</a>
                 <router-link :to="{ name: 'home' }" class="btn btn-sm back">
@@ -69,6 +69,7 @@ export default {
 @use '../assets/styles/partials/variables' as *;
 
 .info {
+    color: white;
     padding: 15rem 0;
 
     .show {
@@ -93,6 +94,7 @@ export default {
     letter-spacing: 3px;
     text-align: center;
     margin-bottom: 0;
+    color: white;
 }
 
 .image {
@@ -120,6 +122,7 @@ export default {
     .links,
     .program {
         margin: 0 0 7rem 0;
+        color: white;
 
         .paragraph {
             font-size: 1.8rem;
@@ -176,6 +179,7 @@ export default {
             &.back {
                 background-color: transparent;
                 border: 2px solid $primary-color;
+                color: white;
             }
         }
     }

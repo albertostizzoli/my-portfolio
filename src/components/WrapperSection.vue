@@ -35,7 +35,7 @@ ul{
 
         a{
             text-decoration: none;
-            color: black;
+            color: white;
 
             &:hover {
                 color: $primary-color;
