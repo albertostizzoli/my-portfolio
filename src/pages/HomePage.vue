@@ -19,13 +19,15 @@
                         <div class="pb-3">
                             <p class="presentation"><strong>Ho iniziato ad avvicinarmi al mondo della programmazione
                                     spinto dalla pura curiosità, ma con il tempo questa si è trasformata in una forte
-                                    passione e desiderio di apprendere sempre di più. In particolare, ho sviluppato un 
-                                    grande interesse per il lato del Front-End, attratto dalla possibilità di creare 
-                                    interfacce utente intuitive e accattivanti che migliorino l'esperienza dell'utente.</strong></p>
+                                    passione e desiderio di apprendere sempre di più. In particolare, ho sviluppato un
+                                    grande interesse per il lato del Front-End, attratto dalla possibilità di creare
+                                    interfacce utente intuitive e accattivanti che migliorino l'esperienza
+                                    dell'utente.</strong></p>
 
                             <p class="presentation"><strong> Sono sempre alla ricerca di nuove sfide e opportunità per
                                     crescere professionalmente. Amo collaborare con gli altri e credo fermamente nel
-                                    valore del lavoro di squadra. Sono convinto che le migliori soluzioni nascano dal confronto
+                                    valore del lavoro di squadra. Sono convinto che le migliori soluzioni nascano dal
+                                    confronto
                                     e dalla condivisione di idee diverse, e mi impegno costantemente per contribuire al
                                     successo del team con il mio entusiasmo e la mia dedizione.</strong>
                             </p>
@@ -46,7 +48,7 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-12 col-md-10">
                         <div class="col-lg-3">
-                            <select class="form-select fs-4" @click="isActive($event.target.value)">
+                            <select class="form-select fs-4 select" @click="isActive($event.target.value)">
                                 <option v-for="(item, index) in store.experiences" :value="'btn-' + index">
                                     {{ item.title }}
                                 </option>
@@ -68,7 +70,7 @@
             <h2 class="intro pb-5"><i><span class="index">04.</span>I MIEI PROGETTI</i></h2>
             <div class="container p-0">
                 <div class="select-container mb-4">
-                    <select class="form-select fs-4" v-model="selectedType">
+                    <select class="form-select fs-4 select" v-model="selectedType">
                         <option value="">Tutti i progetti</option>
                         <option value="FRONT-END">Front-End</option>
                         <option value="BACK-END">Back-End</option>
@@ -213,6 +215,12 @@ export default {
             }
         }
 
+        .select {
+            background-color: rgba(173, 216, 230, 1);
+            border: 2px solid white;
+            font-weight: 600;
+        }
+
         .d-block,
         .d-none {
             transition: 2s;
@@ -227,6 +235,12 @@ export default {
             max-width: 200px;
             margin-left: 0;
             padding-left: 15px;
+
+            .select {
+                background-color: rgba(173, 216, 230, 1);
+                border: 2px solid white;
+                font-weight: 600;
+            }
         }
 
         .box-card {
@@ -336,7 +350,7 @@ export default {
         padding-right: 15px;
     }
 
-    .select-container{
+    .select-container {
         max-width: 250px;
         font-size: 50px;
     }
