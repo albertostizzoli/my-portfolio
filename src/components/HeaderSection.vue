@@ -3,10 +3,26 @@
         <nav class="navbar">
             <div id="navbar-list">
                 <ul>
-                    <li><span class="index">01.</span>CHI SONO</li>
-                    <li><span class="index">02.</span>SKILLS</li>
-                    <li><span class="index">03.</span>ESPERIENZE</li>
-                    <li><span class="index">04.</span>PROGETTI</li>
+                    <li>
+                        <router-link :to="{ name: 'home', hash: '#about-me' }">
+                            <span class="index">01.</span>CHI SONO
+                        </router-link>
+                    </li>
+                    <li>
+                        <router-link :to="{ name: 'home', hash: '#skills' }">
+                            <span class="index">02.</span>SKILLS
+                        </router-link>
+                    </li>
+                    <li>
+                        <router-link :to="{ name: 'home', hash: '#experience' }">
+                            <span class="index">03.</span>ESPERIENZE
+                        </router-link>
+                    </li>
+                    <li>
+                        <router-link :to="{ name: 'home', hash: '#projects' }">
+                            <span class="index">04.</span>PROGETTI
+                        </router-link>
+                    </li>
                 </ul>
             </div>
             <div id="sidemenu">
@@ -17,21 +33,30 @@
                     <span class="bottom"></span>
                 </button>
             </div>
+
             <div class="offcanvas offcanvas-end vh-100" tabindex="-1" id="offcanvasNavbar"
                 aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-body">
                     <ul class="sidemenu__list">
                         <li data-bs-dismiss="offcanvas">
-                            <span class="index">01.</span>CHI SONO
+                            <router-link :to="{ name: 'home', hash: '#about-me' }" @click.prevent="isActive">
+                                <span class="index">01.</span>CHI SONO
+                            </router-link>
                         </li>
                         <li data-bs-dismiss="offcanvas">
-                            <span class="index">02.</span>SKILLS
+                            <router-link :to="{ name: 'home', hash: '#skills' }" @click.prevent="isActive">
+                                <span class="index">02.</span>SKILLS
+                            </router-link>
                         </li>
                         <li data-bs-dismiss="offcanvas">
-                            <span class="index">03.</span>ESPERIENZE
+                            <router-link :to="{ name: 'home', hash: '#experience' }" @click.prevent="isActive">
+                                <span class="index">03.</span>ESPERIENZE
+                            </router-link>
                         </li>
                         <li data-bs-dismiss="offcanvas">
-                            <span class="index">04.</span>PROGETTI
+                            <router-link :to="{ name: 'home', hash: '#projects' }" @click.prevent="isActive">
+                                <span class="index">04.</span>PROGETTI
+                            </router-link>
                         </li>
                     </ul>
                 </div>
@@ -39,6 +64,7 @@
         </nav>
     </header>
 </template>
+
 
 <script>
 export default {
@@ -72,21 +98,26 @@ header {
         justify-content: space-between;
 
         #navbar-list {
-
             ul {
                 list-style-type: none;
                 display: flex;
 
                 li {
                     padding: 10px;
-                    font-size: 1.6rem;
-                    letter-spacing: 1px;
-                    transition: color .3s;
-                    font-weight: 800;
                     cursor: pointer;
+                    font-size: 1.6rem;
+                    font-weight: 800;
 
-                    &:hover {
-                        color: $primary-color;
+                    a {
+                        font-size: 1.6rem;
+                        letter-spacing: 1px;
+                        transition: color .3s;
+                        text-decoration: none;
+                        color: black;
+
+                        &:hover {
+                            color: $primary-color;
+                        }
                     }
 
                     .index {
@@ -115,8 +146,13 @@ header {
                 font-size: 1.6rem;
                 font-weight: 800;
 
-                &:hover {
-                    color: $primary-color;
+                a {
+                    text-decoration: none;
+                    color: black;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
                 }
 
                 .index {
