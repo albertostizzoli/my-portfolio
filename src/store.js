@@ -2,6 +2,8 @@ import { reactive } from "vue";
 
 export const store = reactive({
 
+    portfolio: false,
+
     skills: [
         {
             name: "HTML",
