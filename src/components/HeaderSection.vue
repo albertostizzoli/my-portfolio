@@ -74,10 +74,12 @@ export default {
         }
     },
     methods: {
+        // Metodo per alternare lo stato del menu attivo
         isActive() {
+            // Inverte il valore booleano di 'is_active_menu'
             this.is_active_menu = !this.is_active_menu;
         }
-    },
+    }
 }
 </script>
 

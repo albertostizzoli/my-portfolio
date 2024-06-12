@@ -1,14 +1,16 @@
 <template>
-  <div v-if="loading">
+  <!--mostra il componente LoaderComponent solo se la variabile 'loading' è true -->
+<div v-if="loading">
     <LoaderComponent></LoaderComponent>
-  </div>
-  <div v-else :class="store.portfolio ? 'appearance' : ''">
-  <HeaderSection></HeaderSection>
-  <main>
-    <WrapperSection></WrapperSection>
-    <router-view></router-view>
-  </main>
-  <FooterSection></FooterSection>
+</div>
+<!--mostra il contenuto solo se la variabile 'loading' è false e la proprietà 'portfolio' dello store è true -->
+<div v-else :class="store.portfolio ? 'appearance' : ''">
+    <HeaderSection></HeaderSection>
+    <main>
+      <WrapperSection></WrapperSection>
+      <router-view></router-view>
+    </main>
+    <FooterSection></FooterSection>
   </div>
 </template>
 
@@ -32,23 +34,26 @@ export default {
     }
   },
   methods: {
+    // Metodo per disattivare il caricamento dopo un ritardo
     loader() {
+      // Imposta un timeout che disabilita la proprietà 'loading' dopo 3 secondi (3000 millisecondi)
       setTimeout(() => {
-        this.loading = false
-      }, 3000)
+        this.loading = false;
+      }, 3000);
     }
   },
-  mounted(){
+  // Ciclo di vita del componente: metodo eseguito quando il componente è montato
+  mounted() {
+    // Chiama il metodo 'loader' per avviare il timeout
     this.loader();
   }
+
 
 }
 </script>
 
 <style lang="scss" scoped>
-
 .appearance {
   overflow: hidden;
 }
-
 </style>

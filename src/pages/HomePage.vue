@@ -114,18 +114,26 @@ export default {
         }
     },
     methods: {
+        // Metodo per impostare l'ID attivo
         isActive(id) {
+            // Imposta la variabile 'is_active' con il valore dell'ID passato come argomento
             this.is_active = id;
         },
     },
+    // Ciclo di vita del componente: metodo eseguito quando il componente è montato
     mounted() {
+        // Chiama il metodo 'isActive' passando l'attuale valore di 'is_active'
         this.isActive(this.is_active);
     },
     computed: {
+        // Proprietà calcolata per filtrare i progetti in base al tipo selezionato
         filteredProjects() {
+            // Controlla se esiste un tipo selezionato
             if (this.selectedType) {
+                // Filtra i progetti nello store in base al tipo selezionato
                 return this.store.projects.filter(project => project.type === this.selectedType);
             }
+            // Se non c'è un tipo selezionato, restituisce tutti i progetti nello store
             return this.store.projects;
         }
     }

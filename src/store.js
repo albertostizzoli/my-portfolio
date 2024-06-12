@@ -1,9 +1,13 @@
+// Importazione della funzione reactive da Vue per creare un oggetto reattivo
 import { reactive } from "vue";
 
+// Creazione e esportazione dell'oggetto store contenente i dati dell'applicazione
 export const store = reactive({
 
+    // Flag per la visualizzazione del portfolio
     portfolio: false,
 
+    // Array di oggetti contenente le skills
     skills: [
         {
             name: "HTML",
@@ -47,6 +51,7 @@ export const store = reactive({
         },
     ],
 
+    // Array di oggetti contenente le esperienze
     experiences: [
         {
             title: "Experis Academy",
@@ -74,6 +79,8 @@ export const store = reactive({
         },
     ],
 
+
+    // Array di oggetti contenente i progetti
     projects: [
         {
             id: 1,

@@ -54,9 +54,13 @@ export default {
             projects: null,
         }
     },
+    // Ciclo di vita del componente: metodo eseguito quando il componente è creato
     created() {
+        // Cerca un progetto nello store che abbia un ID corrispondente all'ID del parametro di route
         this.project = store.projects.find((p) => p.id == this.$route.params.id);
+        // Assegna il progetto trovato alla variabile 'project' del componente
     }
+
 }
 </script>
 

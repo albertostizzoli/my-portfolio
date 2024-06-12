@@ -1,6 +1,9 @@
 <template>
+    <!-- Definizione del componente Carousel con alcune proprietà -->
     <Carousel :autoplay="2000" :items-to-show="2.5" :wrap-around="true" :breakpoints="breakpoints">
+        <!-- Iterazione su ogni elemento nell'array store.skills per creare uno Slide per ciascuno -->
         <Slide v-for="item in store.skills " :key="item.name">
+            <!-- Struttura di base per il contenuto di uno Slide -->
             <div class="container p-0">
                 <div class="row">
                     <div class="col-12 col-md-10">
@@ -12,6 +15,7 @@
                 </div>
             </div>
         </Slide>
+        <!-- Definizione di un template per gli elementi aggiuntivi del Carousel, in questo caso la Pagination -->
         <template #addons>
             <Pagination />
         </template>
@@ -28,10 +32,12 @@ export default {
     data() {
         return {
             store,
+            // Configurazione delle impostazioni di base del Carousel
             settings: {
                 itemsToShow: 1,
                 snapAlign: 'center',
             },
+            // Definizione dei breakpoint per adattare il Carousel a diverse dimensioni dello schermo
             breakpoints: {
                 1660: {
                     itemsToShow: 3,
@@ -61,6 +67,7 @@ export default {
         }
     },
     components: {
+        // Dichiarazione dei componenti utilizzati nel template
         Carousel,
         Slide,
         Navigation,
@@ -69,6 +76,7 @@ export default {
 
 }
 </script>
+
 
 <style lang="scss" scoped>
 .type-skill {
