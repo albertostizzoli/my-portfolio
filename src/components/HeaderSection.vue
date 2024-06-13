@@ -1,26 +1,29 @@
 <template>
     <header>
         <nav class="navbar">
+            <div class="logo">
+                <img src="/img/logo.png" alt="logo">
+            </div>
             <div id="navbar-list">
                 <ul>
                     <li>
                         <router-link :to="{ name: 'home', hash: '#about-me' }">
-                            <span class="index">01.</span>CHI SONO
+                            <span class="index">01.</span>Chi sono
                         </router-link>
                     </li>
                     <li>
                         <router-link :to="{ name: 'home', hash: '#skills' }">
-                            <span class="index">02.</span>SKILLS
+                            <span class="index">02.</span>Skills
                         </router-link>
                     </li>
                     <li>
                         <router-link :to="{ name: 'home', hash: '#experience' }">
-                            <span class="index">03.</span>ESPERIENZE
+                            <span class="index">03.</span>Esperienze
                         </router-link>
                     </li>
                     <li>
                         <router-link :to="{ name: 'home', hash: '#projects' }">
-                            <span class="index">04.</span>PROGETTI
+                            <span class="index">04.</span>Progetti
                         </router-link>
                     </li>
                 </ul>
@@ -40,22 +43,22 @@
                     <ul class="sidemenu__list">
                         <li data-bs-dismiss="offcanvas">
                             <router-link :to="{ name: 'home', hash: '#about-me' }" @click.prevent="isActive">
-                                <span class="index">01.</span>CHI SONO
+                                <span class="index">01.</span>Chi sono
                             </router-link>
                         </li>
                         <li data-bs-dismiss="offcanvas">
                             <router-link :to="{ name: 'home', hash: '#skills' }" @click.prevent="isActive">
-                                <span class="index">02.</span>SKILLS
+                                <span class="index">02.</span>Skills
                             </router-link>
                         </li>
                         <li data-bs-dismiss="offcanvas">
                             <router-link :to="{ name: 'home', hash: '#experience' }" @click.prevent="isActive">
-                                <span class="index">03.</span>ESPERIENZE
+                                <span class="index">03.</span>Esperienze
                             </router-link>
                         </li>
                         <li data-bs-dismiss="offcanvas">
                             <router-link :to="{ name: 'home', hash: '#projects' }" @click.prevent="isActive">
-                                <span class="index">04.</span>PROGETTI
+                                <span class="index">04.</span>Progetti
                             </router-link>
                         </li>
                     </ul>
@@ -92,6 +95,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: rgb(0, 74, 173);
 
     nav {
         width: 90%;
@@ -99,12 +103,24 @@ header {
         align-items: center;
         justify-content: space-between;
 
+        .logo{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img{
+                width: 60px;
+            }
+        }
+
         #navbar-list {
             ul {
                 list-style-type: none;
                 display: flex;
 
                 li {
+                    margin-top: 10px;
                     padding: 10px;
                     cursor: pointer;
                     font-size: 1.6rem;
@@ -118,12 +134,12 @@ header {
                         color: white;
 
                         &:hover {
-                            color: $primary-color;
+                            color: black;
                         }
                     }
 
                     .index {
-                        color: $primary-color;
+                        color: black;
                     }
                 }
             }
@@ -153,12 +169,12 @@ header {
                     color: white;
 
                     &:hover {
-                        color: $primary-color;
+                        color: black;
                     }
                 }
 
                 .index {
-                    color: $primary-color;
+                    color: black;
                 }
             }
         }
@@ -184,7 +200,7 @@ header {
                         width: 20px;
                         height: 3px;
                         margin: auto;
-                        background: $primary_color;
+                        background: white;
                         position: absolute;
                         top: 0;
                         bottom: 0;
@@ -222,7 +238,7 @@ header {
     }
 
     .offcanvas {
-        background-color: rgba(0, 0 ,0, 0.5);
+        background-color: rgba(0, 74, 173, 0.5);
 
         &.offcanvas-end {
             width: 50%;
