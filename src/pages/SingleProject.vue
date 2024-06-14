@@ -124,6 +124,7 @@ export default {
         margin: 0 0 7rem 0;
         color: white;
 
+
         .paragraph {
             font-size: 1.8rem;
             line-height: 1.7;
