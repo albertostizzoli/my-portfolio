@@ -95,36 +95,6 @@
                 </div>
             </div>
         </section>
-        <!-- contatti -->
-        <section id="contacts">
-            <h2 class="intro pb-5 text-white"><i><span class="index">05.</span>CONTATTI</i></h2>
-            <div class="container p-0">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-12 col-md-8">
-                        <form>
-                            <div class="mb-3">
-                                <label class="form-label">Nome e Cognome</label>
-                                <input type="text" class="form-control" placeholder="Alberto Stizzoli" name="user_name"
-                                    required>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Email</label>
-                                <input type="email" class="form-control" placeholder="nome@email.com" name="user_email"
-                                    required>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Messaggio</label>
-                                <textarea class="form-control" rows="5" name="message"
-                                    placeholder="Scrivi il tuo messaggio" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">INVIA
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </div>
 </template>
 
@@ -175,8 +145,7 @@ export default {
 #about-me,
 #skills,
 #experience,
-#projects,
-#contacts {
+#projects{
     padding: 4rem 0;
 
     .intro {
@@ -357,37 +326,6 @@ export default {
             }
         }
     }
-
-    /*--- CONTATTI --- */
-
-    #contacts {
-        label {
-            font-size: 1.5rem;
-            font-weight: 600;
-            color: white;
-        }
-
-        input,
-        textarea {
-            font-size: 1.5rem;
-        }
-
-        .btn {
-            font-size: 1.5rem;
-            font-weight: 600;
-            padding: 0.5rem 3rem;
-            background-color: $primary-color;
-            border: none;
-            border-radius: 5px;
-
-            &:hover,
-            &:disabled {
-                background-color: white;
-                color: black;
-            }
-        }
-    }
-
 }
 
 @media screen and (max-width:991px) {

@@ -26,11 +26,6 @@
                             <span class="index">04.</span>Progetti
                         </router-link>
                     </li>
-                    <li>
-                        <router-link :to="{ name: 'home', hash: '#contacts' }">
-                            <span class="index">05.</span>Contatti
-                        </router-link>
-                    </li>
                 </ul>
             </div>
             <div id="sidemenu">
@@ -64,11 +59,6 @@
                         <li data-bs-dismiss="offcanvas">
                             <router-link :to="{ name: 'home', hash: '#projects' }" @click.prevent="isActive">
                                 <span class="index">04.</span>Progetti
-                            </router-link>
-                        </li>
-                        <li data-bs-dismiss="offcanvas">
-                            <router-link :to="{ name: 'home', hash: '#contacts' }" @click.prevent="isActive">
-                                <span class="index">05.</span>Contatti
                             </router-link>
                         </li>
                     </ul>
@@ -106,6 +96,9 @@ header {
     justify-content: space-around;
     align-items: center;
     background-color: rgb(0, 74, 173);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 
     nav {
         width: 90%;
