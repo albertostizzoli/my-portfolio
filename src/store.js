@@ -86,7 +86,7 @@ export const store = reactive({
             id: 1,
             title: "Spotify",
             image: "/img/Spotify.jpg",
-            description: "Replica fedele di Spotify, con un'interfaccia grafica accurata fedele all'originale e adattabile a qualsiasi dispositivo. Un progetto ideale per appassionati di musica e tecnologia!",
+            description: "Replica fedele di Spotify, con un'interfaccia grafica accurata e adattabile a qualsiasi dispositivo. Un progetto ideale per appassionati di musica e tecnologia!",
             skills: ["HTML", "CSS"],
             type: "FRONT-END",
             link_github: "https://github.com/albertostizzoli/html-css-spotifyweb",
