@@ -9,10 +9,10 @@
             </div>
         </div>
         <!-- immagine del progetto -->
-        <div id="details" class="image">
+        <div class="image">
             <img :src="project.image" alt="image-detail">
         </div>
-        <div class="content">
+        <div  id="details" class="content">
             <!-- descrizione progetto-->
             <div class="description">
                 <h2 class="sub-title mt-5">Descrizione</h2>
