@@ -26,6 +26,10 @@ export const store = reactive({
             icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
         },
         {
+            name: "REACT",
+            icon: "https://cdn.simpleicons.org/react/61DAFB"
+        },
+        {
             name: "VUEJS",
             icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vuejs-colored.svg"
         },
@@ -134,6 +138,16 @@ export const store = reactive({
 
         {
             id: 6,
+            title: "Restaurant",
+            image: "/img/Restaurant.png",
+            description: "Progetto di un ristorante con un menù contenente varie categorie di piatti come Hamburger o Pizze svolto come parte di studio autodidatta del framework React, la pagina viene presentata all'utente con una presentazione del ristorante e un menù con dei bottoni che cliccandoci sopra può vedere vari Primi Piatti, Secondi, Hamburger, Pizze, Desserts e Bevande",
+            skills: ["React", "Bootstrap"],
+            type: "FRONT-END",
+            link_github: "https://github.com/albertostizzoli/react-restaurant",
+        },
+
+        {
+            id: 7,
             title: "Laravel Comics",
             image: "/img/Laravelcomics.png",
             description: "Laravel Comics è un negozio online di fumetti della DC Comics. Gli utenti possono visualizzare i fumetti più cercati e, cliccando su un fumetto, modificarne il prezzo, il nome e altro, oppure cancellarlo. È anche possibile aggiungere nuovi fumetti al catalogo.",
@@ -143,7 +157,7 @@ export const store = reactive({
         },
 
         {
-            id: 7,
+            id: 8,
             title: "Squiddy Game",
             image: "/img/Squiddygame.jpg",
             description: "Progetto di squadra per la realizzazione di un gioco fantasy RPG. Il gioco permette di scegliere un personaggio con arma e classe tramite un'interfaccia semplice e intuitiva, per poi partecipare a combattimenti a turni in un'arena. Ho contribuito lavorando sul layout del sito e sul database.",
@@ -153,7 +167,7 @@ export const store = reactive({
         },
 
         {
-            id: 8,
+            id: 9,
             title: "BDoctors",
             image: "/img/BDoctors.png",
             description: "Progetto finale del corso Boolean, realizzato in team, consiste nella creazione di un sito web completo che include una dashboard per i medici, dove possono registrarsi, gestire e sponsorizzare il proprio profilo. La Home page permette ai visitatori di cercare medici per specializzazione, voti e numero di recensioni, fornendo dettagli completi sui professionisti. Gli utenti possono lasciare recensioni e contattare i medici tramite un form che invia messaggi email per fissare appuntamenti e consultazioni. Ho contribuito lavorando sul layout del sito e sul database.",
