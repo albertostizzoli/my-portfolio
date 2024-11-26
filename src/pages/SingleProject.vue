@@ -36,6 +36,7 @@
             <!-- link del progetto -->
             <h2 class="sub-title mt-5 text-white">LINKS</h2>
             <div class="links">
+                <a :href="project.site" class="btn btn-sm site" v-if="project.site">Visualizza Progetto</a>
                 <a :href="project.link_github" class="btn btn-sm github">Github</a>
                 <router-link :to="{ name: 'home' }" class="btn btn-sm back">
                     Indietro
@@ -171,6 +172,11 @@ export default {
             border-radius: 5px;
             font-weight: 600;
             margin-right: 1.5rem;
+
+            &.site {
+                background-color: $primary-color;
+                color: black;
+            }
 
             &.github {
                 background-color: $primary-color;

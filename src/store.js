@@ -148,6 +148,7 @@ export const store = reactive({
             skills: ["REACT", "BOOTSTRAP"],
             type: "FRONT-END",
             link_github: "https://github.com/albertostizzoli/react-restaurant",
+            site: "https://ristorantepepperone.netlify.app/",
         },
 
         {
@@ -158,6 +159,7 @@ export const store = reactive({
             skills: ["REACT", "TAILWIND"],
             type: "FRONT-END",
             link_github: "https://github.com/albertostizzoli/react-weatherapp",
+            site: "https://weatherappalbertostizzoli.netlify.app/",
         },
 
         {
