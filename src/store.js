@@ -22,15 +22,19 @@ export const store = reactive({
             icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/bootstrap-colored.svg"
         },
         {
+            name: "TAILWIND",
+            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg"
+        },
+        {
             name: "JAVASCRIPT",
             icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
         },
         {
             name: "REACT",
-            icon: "https://cdn.simpleicons.org/react/61DAFB"
+            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg"
         },
         {
-            name: "VUEJS",
+            name: "VUE",
             icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vuejs-colored.svg"
         },
         {
@@ -101,7 +105,7 @@ export const store = reactive({
             title: "Campo Minato",
             image: "/img/Campominato.jpg",
             description: "Campo Minato è una versione del classico gioco di Windows. Il computer posiziona casualmente 16 bombe sulla scacchiera. L'utente clicca sulle celle finché non trova una bomba. Alla fine, viene mostrato il punteggio e le bombe rimanenti. Si può scegliere tra 3 livelli di difficoltà e ricominciare il gioco selezionando il livello preferito.",
-            skills: ["HTML", "CSS", "JavaScript"],
+            skills: ["HTML", "CSS", "JAVASCRIPT"],
             type: "FRONT-END",
             link_github: "https://github.com/albertostizzoli/js-campominato-dom",
         },
@@ -111,7 +115,7 @@ export const store = reactive({
             title: "Boolzapp",
             image: "/img/Boolzapp.jpg",
             description: "Boolzapp è una replica di WhatsApp Web. Selezionando un contatto, si può visualizzare e continuare la conversazione, ricevendo risposte casuali dal computer. La barra di ricerca permette di filtrare le conversazioni in base all'input dell'utente. È possibile cancellare singoli messaggi o intere conversazioni.",
-            skills: ["HTML", "CSS", "VueJS"],
+            skills: ["HTML", "CSS", "VUE"],
             type: "FRONT-END",
             link_github: "https://github.com/albertostizzoli/vue-boolzapp",
         },
@@ -121,7 +125,7 @@ export const store = reactive({
             title: "Boolflix",
             image: "/img/Boolflix.jpg",
             description: "Boolflix è un motore di ricerca per film e serie TV, ispirato a Netflix. La home page mostra le copertine dei titoli più popolari e, passando con il mouse, rivela dettagli ottenuti tramite API da The Movie DB. Gli utenti possono cercare i loro titoli preferiti inserendo parole chiave nella barra di ricerca e visualizzare informazioni sui film e le serie TV passando con il mouse sulle copertine.",
-            skills: ["VueJS", "SASS"],
+            skills: ["VUE", "SASS"],
             type: "FRONT-END",
             link_github: "https://github.com/albertostizzoli/vite-boolflix",
         },
@@ -131,7 +135,7 @@ export const store = reactive({
             title: "EduPrime",
             image: "/img/Eduprime.jpg",
             description: "Replica della parte grafica del sito EduPrime basata su un portale di iscrizione universitario svolta come Progetto MidTerm durante il corso di Boolean.",
-            skills: ["VueJS", "SASS"],
+            skills: ["VUE", "SASS"],
             type: "FRONT-END",
             link_github: "https://github.com/albertostizzoli/proj-html-vuejs",
         },
@@ -141,37 +145,47 @@ export const store = reactive({
             title: "Restaurant",
             image: "/img/Restaurant.png",
             description: "Progetto di un ristorante con un menù contenente varie categorie di piatti come Hamburger o Pizze svolto come parte di studio autodidatta del framework React, la pagina viene presentata all'utente con una presentazione del ristorante e un menù con dei bottoni che cliccandoci sopra può vedere vari Primi Piatti, Secondi, Hamburger, Pizze, Desserts e Bevande",
-            skills: ["React", "Bootstrap"],
+            skills: ["REACT", "BOOTSTRAP"],
             type: "FRONT-END",
             link_github: "https://github.com/albertostizzoli/react-restaurant",
         },
 
         {
             id: 7,
+            title: "Weather App",
+            image: "/img/WeatherApp.png",
+            description: "Progetto di una webapp del Meteo in cui l'utente attraverso una barra di ricerca può ottenere i dati meteorologici del proprio luogo di interesse quelli attuali, ogni 3 ore e fino a 5 giorni e, attraverso un grafico vede i dati di Umidità e Vento. L'utente può anche salvare/rimuovere le città interessate, ottenere il luogo dove si trova tramite Geolocalizzazione e scegliere se visitare l'applicazione in modalità Light o Dark",
+            skills: ["REACT", "TAILWIND"],
+            type: "FRONT-END",
+            link_github: "https://github.com/albertostizzoli/react-weatherapp",
+        },
+
+        {
+            id: 8,
             title: "Laravel Comics",
             image: "/img/Laravelcomics.png",
             description: "Laravel Comics è un negozio online di fumetti della DC Comics. Gli utenti possono visualizzare i fumetti più cercati e, cliccando su un fumetto, modificarne il prezzo, il nome e altro, oppure cancellarlo. È anche possibile aggiungere nuovi fumetti al catalogo.",
-            skills: ["Laravel", "MySQL"],
+            skills: ["LARAVEL", "MySQL"],
             type: "BACK-END",
             link_github: "https://github.com/albertostizzoli/laravel-comics-2",
         },
 
         {
-            id: 8,
+            id: 9,
             title: "Squiddy Game",
             image: "/img/Squiddygame.jpg",
             description: "Progetto di squadra per la realizzazione di un gioco fantasy RPG. Il gioco permette di scegliere un personaggio con arma e classe tramite un'interfaccia semplice e intuitiva, per poi partecipare a combattimenti a turni in un'arena. Ho contribuito lavorando sul layout del sito e sul database.",
-            skills: ["VueJS", "Laravel", "MySQL"],
+            skills: ["VUE", "LARAVEL", "MySQL"],
             type: "FULL-STACK",
             link_github: "https://github.com/albertostizzoli/vite-team-5",
         },
 
         {
-            id: 9,
+            id: 10,
             title: "BDoctors",
             image: "/img/BDoctors.png",
             description: "Progetto finale del corso Boolean, realizzato in team, consiste nella creazione di un sito web completo che include una dashboard per i medici, dove possono registrarsi, gestire e sponsorizzare il proprio profilo. La Home page permette ai visitatori di cercare medici per specializzazione, voti e numero di recensioni, fornendo dettagli completi sui professionisti. Gli utenti possono lasciare recensioni e contattare i medici tramite un form che invia messaggi email per fissare appuntamenti e consultazioni. Ho contribuito lavorando sul layout del sito e sul database.",
-            skills: ["VueJS", "Laravel", "MySQL"],
+            skills: ["VUE", "LARAVEL", "MySQL"],
             type: "FULL-STACK",
             link_github: "https://github.com/albertostizzoli/vue-bdoctors",
         },
