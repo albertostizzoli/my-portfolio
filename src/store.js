@@ -98,6 +98,7 @@ export const store = reactive({
             skills: ["HTML", "CSS"],
             type: "FRONT-END",
             link_github: "https://github.com/albertostizzoli/html-css-spotifyweb",
+            site: "https://spotifyalbertostizzoli.netlify.app/",
         },
 
         {
@@ -108,6 +109,7 @@ export const store = reactive({
             skills: ["HTML", "CSS", "JAVASCRIPT"],
             type: "FRONT-END",
             link_github: "https://github.com/albertostizzoli/js-campominato-dom",
+            site: "https://campominatoalbertostizzoli.netlify.app/",
         },
 
         {
@@ -118,6 +120,7 @@ export const store = reactive({
             skills: ["HTML", "CSS", "VUE"],
             type: "FRONT-END",
             link_github: "https://github.com/albertostizzoli/vue-boolzapp",
+            site: "https://boolzappalbertostizzoli.netlify.app/",
         },
 
         {
