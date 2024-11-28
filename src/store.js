@@ -128,6 +128,7 @@ export const store = reactive({
             skills: ["VUE", "SASS"],
             type: "FRONT-END",
             link_github: "https://github.com/albertostizzoli/vite-boolflix",
+            site: "https://boolflixalbertostizzoli.netlify.app/",
         },
 
         {
@@ -138,6 +139,7 @@ export const store = reactive({
             skills: ["VUE", "SASS"],
             type: "FRONT-END",
             link_github: "https://github.com/albertostizzoli/proj-html-vuejs",
+            site: "https://eduprimealbertostizzoli.netlify.app/",
         },
 
         {
