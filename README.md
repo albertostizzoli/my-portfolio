@@ -1,6 +1,3 @@
-![immagine](src/assets/images/screen-home.png)
-![immagine](src/assets/images/singlepage.png)
-
 ### Benvenuto
 
 Ciao mi chiamo Alberto Stizzoli e sono un Jr Full-Stack Web Developer.
