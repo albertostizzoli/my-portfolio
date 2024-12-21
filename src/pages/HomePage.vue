@@ -2,7 +2,7 @@
     <div class="full-content">
         <!-- home page -->
         <section id="home" class="content">
-            <p class="hello">Ciao, mi chiamo</p>
+            <p class="hello">Mi chiamo</p>
             <h1 class="name">Alberto Stizzoli</h1>
             <p class="job">Sono un Jr Full-Stack Web Developer</p>
         </section>
