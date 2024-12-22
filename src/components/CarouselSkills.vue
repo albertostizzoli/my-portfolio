@@ -79,11 +79,13 @@ export default {
 
 
 <style lang="scss" scoped>
+@use '../assets/styles/partials/variables' as *;
+
 .type-skill {
     font-weight: 600;
     font-size: 2rem;
     text-align: center;
-    color: white;
+    color: $secondary-color;
 
 }
 
@@ -108,6 +110,6 @@ export default {
     font-size: 1.2rem;
     margin-top: 1rem;
     text-align: center;
-    color: white;
+    color: $secondary-color;
 }
 </style>

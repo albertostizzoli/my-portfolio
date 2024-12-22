@@ -4,7 +4,7 @@
         <section id="home" class="content">
             <p class="hello">Mi chiamo</p>
             <h1 class="name">Alberto Stizzoli</h1>
-            <p class="job">Sono un Jr Full-Stack Web Developer</p>
+            <p class="job">Sono un Web & Software Developer</p>
         </section>
         <!-- chi sono -->
         <section id="about-me">
@@ -16,21 +16,36 @@
                     </div>
                     <div class="col-lg-7 ps-lg-3 col-md-12 pt-3">
                         <!-- presentazione -->
-                        <div class="pb-3">
-                            <p class="presentation"><strong>Ho iniziato ad avvicinarmi al mondo della programmazione
-                                    spinto dalla pura curiosità, ma con il tempo questa si è trasformata in una forte
-                                    passione e desiderio di apprendere sempre di più. In particolare, ho sviluppato un
-                                    grande interesse per il lato del Front-End, attratto dalla possibilità di creare
-                                    interfacce utente intuitive e accattivanti che migliorino l'esperienza
-                                    dell'utente.</strong></p>
-
-                            <p class="presentation"><strong> Sono sempre alla ricerca di nuove sfide e opportunità per
-                                    crescere professionalmente. Amo collaborare con gli altri e credo fermamente nel
-                                    valore del lavoro di squadra. Sono convinto che le migliori soluzioni nascano dal
-                                    confronto
-                                    e dalla condivisione di idee diverse, e mi impegno costantemente per contribuire al
-                                    successo del team con il mio entusiasmo e la mia dedizione.</strong>
-                            </p>
+                        <div class="pb-2">
+                            <h2 class="presentation"><i class="fas fa-road"></i>Il mio percorso</h2>
+                            <p class="paragraph"><strong>Ho iniziato ad avvicinarmi al mondo della programmazione spinto
+                                    dalla pura
+                                    curiosità, ma con il tempo mi sono appassionato nel creare esperienze digitali
+                                    che siano funzionali, intuitive e visivamente accattivanti. Oltre alla
+                                    programmazione, amo esplorare passioni che mi aiutano a sviluppare competenze
+                                    trasversali e a rimanere ispirato, mi sto avvicinando al mondo del Design, in
+                                    particolare il mondo della UX/UI e infatti nel mio tempo libero sperimento con
+                                    strumenti di design e li applico anche a livello di
+                                    codice.</strong></p>
+                        </div>
+                        <div class="pb-2">
+                            <h2 class="presentation"><i class="fas fa-handshake"></i>Il lavoro di squadra</h2>
+                            <p class="paragraph"><strong>Nel corso in Web Development di Boolean Careers ho imparato a
+                                    collaborare con gli altri e credere fermamente nel valore del lavoro di
+                                    squadra. Sono tuttora convinto che le migliori soluzioni nascano dal confronto e
+                                    dalla
+                                    condivisione di idee diverse, e mi impegno costantemente per contribuire al
+                                    successo del team con il mio entusiasmo e la mia dedizione.</strong></p>
+                        </div>
+                        <div class="pb-2">
+                            <h2 class="presentation"><i class="fas fa-rocket"></i> Cosa mi motiva</h2>
+                            <p class="paragraph"><strong>Quello che amo dello sviluppo web è la possibilità di
+                                    trasformare idee in
+                                    realtà. La
+                                    soddisfazione di vedere un'applicazione prendere forma e funzionare esattamente
+                                    come
+                                    previsto è ciò che mi spinge a migliorarmi ogni giorno. Credo che ogni problema
+                                    abbia una soluzione creativa, e mi impegno sempre a trovarla</strong></p>
                         </div>
                     </div>
                 </div>
@@ -145,7 +160,7 @@ export default {
 #about-me,
 #skills,
 #experience,
-#projects{
+#projects {
     padding: 4rem 0;
 
     .intro {
@@ -180,8 +195,8 @@ export default {
         .hello,
         .job {
             font-size: 2.5rem;
-            font-weight: 400;
-            color: white;
+            font-weight: 800;
+            color: $secondary-color;
         }
 
         .name {
@@ -194,11 +209,20 @@ export default {
 
     /*--- CHI SONO ---*/
     #about-me {
-        color: white;
+        color: $secondary-color;
 
         .presentation {
-            font-size: 1.5rem;
+            font-size: 2rem;
+            text-decoration: underline;
+        }
 
+        h2.presentation i {
+            margin-right: 8px;
+            color: $primary-color;
+        }
+
+        .paragraph {
+            font-size: 1.3rem;
         }
 
         .image {
@@ -217,7 +241,7 @@ export default {
 
     /*--- ESPERIENZE ---*/
     #experience {
-        color: white;
+        color: $secondary-color;
 
         .description {
             font-size: 1.5rem;
@@ -228,10 +252,10 @@ export default {
         }
 
         .select {
-            background-color: black;
-            border: 2px solid white;
+            background-color: $primary-color;
+            border: 2px solid $blue-color;
             font-weight: 600;
-            color: white;
+            color: $secondary-color;
         }
 
         .d-block,
@@ -249,17 +273,17 @@ export default {
             padding-left: 15px;
 
             .select {
-                background-color: black;
-                border: 2px solid white;
+                background-color: $primary-color;
+                border: 2px solid $blue-color;
                 font-weight: 600;
-                color: white;
+                color: $secondary-color;
             }
         }
 
         .box-card {
             width: 100%;
             height: 100%;
-            background-color: $primary_color;
+            background-color: $primary-color;
             backdrop-filter: blur(5px);
             border-radius: 20px;
             display: flex;
@@ -279,7 +303,7 @@ export default {
             width: 35px;
             margin-right: 0.5rem;
             border-radius: 50%;
-            background-color: white;
+            background-color: $secondary-color;
             position: relative;
 
             span {
@@ -295,7 +319,7 @@ export default {
         .title {
             font-size: 2.5rem;
             font-weight: 600;
-            color: white;
+            color: $secondary-color;
             transition: all .35s ease-in;
         }
 
@@ -314,7 +338,7 @@ export default {
             padding-bottom: 10px;
 
             .btn {
-                background-color: white;
+                background-color: $secondary-color;
                 font-weight: 600;
                 font-size: 1.2rem;
                 border-radius: 20px;
@@ -322,6 +346,8 @@ export default {
                 &:hover {
                     scale: 1.2;
                     transition: .3s;
+                    background-color: $blue-color;
+                    color: $secondary-color;
                 }
             }
         }

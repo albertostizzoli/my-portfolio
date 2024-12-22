@@ -45,7 +45,7 @@ footer {
 
       a {
         text-decoration: none;
-        color: white;
+        color: $secondary-color;
 
         &:hover {
           color: $primary-color;

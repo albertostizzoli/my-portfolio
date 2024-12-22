@@ -40,7 +40,7 @@ export default {
       stroke-width: 4;
       stroke-dashoffset: 3100;
       stroke-dasharray: 3100;
-      animation: stroke_animation 2s ease-in forwards, fill_animation 2.5s ease-in-out 0s forwards;
+      animation: stroke_animation 2.5s ease-in forwards, fill_animation 2.5s ease-in-out 0s forwards;
     }
   }
 }
@@ -68,7 +68,7 @@ export default {
   }
 
   100% {
-    fill: white; /* Riempimento bianco finale */
+    fill: $secondary-color; /* Riempimento bianco finale */
   }
 }
 </style>
