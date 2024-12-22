@@ -1,8 +1,12 @@
 <template>
     <header>
         <nav class="navbar">
-            <div class="logo">
-                <img src="/img/logo.png" alt="logo">
+            <div class="wrapper">
+                <ul>
+                    <li><a href="https://drive.google.com/file/d/1wAk8-dR9JLRhjfM7XAVcHdX81sc7C6-z/view?usp=drive_link"><i class="fa-solid fa-file fa-3x"></i></a></li>
+                    <li><a href="https://github.com/albertostizzoli"><i class="fa-brands fa-github fa-3x"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/alberto-stizzoli-82a676260/"><i class="fa-brands fa-linkedin-in fa-3x"></i></a></li>
+                </ul>
             </div>
             <div id="navbar-list">
                 <ul>
@@ -95,24 +99,46 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    //background-color: rgb(0, 74, 173);
-
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    
     nav {
         width: 90%;
         display: flex;
         align-items: center;
         justify-content: space-between;
 
-        .logo{
-            height: 100%;
+        .wrapper {
             display: flex;
             align-items: center;
-            justify-content: center;
 
-            img{
-                width: 60px;
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: row;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: 0 10px;
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        line-height: 1;
+
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+                }
             }
         }
+
 
         #navbar-list {
             ul {
