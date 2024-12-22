@@ -1,7 +1,3 @@
-<script>
-export default {};
-</script>
-
 <template>
   <div>
     <div class="container">
@@ -15,6 +11,13 @@ export default {};
   </div>
 </template>
 
+
+<script>
+export default {
+
+};
+</script>
+
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
 
@@ -25,7 +28,7 @@ export default {};
   justify-content: center;
 
   #word {
-    width: 70%;
+    width: 100%;
     max-width: 400px;
 
     #animated-text {

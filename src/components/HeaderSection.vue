@@ -95,7 +95,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(0, 74, 173);
+    //background-color: rgb(0, 74, 173);
 
     nav {
         width: 90%;
