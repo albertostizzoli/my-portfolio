@@ -96,6 +96,7 @@ export default {
 header {
     height: 80px;
     width: 100%;
+    backdrop-filter: blur(5px);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -128,8 +129,7 @@ header {
 
                     a {
                         text-decoration: none;
-                        color: white;
-                        line-height: 1;
+                        color: $secondary-color;
 
                         &:hover {
                             color: $primary-color;
@@ -157,15 +157,15 @@ header {
                         letter-spacing: 1px;
                         transition: color .3s;
                         text-decoration: none;
-                        color: white;
+                        color: $secondary-color;
 
                         &:hover {
-                            color: black;
+                            color: $blue-color;
                         }
                     }
 
                     .index {
-                        color: black;
+                        color: $primary-color;
                     }
                 }
             }
@@ -192,15 +192,15 @@ header {
 
                 a {
                     text-decoration: none;
-                    color: white;
+                    color: $secondary-color;
 
                     &:hover {
-                        color: black;
+                        color: $blue-color;
                     }
                 }
 
                 .index {
-                    color: black;
+                    color: $primary-color;
                 }
             }
         }
@@ -226,7 +226,7 @@ header {
                         width: 20px;
                         height: 3px;
                         margin: auto;
-                        background: white;
+                        background: $secondary-color;
                         position: absolute;
                         top: 0;
                         bottom: 0;
@@ -264,7 +264,7 @@ header {
     }
 
     .offcanvas {
-        background-color: rgba(0, 74, 173, 0.5);
+        background: linear-gradient(to left, rgb(0, 74, 173), rgb(116, 157, 235));
 
         &.offcanvas-end {
             width: 50%;
@@ -296,6 +296,10 @@ header {
 
 
 @media screen and (max-width: 700px) {
+    header nav .wrapper {
+        visibility: hidden;
+    }
+
     #navbar-list {
         display: none;
     }
