@@ -23,9 +23,9 @@
                                     curiosità, ma con il tempo mi sono appassionato nel creare esperienze digitali
                                     che siano funzionali, intuitive e visivamente accattivanti. Oltre alla
                                     programmazione, amo esplorare passioni che mi aiutano a sviluppare competenze
-                                    trasversali e a rimanere ispirato, mi sto avvicinando al mondo del Design, in
-                                    particolare il mondo della UX/UI e infatti nel mio tempo libero sperimento con
-                                    strumenti di design e li applico anche a livello di
+                                    trasversali e a rimanere ispirato, in particolare il mondo dello UX/UI Designer e
+                                    infatti nel
+                                    mio tempo libero sperimento con strumenti di design come Figma e li applico anche a livello di
                                     codice.</strong></p>
                         </div>
                         <div class="pb-2">
@@ -34,8 +34,8 @@
                                     collaborare con gli altri e credere fermamente nel valore del lavoro di
                                     squadra. Sono tuttora convinto che le migliori soluzioni nascano dal confronto e
                                     dalla
-                                    condivisione di idee diverse, e mi impegno costantemente per contribuire al
-                                    successo del team con il mio entusiasmo e la mia dedizione.</strong></p>
+                                    condivisione di idee diverse, mi impegno a offrire idee innovative e supporto
+                                    concreto per raggiungere obiettivi comuni</strong></p>
                         </div>
                         <div class="pb-2">
                             <h2 class="presentation"><i class="fas fa-rocket"></i> Cosa mi motiva</h2>
