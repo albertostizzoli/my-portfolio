@@ -234,7 +234,7 @@ export default {
             img {
                 width: 400px;
                 border: 10px solid $primary-color;
-                border-radius: 20px;
+                border-radius: 25px;
             }
         }
     }
@@ -285,7 +285,7 @@ export default {
             height: 100%;
             background-color: $primary-color;
             backdrop-filter: blur(5px);
-            border-radius: 20px;
+            border-radius: 25px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -341,7 +341,7 @@ export default {
                 background-color: $secondary-color;
                 font-weight: 600;
                 font-size: 1.2rem;
-                border-radius: 20px;
+                border-radius: 25px;
 
                 &:hover {
                     scale: 1.2;

@@ -6,8 +6,6 @@
       <li class="me-3"><a href="https://www.linkedin.com/in/alberto-stizzoli-82a676260/"><i class="fa-brands fa-linkedin-in fa-3x"></i></a></li>
     </ul>
     <h2 class="text-white mb-5">©{{ currentYear }} Alberto Stizzoli</h2>
-    <h4 class="d-flex align-items-center text-white ms-5"><i class="fa-solid fa-location-dot me-2"></i> Verona, Italia</h4>
-    <h4 class="d-flex align-items-center text-white ms-5"><i class="fa-regular fa-envelope me-2"></i><a class="text-decoration-none text-white">albertostizzoli60@gmail.com</a></h4>
   </footer>
 </template>
 
