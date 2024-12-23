@@ -70,7 +70,7 @@ export default {
 @use '../assets/styles/partials/variables' as *;
 
 .info {
-    color: white;
+    color: $secondary-color;
     padding: 15rem 0;
 
     .show {
@@ -82,8 +82,8 @@ export default {
             font-weight: 600;
             padding: 0.5rem 3rem;
             background-color: $primary-color;
-            color: white;
-            border-radius: 5px;
+            color: $secondary-color;
+            border-radius: 25px;
         }
     }
 }
@@ -95,7 +95,7 @@ export default {
     letter-spacing: 3px;
     text-align: center;
     margin-bottom: 0;
-    color: white;
+    color: $secondary-color;
 }
 
 .image {
@@ -123,7 +123,7 @@ export default {
     .links,
     .program {
         margin: 0 0 7rem 0;
-        color: white;
+        color: $secondary-color;
 
 
         .paragraph {
@@ -143,8 +143,8 @@ export default {
                 font-size: 1.4rem;
                 font-weight: 600;
                 background-color: $primary-color;
-                color: white;
-                border-radius: 5px;
+                color: $secondary-color;
+                border-radius: 25px;
                 text-transform: uppercase;
             }
         }
@@ -160,9 +160,10 @@ export default {
                 font-size: 1.4rem;
                 font-weight: 600;
                 background-color: $primary-color;
-                color: white;
+                color: $secondary-color;
                 border-radius: 5px;
                 text-transform: uppercase;
+                border-radius: 25px;
             }
         }
 
@@ -172,21 +173,34 @@ export default {
             border-radius: 5px;
             font-weight: 600;
             margin-right: 1.5rem;
+            border-radius: 25px;
 
             &.site {
                 background-color: $primary-color;
-                color: black;
+                color: $secondary-color;
+
+                &:hover{
+                    background-color: $blue-color;
+                }
             }
 
             &.github {
-                background-color: $primary-color;
+                background-color: $blue-color;
                 color: white;
+
+                &:hover{
+                    background-color: $primary-color;
+                }
             }
 
             &.back {
                 background-color: transparent;
                 border: 2px solid $primary-color;
                 color: white;
+
+                &:hover{
+                    background-color: $blue-color;
+                }
             }
         }
     }
