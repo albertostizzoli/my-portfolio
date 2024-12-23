@@ -3,72 +3,82 @@
         <div class="row">
             <div class="col info">
                 <h1 class="intro">{{ project.title }}</h1>
-                <div class="show">
-                    <a href="#details" class="btn">Dettagli progetto</a>
-                </div>
             </div>
         </div>
         <!-- immagine del progetto -->
         <div class="image">
             <img :src="project.image" alt="image-detail">
         </div>
-        <div  id="details" class="content">
-            <!-- descrizione progetto-->
-            <div class="description">
+
+        <!-- Selettore tab -->
+        <div class="tab-selector">
+            <button 
+                v-for="tab in tabs" 
+                :key="tab.id" 
+                class="tab-button"
+                :class="{ active: activeTab === tab.id }"
+                @click="activeTab = tab.id">
+                {{ tab.label }}
+            </button>
+        </div>
+
+        <!-- Contenuto del tab -->
+        <div class="content">
+            <div v-if="activeTab === 'description'" class="description">
                 <h2 class="sub-title mt-5">Descrizione</h2>
                 <p class="paragraph">{{ project.description }}</p>
             </div>
-            <!-- tecnologie progetto-->
-            <div class="tools">
+            <div v-if="activeTab === 'technologies'" class="tools">
                 <h2 class="sub-title mt-5">Tecnologie</h2>
                 <div class="skills">
-                    <div class="single-skill" v-for="technology in project.skills" :key="technology">{{ technology }}
+                    <div class="single-skill" v-for="technology in project.skills" :key="technology">
+                        {{ technology }}
                     </div>
                 </div>
             </div>
-            <!-- tipo di progetto-->
-            <div class="program">
+            <div v-if="activeTab === 'type'" class="program">
                 <h2 class="sub-title mt-5">Tipo</h2>
                 <div class="type">
-                    <p class="single-type">{{ project.type }}</p>
+                    <button class="single-type">{{ project.type }}</button>
                 </div>
             </div>
-            <!-- link del progetto -->
-            <h2 class="sub-title mt-5 text-white">LINKS</h2>
-            <div class="links">
+            <div v-if="activeTab === 'links'" class="links">
+                <h2 class="sub-title mt-5 text-white">LINKS</h2>
                 <a :href="project.site" class="btn btn-sm site" v-if="project.site">Visualizza Progetto</a>
                 <a :href="project.link_github" class="btn btn-sm github">Github</a>
-                <router-link :to="{ name: 'home' }" class="btn btn-sm back">
-                    Indietro
-                </router-link>
+                <router-link :to="{ name: 'home' }" class="btn btn-sm back">Indietro</router-link>
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import { store } from '../store.js'
+import { store } from '../store.js';
+
 export default {
     data() {
         return {
             store,
-            projects: null,
-        }
+            project: null,
+            activeTab: 'description', // Tab attivo iniziale
+            tabs: [
+                { id: 'description', label: 'Descrizione' },
+                { id: 'technologies', label: 'Tecnologie' },
+                { id: 'type', label: 'Tipo' },
+                { id: 'links', label: 'Links' },
+            ],
+        };
     },
-    // Ciclo di vita del componente: metodo eseguito quando il componente è creato
     created() {
-        // Cerca un progetto nello store che abbia un ID corrispondente all'ID del parametro di route
         this.project = store.projects.find((p) => p.id == this.$route.params.id);
-        // Assegna il progetto trovato alla variabile 'project' del componente
-    }
-
-}
+    },
+};
 </script>
-
 
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
 
+/* Mantenendo il tuo stile originale */
 .info {
     color: $secondary-color;
     padding: 15rem 0;
@@ -125,7 +135,6 @@ export default {
         margin: 0 0 7rem 0;
         color: $secondary-color;
 
-
         .paragraph {
             font-size: 1.8rem;
             line-height: 1.7;
@@ -161,25 +170,24 @@ export default {
                 font-weight: 600;
                 background-color: $primary-color;
                 color: $secondary-color;
-                border-radius: 5px;
-                text-transform: uppercase;
                 border-radius: 25px;
+                text-transform: uppercase;
+                border: none;
             }
         }
 
         .btn {
             padding: 1rem 3rem;
             font-size: 1.4rem;
-            border-radius: 5px;
+            border-radius: 25px;
             font-weight: 600;
             margin-right: 1.5rem;
-            border-radius: 25px;
 
             &.site {
                 background-color: $primary-color;
                 color: $secondary-color;
 
-                &:hover{
+                &:hover {
                     background-color: $blue-color;
                 }
             }
@@ -188,7 +196,7 @@ export default {
                 background-color: $blue-color;
                 color: white;
 
-                &:hover{
+                &:hover {
                     background-color: $primary-color;
                 }
             }
@@ -198,10 +206,39 @@ export default {
                 border: 2px solid $primary-color;
                 color: white;
 
-                &:hover{
+                &:hover {
                     background-color: $blue-color;
                 }
             }
+        }
+    }
+}
+
+/* Stile aggiunto per il selettore dei tab */
+.tab-selector {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+
+    .tab-button {
+        padding: 1rem 2rem;
+        margin: 0 1rem;
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: $secondary-color;
+        background-color: $primary-color;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &.active {
+            background-color: $blue-color;
+            color: white;
+        }
+
+        &:hover {
+            background-color: lighten($primary-color, 10%);
         }
     }
 }
@@ -222,3 +259,4 @@ export default {
     }
 }
 </style>
+
