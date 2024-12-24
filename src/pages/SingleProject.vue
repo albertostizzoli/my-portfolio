@@ -3,42 +3,36 @@
         <div class="row">
             <div class="col info">
                 <div class="position-relative">
-                    <!-- pulsante "Indietro" posizionato a sinistra con position-absolute (Bootstrap) -->
                     <router-link :to="{ name: 'home' }"
                         class="btn btn-sm back position-absolute start-0 top-50 translate-middle-y behind">
                         <i class="fa-solid fa-arrow-left me-2"></i>Indietro
                     </router-link>
-                    <!-- titolo del progetto -->
                     <h1 class="intro">{{ project.title }}</h1>
                 </div>
             </div>
         </div>
-        <!-- immagine del progetto -->
         <div class="image">
             <img :src="project.image" alt="image-detail">
         </div>
 
-        <!-- Selettore tab -->
         <div class="tab-selector">
             <div class="tab-background">
-                <!-- Indicatore visivo della scheda attiva -->
                 <div class="tab-indicator" :style="{ left: indicatorLeft, width: indicatorWidth }"></div>
-                <button v-for="(tab, index) in tabs" :key="tab.id" class="tab-button"
-                    :class="{ active: activeTab === tab.id }" @click="selectTab(tab.id, index)">
-                    {{ tab.label }}
-                </button>
+                <div class="d-flex justify-content-between flex-wrap">
+                    <button v-for="(tab, index) in tabs" :key="tab.id" class="tab-button"
+                        :class="{ active: activeTab === tab.id }" @click="selectTab(tab.id, index)">
+                        {{ tab.label }}
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Contenuto del tab -->
     <div class="content">
-        <!-- descrizione -->
         <div v-if="activeTab === 'description'" class="description">
             <h2 class="sub-title mt-5">Descrizione</h2>
             <p class="paragraph">{{ project.description }}</p>
         </div>
-        <!-- tecnologie -->
         <div v-if="activeTab === 'technologies'" class="tools">
             <h2 class="sub-title mt-5">Tecnologie</h2>
             <div class="skills">
@@ -47,14 +41,12 @@
                 </div>
             </div>
         </div>
-        <!-- tipo di progetto -->
         <div v-if="activeTab === 'type'" class="program">
             <h2 class="sub-title mt-5">Tipo</h2>
             <div class="type">
                 <button class="single-type">{{ project.type }}</button>
             </div>
         </div>
-        <!-- links -->
         <div v-if="activeTab === 'links'" class="links">
             <h2 class="sub-title mt-5 text-white">Links</h2>
             <a :href="project.site" class="btn btn-sm site" v-if="project.site"><i
@@ -124,7 +116,8 @@ export default {
 
 .info {
     color: $secondary-color;
-    padding: 9rem 0;
+    padding-top: 9rem;
+    padding-bottom: 4rem;
 
     .btn {
         padding: 1rem 3rem;
@@ -330,8 +323,18 @@ export default {
         width: 100%;
     }
 
-    .tab-selector {
-        width: 100%;
+    .tab-selector .tab-background {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .tab-button {
+        width: 100%;  /* Rende ogni tab un pulsante che occupa tutta la larghezza */
+        text-align: center;  /* Centra il testo nei pulsanti */
+        margin-bottom: 5px;  /* Distanza tra i tab */
+    }
+    .tab-indicator {
+        width: 100%;  /* Indica che l'indicatore deve estendersi su tutta la larghezza */
+        left: 0;  /* Centra l'indicatore */
     }
 }
 </style>
