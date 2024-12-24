@@ -2,8 +2,15 @@
     <div class="container" v-if="project">
         <div class="row">
             <div class="col info">
-                <!-- titolo del progetto -->
-                <h1 class="intro">{{ project.title }}</h1>
+                <div class="position-relative">
+                    <!-- pulsante "Indietro" posizionato a sinistra con position-absolute (Bootstrap) -->
+                    <router-link :to="{ name: 'home' }"
+                        class="btn btn-sm back position-absolute start-0 top-50 translate-middle-y">
+                        <i class="fa-solid fa-arrow-left me-2"></i>Indietro
+                    </router-link>
+                    <!-- titolo del progetto -->
+                    <h1 class="intro">{{ project.title }}</h1>
+                </div>
             </div>
         </div>
         <!-- immagine del progetto -->
@@ -52,7 +59,6 @@
             <h2 class="sub-title mt-5 text-white">LINKS</h2>
             <a :href="project.site" class="btn btn-sm site" v-if="project.site"><i class="fas fa-display me-2"></i>Visualizza Progetto</a>
             <a :href="project.link_github" class="btn btn-sm github"><i class="fa-brands fa-github me-2"></i>GitHub</a>
-            <router-link :to="{ name: 'home' }" class="btn btn-sm back"><i class="fa-solid fa-arrow-left me-2"></i>Indietro</router-link>
         </div>
     </div>
 </template>
@@ -117,17 +123,21 @@ export default {
     color: $secondary-color;
     padding: 9rem 0;
 
-    .show {
-        margin-top: 2rem;
-        text-align: center;
+    .btn {
+        padding: 1rem 3rem;
+        font-size: 1.4rem;
+        border-radius: 25px;
+        font-weight: 600;
+        margin-right: 1.5rem;
 
-        .btn {
-            font-size: 2rem;
-            font-weight: 600;
-            padding: 0.5rem 3rem;
-            background-color: $primary-color;
+        &.back {
+            background-color: transparent;
+            border: 2px solid $primary-color;
             color: $secondary-color;
-            border-radius: 25px;
+
+            &:hover {
+                background-color: $primary-color;
+            }
         }
     }
 }
@@ -235,16 +245,6 @@ export default {
                     border: 2px solid $primary-color;
                 }
             }
-
-            &.back {
-                background-color: transparent;
-                border: 2px solid $primary-color;
-                color: white;
-
-                &:hover {
-                    background-color: $primary-color;
-                }
-            }
         }
     }
 }
@@ -287,7 +287,7 @@ export default {
         transition: color 0.3s;
 
         &.active {
-            color: $secondary-color; 
+            color: $secondary-color;
         }
     }
 }
