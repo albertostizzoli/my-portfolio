@@ -1,59 +1,68 @@
 <template>
     <div class="container" v-if="project">
         <div class="row">
-            <div class="col info">
-                <div class="position-relative">
+            <div class="col">
+                <div class="position-relative info">
+                    <!-- Bottone per tornare indietro (sparisce a max-width: 576px)-->
                     <router-link :to="{ name: 'home' }"
                         class="btn btn-sm back position-absolute start-0 top-50 translate-middle-y behind">
                         <i class="fa-solid fa-arrow-left me-2"></i>Indietro
                     </router-link>
+                    <!-- titolo del progetto -->
                     <h1 class="intro">{{ project.title }}</h1>
                 </div>
-            </div>
-        </div>
-        <div class="image">
-            <img :src="project.image" alt="image-detail">
-        </div>
-
-        <div class="tab-selector">
-            <div class="tab-background">
-                <div class="tab-indicator" :style="{ left: indicatorLeft, width: indicatorWidth }"></div>
-                <div class="d-flex justify-content-between flex-wrap">
-                    <button v-for="(tab, index) in tabs" :key="tab.id" class="tab-button"
-                        :class="{ active: activeTab === tab.id }" @click="selectTab(tab.id, index)">
-                        {{ tab.label }}
-                    </button>
+                <div class="image">
+                    <!-- immagine del progetto -->
+                    <img :src="project.image" alt="image-detail">
+                </div>
+                <!-- Selettore di Tab -->
+                <div class="tab-selector">
+                    <div class="tab-background">
+                        <div class="tab-indicator" :style="{ left: indicatorLeft, width: indicatorWidth }"></div>
+                        <div class="d-flex justify-content-between flex-wrap">
+                            <button v-for="(tab, index) in tabs" :key="tab.id" class="tab-button"
+                                :class="{ active: activeTab === tab.id }" @click="selectTab(tab.id, index)">
+                                {{ tab.label }}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contenuto del Tab -->
+                <div class="content">
+                    <!-- descrizione -->
+                    <div v-if="activeTab === 'description'" class="description">
+                        <h2 class="sub-title mt-5">Descrizione</h2>
+                        <p class="paragraph">{{ project.description }}</p>
+                    </div>
+                    <!-- tecnologie-->
+                    <div v-if="activeTab === 'technologies'" class="tools">
+                        <h2 class="sub-title mt-5">Tecnologie</h2>
+                        <div class="skills">
+                            <div class="single-skill" v-for="technology in project.skills" :key="technology">
+                                {{ technology }}
+                            </div>
+                        </div>
+                    </div>
+                    <!-- tipo di progetto -->
+                    <div v-if="activeTab === 'type'" class="program">
+                        <h2 class="sub-title mt-5">Tipo</h2>
+                        <div class="type">
+                            <button class="single-type">{{ project.type }}</button>
+                        </div>
+                    </div>
+                    <!-- links -->
+                    <div v-if="activeTab === 'links'" class="links">
+                        <h2 class="sub-title mt-5 text-white">Links</h2>
+                        <a :href="project.site" class="btn btn-sm site" v-if="project.site"><i
+                                class="fas fa-display me-2"></i>Visualizza Progetto</a>
+                        <a :href="project.link_github" class="btn btn-sm github"><i
+                                class="fa-brands fa-github me-2"></i>GitHub</a>
+                        <!-- Bottone per tornare indietro (sparisce a min-width: 768px)-->
+                        <router-link :to="{ name: 'home' }" class="btn btn-sm back behind-2"> <i
+                                class="fa-solid fa-arrow-left me-2"></i>Indietro</router-link>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-
-    <div class="content">
-        <div v-if="activeTab === 'description'" class="description">
-            <h2 class="sub-title mt-5">Descrizione</h2>
-            <p class="paragraph">{{ project.description }}</p>
-        </div>
-        <div v-if="activeTab === 'technologies'" class="tools">
-            <h2 class="sub-title mt-5">Tecnologie</h2>
-            <div class="skills">
-                <div class="single-skill" v-for="technology in project.skills" :key="technology">
-                    {{ technology }}
-                </div>
-            </div>
-        </div>
-        <div v-if="activeTab === 'type'" class="program">
-            <h2 class="sub-title mt-5">Tipo</h2>
-            <div class="type">
-                <button class="single-type">{{ project.type }}</button>
-            </div>
-        </div>
-        <div v-if="activeTab === 'links'" class="links">
-            <h2 class="sub-title mt-5 text-white">Links</h2>
-            <a :href="project.site" class="btn btn-sm site" v-if="project.site"><i
-                    class="fas fa-display me-2"></i>Visualizza Progetto</a>
-            <a :href="project.link_github" class="btn btn-sm github"><i class="fa-brands fa-github me-2"></i>GitHub</a>
-            <router-link :to="{ name: 'home' }" class="btn btn-sm back behind-2"> <i
-                    class="fa-solid fa-arrow-left me-2"></i>Indietro</router-link>
         </div>
     </div>
 </template>
@@ -117,7 +126,7 @@ export default {
 .info {
     color: $secondary-color;
     padding-top: 9rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
 
     .btn {
         padding: 1rem 3rem;
@@ -289,7 +298,7 @@ export default {
         background-color: transparent;
         border: none;
         cursor: pointer;
-        z-index: 1000; // Sopra l'indicatore
+        z-index: 1000;
         transition: color 0.3s;
 
         &.active {
@@ -298,8 +307,8 @@ export default {
     }
 }
 
-@media screen and (min-width: 768px){
-    .behind-2{
+@media screen and (min-width: 768px) {
+    .behind-2 {
         display: none;
     }
 }
@@ -307,6 +316,11 @@ export default {
 @media screen and (max-width: 576px) {
     .behind {
         display: none;
+    }
+
+    .content {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     .content .links {
@@ -327,14 +341,16 @@ export default {
         padding-left: 0;
         padding-right: 0;
     }
+
     .tab-button {
-        width: 100%;  /* Rende ogni tab un pulsante che occupa tutta la larghezza */
-        text-align: center;  /* Centra il testo nei pulsanti */
-        margin-bottom: 5px;  /* Distanza tra i tab */
+        width: 100%;
+        text-align: center;
+        margin-bottom: 5px;
     }
+
     .tab-indicator {
-        width: 100%;  /* Indica che l'indicatore deve estendersi su tutta la larghezza */
-        left: 0;  /* Centra l'indicatore */
+        width: 100%;
+        left: 0;
     }
 }
 </style>

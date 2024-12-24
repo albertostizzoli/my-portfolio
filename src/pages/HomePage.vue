@@ -17,36 +17,43 @@
                     <div class="col-lg-7 ps-lg-3 col-md-12 pt-3">
                         <!-- presentazione -->
                         <div class="pb-2">
-                            <h2 class="presentation"><i class="fas fa-road"></i>Il mio percorso</h2>
-                            <p class="paragraph"><strong>Ho iniziato ad avvicinarmi al mondo della programmazione spinto
-                                    dalla pura
-                                    curiosità, ma con il tempo mi sono appassionato nel creare esperienze digitali
-                                    che siano funzionali, intuitive e visivamente accattivanti. Oltre alla
-                                    programmazione, amo esplorare passioni che mi aiutano a sviluppare competenze
-                                    trasversali e a rimanere ispirato, in particolare il mondo dello UX/UI Designer e
-                                    infatti nel
-                                    mio tempo libero sperimento con strumenti di design come Figma e li applico anche a livello di
-                                    codice.</strong></p>
+                            <h2 class="presentation">🚧 Il mio percorso</h2>
+                            <p class="paragraph">
+                                <strong>
+                                    Ho iniziato ad avvicinarmi al mondo della programmazione spinto dalla pura
+                                    curiosità, ma con il tempo mi sono appassionato nel creare esperienze digitali che
+                                    siano funzionali, intuitive e visivamente accattivanti. Oltre alla programmazione,
+                                    amo esplorare passioni che mi aiutano a sviluppare competenze trasversali e a
+                                    rimanere ispirato, in particolare il mondo dello UX/UI Designer e infatti nel mio
+                                    tempo libero sperimento con strumenti di design come Figma e li applico anche a
+                                    livello di codice.
+                                </strong>
+                            </p>
                         </div>
                         <div class="pb-2">
-                            <h2 class="presentation"><i class="fas fa-handshake"></i>Il lavoro di squadra</h2>
-                            <p class="paragraph"><strong>Nel corso in Web Development di Boolean Careers ho imparato a
-                                    collaborare con gli altri e credere fermamente nel valore del lavoro di
-                                    squadra. Sono tuttora convinto che le migliori soluzioni nascano dal confronto e
-                                    dalla
-                                    condivisione di idee diverse, mi impegno a offrire idee innovative e supporto
-                                    concreto per raggiungere obiettivi comuni</strong></p>
+                            <h2 class="presentation">🤝 Il lavoro di squadra</h2>
+                            <p class="paragraph">
+                                <strong>
+                                    Nel corso in Web Development di Boolean Careers ho imparato a collaborare con gli
+                                    altri e credere fermamente nel valore del lavoro di squadra. Sono tuttora convinto
+                                    che le migliori soluzioni nascano dal confronto e dalla condivisione di idee
+                                    diverse, mi impegno a offrire idee innovative e supporto concreto per raggiungere
+                                    obiettivi comuni.
+                                </strong>
+                            </p>
                         </div>
                         <div class="pb-2">
-                            <h2 class="presentation"><i class="fas fa-rocket"></i> Cosa mi motiva</h2>
-                            <p class="paragraph"><strong>Quello che amo dello sviluppo web è la possibilità di
-                                    trasformare idee in
-                                    realtà. La
-                                    soddisfazione di vedere un'applicazione prendere forma e funzionare esattamente
-                                    come
+                            <h2 class="presentation">🚀Cosa mi motiva</h2>
+                            <p class="paragraph">
+                                <strong>
+                                    Quello che amo dello sviluppo web è la possibilità di trasformare idee in realtà. La
+                                    soddisfazione di vedere un'applicazione prendere forma e funzionare esattamente come
                                     previsto è ciò che mi spinge a migliorarmi ogni giorno. Credo che ogni problema
-                                    abbia una soluzione creativa, e mi impegno sempre a trovarla</strong></p>
+                                    abbia una soluzione creativa, e mi impegno sempre a trovarla.
+                                </strong>
+                            </p>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -213,12 +220,6 @@ export default {
 
         .presentation {
             font-size: 2rem;
-            text-decoration: underline;
-        }
-
-        h2.presentation i {
-            margin-right: 8px;
-            color: $primary-color;
         }
 
         .paragraph {
