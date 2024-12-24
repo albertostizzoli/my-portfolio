@@ -5,7 +5,7 @@
                 <div class="position-relative">
                     <!-- pulsante "Indietro" posizionato a sinistra con position-absolute (Bootstrap) -->
                     <router-link :to="{ name: 'home' }"
-                        class="btn btn-sm back position-absolute start-0 top-50 translate-middle-y">
+                        class="btn btn-sm back position-absolute start-0 top-50 translate-middle-y behind">
                         <i class="fa-solid fa-arrow-left me-2"></i>Indietro
                     </router-link>
                     <!-- titolo del progetto -->
@@ -56,9 +56,12 @@
         </div>
         <!-- links -->
         <div v-if="activeTab === 'links'" class="links">
-            <h2 class="sub-title mt-5 text-white">LINKS</h2>
-            <a :href="project.site" class="btn btn-sm site" v-if="project.site"><i class="fas fa-display me-2"></i>Visualizza Progetto</a>
+            <h2 class="sub-title mt-5 text-white">Links</h2>
+            <a :href="project.site" class="btn btn-sm site" v-if="project.site"><i
+                    class="fas fa-display me-2"></i>Visualizza Progetto</a>
             <a :href="project.link_github" class="btn btn-sm github"><i class="fa-brands fa-github me-2"></i>GitHub</a>
+            <router-link :to="{ name: 'home' }" class="btn btn-sm back behind-2"> <i
+                    class="fa-solid fa-arrow-left me-2"></i>Indietro</router-link>
         </div>
     </div>
 </template>
@@ -245,6 +248,16 @@ export default {
                     border: 2px solid $primary-color;
                 }
             }
+
+            &.back {
+                background-color: transparent;
+                border: 2px solid $primary-color;
+                color: $secondary-color;
+
+                &:hover {
+                    background-color: $primary-color;
+                }
+            }
         }
     }
 }
@@ -292,8 +305,17 @@ export default {
     }
 }
 
+@media screen and (min-width: 768px){
+    .behind-2{
+        display: none;
+    }
+}
 
 @media screen and (max-width: 576px) {
+    .behind {
+        display: none;
+    }
+
     .content .links {
         display: flex;
         flex-direction: column;
