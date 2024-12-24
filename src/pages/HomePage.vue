@@ -102,7 +102,7 @@
                             <div class="preview" :style="{ 'background-image': 'url(./' + item.image + ')' }"></div>
                             <div class="project">
                                 <router-link :to="{ name: 'project', params: { id: item.id } }" class="btn btn-sm">
-                                    Continua a leggere
+                                    Scopri di più <i class="fa-solid fa-arrow-right ms-2"></i>
                                 </router-link>
                             </div>
                         </div>
