@@ -2,10 +2,9 @@
     <div class="container" v-if="project">
         <div class="row">
             <div class="col">
-                <div class="position-relative info">
+                <div class="info">
                     <!-- Bottone per tornare indietro (sparisce a max-width: 576px)-->
-                    <router-link :to="{ name: 'home' }"
-                        class="btn btn-sm back position-absolute start-0 top-50 translate-middle-y behind">
+                    <router-link :to="{ name: 'home' }" class="btn btn-sm back translate-middle-y behind">
                         <i class="fa-solid fa-arrow-left me-2"></i>Indietro
                     </router-link>
                     <!-- titolo del progetto -->
@@ -127,6 +126,7 @@ export default {
     color: $secondary-color;
     padding-top: 9rem;
     padding-bottom: 2rem;
+    position: relative;
 
     .btn {
         padding: 1rem 3rem;
@@ -134,6 +134,9 @@ export default {
         border-radius: 25px;
         font-weight: 600;
         margin-right: 1.5rem;
+        position: absolute;
+        bottom: 16px;
+        left: 70px;
 
         &.back {
             background-color: transparent;
