@@ -50,11 +50,9 @@
         <!-- links -->
         <div v-if="activeTab === 'links'" class="links">
             <h2 class="sub-title mt-5 text-white">LINKS</h2>
-            <a :href="project.site" class="btn btn-sm site" v-if="project.site"><i
-                    class="fas fa-display me-2"></i>Visualizza Progetto</a>
+            <a :href="project.site" class="btn btn-sm site" v-if="project.site"><i class="fas fa-display me-2"></i>Visualizza Progetto</a>
             <a :href="project.link_github" class="btn btn-sm github"><i class="fa-brands fa-github me-2"></i>GitHub</a>
-            <router-link :to="{ name: 'home' }" class="btn btn-sm back"><i
-                    class="fa-solid fa-arrow-left me-2"></i>Indietro</router-link>
+            <router-link :to="{ name: 'home' }" class="btn btn-sm back"><i class="fa-solid fa-arrow-left me-2"></i>Indietro</router-link>
         </div>
     </div>
 </template>
@@ -65,6 +63,7 @@ import { store } from '../store.js';
 export default {
     data() {
         return {
+            store,
             project: null, // Oggetto che conterrà i dati del progetto selezionato
             activeTab: 'description', // Tab attivo iniziale (di default)
             indicatorLeft: '0px', // Posizione orizzontale dell'indicatore iniziale
