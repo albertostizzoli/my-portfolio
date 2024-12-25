@@ -147,7 +147,7 @@ export const store = reactive({
 
         {
             id: 6,
-            title: "Restaurant",
+            title: "Diner & Cafè",
             image: "/img/Restaurant.png",
             description: "Progetto di un ristorante sviluppato utilizzando React e Bootstrap, che presenta un menù con varie categorie di piatti, come Hamburger, Pizze e Desserts. La pagina iniziale introduce l'utente con una breve presentazione del ristorante e offre un menù interattivo. Gli utenti possono cliccare sui bottoni per visualizzare i diversi tipi di piatti, suddivisi in categorie come Primi Piatti, Secondi, Hamburger, Pizze, Desserts e Bevande. Il progetto sfrutta React per la gestione dinamica dello stato dell'interfaccia e Bootstrap per il design responsivo, garantendo una navigazione fluida e un'esperienza utente ottimale.",
             skills: ["REACT", "BOOTSTRAP"],

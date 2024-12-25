@@ -9,7 +9,7 @@
                 <!-- Titolo del progetto -->
                 <h1 class="intro">{{ project.title }}</h1>
             </div>
-            <div class="col-12 col-md">
+            <div class="col-12 col-md me-2">
                 <div class="image">
                     <!-- Immagine del progetto -->
                     <img :src="project.image" alt="image-detail">
@@ -32,12 +32,10 @@
                 <div class="content">
                     <!-- Descrizione -->
                     <div v-if="activeTab === 'description'" class="description">
-                        <h2 class="sub-title mt-5">Descrizione</h2>
                         <p class="paragraph">{{ project.description }}</p>
                     </div>
                     <!-- Tecnologie -->
                     <div v-if="activeTab === 'technologies'" class="tools">
-                        <h2 class="sub-title mt-5">Tecnologie</h2>
                         <div class="skills">
                             <div class="single-skill" v-for="technology in project.skills" :key="technology">
                                 {{ technology }}
@@ -46,14 +44,12 @@
                     </div>
                     <!-- Tipo di progetto -->
                     <div v-if="activeTab === 'type'" class="program">
-                        <h2 class="sub-title mt-5">Tipo</h2>
                         <div class="type">
                             <button class="single-type">{{ project.type }}</button>
                         </div>
                     </div>
                     <!-- Links -->
                     <div v-if="activeTab === 'links'" class="links">
-                        <h2 class="sub-title mt-5 text-white">Links</h2>
                         <a :href="project.site" class="btn btn-sm site" v-if="project.site"><i
                                 class="fas fa-display me-2"></i>Visualizza Progetto</a>
                         <a :href="project.link_github" class="btn btn-sm github"><i
@@ -125,19 +121,18 @@ export default {
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
 
-
+/*-- BOTTONE INDIETRO E TITOLO PROGETTO --*/
 .info {
     color: $secondary-color;
-    padding-top: 9rem;
+    padding-top: 8rem;
     padding-bottom: 2rem;
     position: relative;
 
     .btn {
-        padding: 1rem 3rem;
+        padding: 1rem 2rem;
         font-size: 1.4rem;
         border-radius: 25px;
         font-weight: 600;
-        margin-right: 1.5rem;
         position: absolute;
         bottom: 16px;
         left: 70px;
@@ -152,125 +147,32 @@ export default {
             }
         }
     }
+
+    .intro {
+        font-size: 6rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        text-align: center;
+        margin-bottom: 0;
+        color: $secondary-color;
+    }
 }
 
-.intro {
-    font-size: 6rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    text-align: center;
-    margin-bottom: 0;
-    color: $secondary-color;
-}
-
+/*-- IMMAGINE PROGETTO --*/
 .image img {
     width: 100%;
+    height: 100%;
+    padding-top: 30px;
 }
 
-.content {
-    margin: auto;
-    padding-bottom: 3rem;
-    max-width: 70rem;
-
-    .sub-title {
-        margin-bottom: 3rem;
-        font-weight: 600;
-        font-size: 2.5rem;
-    }
-
-    .description,
-    .tools,
-    .links,
-    .program {
-        margin: 0 0 7rem 0;
-        color: $secondary-color;
-
-        .paragraph {
-            font-size: 1.8rem;
-            line-height: 1.7;
-            margin-bottom: 2rem;
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-
-            .single-skill {
-                padding: 1rem 2rem;
-                margin-bottom: 1rem;
-                margin-right: 1rem;
-                font-size: 1.4rem;
-                font-weight: 600;
-                background-color: $primary-color;
-                color: $secondary-color;
-                border-radius: 25px;
-                text-transform: uppercase;
-            }
-        }
-
-        .type {
-            display: flex;
-            flex-wrap: wrap;
-
-            .single-type {
-                padding: 1rem 2rem;
-                margin-bottom: 1rem;
-                margin-right: 1rem;
-                font-size: 1.4rem;
-                font-weight: 600;
-                background-color: $primary-color;
-                color: $secondary-color;
-                border-radius: 25px;
-                text-transform: uppercase;
-                border: none;
-            }
-        }
-
-        .btn {
-            padding: 1rem 3rem;
-            font-size: 1.4rem;
-            border-radius: 25px;
-            font-weight: 600;
-            margin-right: 1.5rem;
-
-            &.site {
-                background-color: $primary-color;
-                color: $secondary-color;
-
-                &:hover {
-                    background-color: $blue-color;
-                }
-            }
-
-            &.github {
-                background-color: $blue-color;
-                color: white;
-
-                &:hover {
-                    background-color: transparent;
-                    border: 2px solid $primary-color;
-                }
-            }
-
-            &.back {
-                background-color: transparent;
-                border: 2px solid $primary-color;
-                color: $secondary-color;
-
-                &:hover {
-                    background-color: $primary-color;
-                }
-            }
-        }
-    }
-}
-
-/*selettore dei tab */
+/*-- SELETTORE TAB-- */
 .tab-selector {
     display: flex;
     justify-content: center;
     margin: 2rem 0;
+    width: 100%;
+    padding: 0;
 
     .tab-background {
         position: relative;
@@ -284,10 +186,9 @@ export default {
             position: absolute;
             bottom: 0;
             height: 100%;
-            background-color: lighten($primary-color, 10%);
+            background-color: lighten($primary-color, 20%);
             border-radius: 25px;
             transition: left 0.3s ease, width 0.3s ease;
-
         }
     }
 
@@ -309,6 +210,107 @@ export default {
     }
 }
 
+/*-- CONTENUTO DEL TAB --*/
+.content {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .description,
+    .tools,
+    .links,
+    .program {
+        color: $secondary-color;
+        text-align: center;
+
+        .paragraph {
+            font-size: 1.4rem;
+            line-height: 1.7;
+            text-align: justify;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .single-skill {
+                padding: 1rem 2rem;
+                margin-bottom: 1rem;
+                margin-right: 1rem;
+                font-size: 1.4rem;
+                font-weight: 600;
+                background-color: $primary-color;
+                color: $secondary-color;
+                border-radius: 25px;
+                text-transform: uppercase;
+            }
+        }
+
+        .type {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            .single-type {
+                padding: 1rem 2rem;
+                margin-bottom: 1rem;
+                margin-right: 1rem;
+                font-size: 1.4rem;
+                font-weight: 600;
+                background-color: $primary-color;
+                color: $secondary-color;
+                border-radius: 25px;
+                text-transform: uppercase;
+                border: none;
+            }
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            font-size: 1.4rem;
+            border-radius: 25px;
+            font-weight: 600;
+            margin-right: 1.5rem;
+
+            &.site {
+                background-color: $primary-color;
+                color: $secondary-color;
+
+                &:hover {
+                    background-color: $blue-color;
+                }
+            }
+
+            &.github {
+                background-color: transparent;
+                color: white;
+                border: 2px solid $primary-color;
+
+                &:hover {
+                    background-color: $blue-color;
+                    border: none;
+                }
+            }
+
+            &.back {
+                background-color: transparent;
+                border: 2px solid $primary-color;
+                color: $secondary-color;
+
+                &:hover {
+                    background-color: $primary-color;
+                }
+            }
+        }
+    }
+}
+
+/*-- MEDIA QUERY --*/
 @media screen and (min-width: 768px) {
     .behind-2 {
         display: none;
@@ -337,22 +339,6 @@ export default {
 
     .image img {
         width: 100%;
-    }
-
-    .tab-selector .tab-background {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .tab-button {
-        width: 100%;
-        text-align: center;
-        margin-bottom: 5px;
-    }
-
-    .tab-indicator {
-        width: 100%;
-        left: 0;
     }
 }
 </style>

@@ -19,7 +19,6 @@
                         <div class="pb-2">
                             <h2 class="presentation">🌟 Il mio percorso</h2>
                             <p class="paragraph">
-                                <strong>
                                     Ho iniziato ad avvicinarmi al mondo della programmazione spinto dalla pura
                                     curiosità, ma con il tempo mi sono appassionato nel creare esperienze digitali che
                                     siano funzionali, intuitive e visivamente accattivanti. Oltre alla programmazione,
@@ -27,30 +26,25 @@
                                     rimanere ispirato, in particolare il mondo dello UX/UI Designer e infatti nel mio
                                     tempo libero sperimento con strumenti di design come Figma e li applico anche a
                                     livello di codice.
-                                </strong>
                             </p>
                         </div>
-                        <div class="pb-2">
+                        <div class="pb-3">
                             <h2 class="presentation">🤝 Il lavoro di squadra</h2>
                             <p class="paragraph">
-                                <strong>
                                     Nel corso in Web Development di Boolean Careers ho imparato a collaborare con gli
                                     altri e credere fermamente nel valore del lavoro di squadra. Sono tuttora convinto
                                     che le migliori soluzioni nascano dal confronto e dalla condivisione di idee
                                     diverse, mi impegno a offrire idee innovative e supporto concreto per raggiungere
                                     obiettivi comuni.
-                                </strong>
                             </p>
                         </div>
-                        <div class="pb-2">
+                        <div class="pb-3">
                             <h2 class="presentation">🚀Cosa mi motiva</h2>
                             <p class="paragraph">
-                                <strong>
                                     Quello che amo dello sviluppo web è la possibilità di trasformare idee in realtà. La
                                     soddisfazione di vedere un'applicazione prendere forma e funzionare esattamente come
                                     previsto è ciò che mi spinge a migliorarmi ogni giorno. Credo che ogni problema
                                     abbia una soluzione creativa, e mi impegno sempre a trovarla.
-                                </strong>
                             </p>
                         </div>
 
@@ -224,6 +218,9 @@ export default {
 
         .paragraph {
             font-size: 1.3rem;
+            text-align: justify;
+            margin: 0 auto;
+            max-width: 800px;
         }
 
         .image {
@@ -245,7 +242,9 @@ export default {
         color: $secondary-color;
 
         .description {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
+            text-align: justify;
+            margin: 0 auto;
 
             &.bold {
                 font-weight: 700;
@@ -355,6 +354,7 @@ export default {
     }
 }
 
+/*-- MEDIA QUERY --*/
 @media screen and (max-width:991px) {
     .full-content {
         padding: 0 50px;

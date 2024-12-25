@@ -94,17 +94,18 @@ export default {
 @use '../assets/styles/partials/variables' as *;
 
 header {
-    height: 80px;
+    height: 60px;
     width: 100%;
     backdrop-filter: blur(5px);
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     position: fixed;
     top: 0;
     z-index: 1000;
     
     nav {
+        margin-top: 15px;
         width: 90%;
         display: flex;
         align-items: center;
@@ -161,12 +162,12 @@ header {
                         color: $secondary-color;
 
                         &:hover {
-                            color: $blue-color;
+                            color: $primary-color;
                         }
                     }
 
                     .index {
-                        color: $primary-color;
+                        color: $blue-color;
                     }
                 }
             }
@@ -196,7 +197,7 @@ header {
                     color: $secondary-color;
 
                     &:hover {
-                        color: $blue-color;
+                        color: $primary-color;
                     }
                 }
 
