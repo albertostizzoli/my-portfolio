@@ -4,7 +4,7 @@
         <section id="home" class="content">
             <p class="hello">Mi chiamo</p>
             <h1 class="name">Alberto Stizzoli</h1>
-            <p class="job">Sono un Web & Software Developer</p>
+            <p class="job">e sono un Web Developer</p>
         </section>
         <!-- chi sono -->
         <section id="about-me">
@@ -17,7 +17,7 @@
                     <div class="col-lg-7 ps-lg-3 col-md-12 pt-3">
                         <!-- presentazione -->
                         <div class="pb-2">
-                            <h2 class="presentation">🚧 Il mio percorso</h2>
+                            <h2 class="presentation">🌟 Il mio percorso</h2>
                             <p class="paragraph">
                                 <strong>
                                     Ho iniziato ad avvicinarmi al mondo della programmazione spinto dalla pura

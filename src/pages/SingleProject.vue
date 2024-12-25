@@ -1,19 +1,21 @@
 <template>
     <div class="container" v-if="project">
-        <div class="row">
-            <div class="col">
-                <div class="info">
-                    <!-- Bottone per tornare indietro (sparisce a max-width: 576px)-->
-                    <router-link :to="{ name: 'home' }" class="btn btn-sm back translate-middle-y behind">
-                        <i class="fa-solid fa-arrow-left me-2"></i>Indietro
-                    </router-link>
-                    <!-- titolo del progetto -->
-                    <h1 class="intro">{{ project.title }}</h1>
-                </div>
+        <div class="row flex-column flex-md-row">
+            <div class="info">
+                <!-- Bottone per tornare indietro (sparisce a max-width: 576px) -->
+                <router-link :to="{ name: 'home' }" class="btn btn-sm back translate-middle-y behind">
+                    <i class="fa-solid fa-arrow-left me-2"></i>Indietro
+                </router-link>
+                <!-- Titolo del progetto -->
+                <h1 class="intro">{{ project.title }}</h1>
+            </div>
+            <div class="col-12 col-md">
                 <div class="image">
-                    <!-- immagine del progetto -->
+                    <!-- Immagine del progetto -->
                     <img :src="project.image" alt="image-detail">
                 </div>
+            </div>
+            <div class="col-12 col-md">
                 <!-- Selettore di Tab -->
                 <div class="tab-selector">
                     <div class="tab-background">
@@ -28,12 +30,12 @@
                 </div>
                 <!-- Contenuto del Tab -->
                 <div class="content">
-                    <!-- descrizione -->
+                    <!-- Descrizione -->
                     <div v-if="activeTab === 'description'" class="description">
                         <h2 class="sub-title mt-5">Descrizione</h2>
                         <p class="paragraph">{{ project.description }}</p>
                     </div>
-                    <!-- tecnologie-->
+                    <!-- Tecnologie -->
                     <div v-if="activeTab === 'technologies'" class="tools">
                         <h2 class="sub-title mt-5">Tecnologie</h2>
                         <div class="skills">
@@ -42,29 +44,31 @@
                             </div>
                         </div>
                     </div>
-                    <!-- tipo di progetto -->
+                    <!-- Tipo di progetto -->
                     <div v-if="activeTab === 'type'" class="program">
                         <h2 class="sub-title mt-5">Tipo</h2>
                         <div class="type">
                             <button class="single-type">{{ project.type }}</button>
                         </div>
                     </div>
-                    <!-- links -->
+                    <!-- Links -->
                     <div v-if="activeTab === 'links'" class="links">
                         <h2 class="sub-title mt-5 text-white">Links</h2>
                         <a :href="project.site" class="btn btn-sm site" v-if="project.site"><i
                                 class="fas fa-display me-2"></i>Visualizza Progetto</a>
                         <a :href="project.link_github" class="btn btn-sm github"><i
                                 class="fa-brands fa-github me-2"></i>GitHub</a>
-                        <!-- Bottone per tornare indietro (sparisce a min-width: 768px)-->
-                        <router-link :to="{ name: 'home' }" class="btn btn-sm back behind-2"> <i
-                                class="fa-solid fa-arrow-left me-2"></i>Indietro</router-link>
+                        <!-- Bottone per tornare indietro (sparisce a min-width: 768px) -->
+                        <router-link :to="{ name: 'home' }" class="btn btn-sm back behind-2">
+                            <i class="fa-solid fa-arrow-left me-2"></i>Indietro
+                        </router-link>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
 
 <script>
 import { store } from '../store.js';
@@ -160,13 +164,8 @@ export default {
     color: $secondary-color;
 }
 
-.image {
-    display: flex;
-    justify-content: center;
-
-    img {
-        width: 90%;
-    }
+.image img {
+    width: 100%;
 }
 
 .content {
