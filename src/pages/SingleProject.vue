@@ -68,7 +68,7 @@
 
 <script>
 import { store } from '../store.js';
-
+import { gsap } from "gsap"; 
 export default {
     data() {
         return {
@@ -108,6 +108,31 @@ export default {
         this.$nextTick(() => {
             // Aggiorna l'indicatore dopo il rendering iniziale del DOM
             this.updateIndicator();
+        });
+
+        // Animazioni GSAP
+        gsap.from(".info", {
+            opacity: 0, // Opacità a 0
+            y: -50, // Arriva dall'alto di 50px
+            duration: 1, // Durata dell'animazione
+        });
+
+        gsap.from(".image", {
+            opacity: 0, // Opacità a 0
+            x: -100, // Arriva da sinistra di 100px
+            duration: 1, // Durata dell'animazione
+        });
+
+        gsap.from(".tab-selector", {
+            opacity: 0, // Opacità a 0
+            y: -50, // Arriva dall'alto di 50px
+            duration: 1, // Durata dell'animazione
+        });
+
+        gsap.from(".content", {
+            opacity: 0, // Opacità a 0
+            x: 100, // Arriva da destra di 100px
+            duration: 1, // Durata dell'animazione
         });
     },
     created() {
@@ -243,6 +268,7 @@ export default {
                 padding: 0.4rem 1.4rem;
                 font-size: 1.4rem;
                 margin-right: 1.5rem;
+                margin-bottom: 1rem;
                 font-weight: 600;
                 background-color: $primary-color;
                 color: $secondary-color;
