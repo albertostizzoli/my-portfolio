@@ -115,12 +115,8 @@
 </template>
 
 <script>
-import { gsap } from "gsap"; // Importo la libreria GSAP
-import { ScrollTrigger } from "gsap/ScrollTrigger"; // importo il plugin di ScrollTrigger di GSAP
 import CarouselSkills from '../components/CarouselSkills.vue';
 import { store } from '../store.js';
-gsap.registerPlugin(ScrollTrigger); // registro i plugin di ScrollTrigger per usare le animazioni legate allo scroll
-
 export default {
     components: {
         CarouselSkills,
@@ -143,146 +139,6 @@ export default {
     mounted() {
         // Chiama il metodo 'isActive' passando l'attuale valore di 'is_active'
         this.isActive(this.is_active);
-
-        // Animazioni Home Page GSAP
-        gsap.from("#home .hello, #home .name, #home .job", {  // // Inizializzazione dell'animazione GSAP
-            scrollTrigger: {
-                trigger: "#home", //  l'elemento che attiva l'animazione.
-                start: "top center", // Indica quando iniziare l'animazione
-                end: "bottom center", // Indica quando finire l'animazione
-                toggleActions: "play reverse play reverse", // Animazione sia avanti che indietro
-            },
-            opacity: 0, // Opacità a 0
-            x: 100, // L'elemento si sposta da destra di 100px
-            duration: 1, // Durata dell'animazione
-        });
-
-        // Animazioni Chi Sono GSAP
-        gsap.from("#about-me .intro", {
-            scrollTrigger: {
-                trigger: "#about-me",
-                start: "top center",
-                toggleActions: "play reverse play reverse",
-            },
-            opacity: 0,
-            scale: 0.9, // Grandezza dell'elemento
-            duration: 1.6,
-            
-        });
-
-        gsap.from("#about-me .presentation", {
-            scrollTrigger: {
-                trigger: "#about-me",
-                start: "top center",
-                end: "bottom center", 
-                toggleActions: "play reverse play reverse",
-            },
-            opacity: 0,
-            x: -100,
-            duration: 1.6,
-        });
-
-        gsap.from("#about-me .paragraph", {
-            scrollTrigger: {
-                trigger: "#about-me",
-                start: "top center",
-                toggleActions: "play reverse play reverse",
-            },
-            opacity: 0,
-            x: 100,
-            duration: 1.6,
-        });
-
-        gsap.from("#about-me .image img", {
-            scrollTrigger: {
-                trigger: "#about-me .image",
-                start: "top center",
-                toggleActions: "play reverse play reverse",
-            },
-            scale: 0.8,
-            opacity: 0,
-            duration: 1.6,
-        });
-
-        // Animazioni Skills GSAP
-        gsap.from("#skills .intro", {
-            scrollTrigger: {
-                trigger: "#skills",
-                start: "top center",
-                toggleActions: "play reverse play reverse",
-            },
-            opacity: 0,
-            scale: 0.9,
-            duration: 1.6,
-        });
-
-        // Animazioni Esperienze GSAP
-        gsap.from("#experience .intro", {
-            scrollTrigger: {
-                trigger: "#experience",
-                start: "top center",
-                toggleActions: "play reverse play reverse",
-            },
-            opacity: 0,
-            scale: 0.9,
-            duration: 1.6,
-        });
-
-        gsap.from("#experience select", {
-            scrollTrigger: {
-                trigger: "#experience",
-                start: "top center",
-                toggleActions: "play reverse play reverse",
-            },
-            opacity: 0,
-            scale: 0.9,
-            duration: 1.6,
-        });
-
-        gsap.from("#experience .description", {
-            scrollTrigger: {
-                trigger: "#experience",
-                start: "top center",
-                toggleActions: "play reverse play reverse",
-            },
-            opacity: 0,
-            y: 50, // L'elemento si sposta dal basso verso l'alto di 50px
-            duration: 1.6,
-        });
-
-        // Animazioni Progetti GSAP
-        gsap.from("#projects .intro", {
-            scrollTrigger: {
-                trigger: "#projects",
-                start: "top center",
-                toggleActions: "play reverse play reverse",
-            },
-            opacity: 0,
-            scale: 0.9,
-            duration: 1.6,
-        });
-
-        gsap.from("#projects select", {
-            scrollTrigger: {
-                trigger: "#projects",
-                start: "top center",
-                toggleActions: "play reverse play reverse",
-            },
-            opacity: 0,
-            scale: 0.9,
-            duration: 1.6,
-        });
-
-        gsap.from("#projects .box-card", {
-            scrollTrigger: {
-                trigger: "#projects",
-                start: "top center",
-                toggleActions: "play reverse play reverse",
-            },
-            y: -50,
-            opacity: 0,
-            duration: 1.6,
-        });
     },
     computed: {
         // Proprietà calcolata per filtrare i progetti in base al tipo selezionato
