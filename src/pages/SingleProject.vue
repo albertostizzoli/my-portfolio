@@ -243,7 +243,6 @@ export default {
                 padding: 0.4rem 1.4rem;
                 font-size: 1.4rem;
                 margin-right: 1.5rem;
-                margin-bottom: 1rem;
                 font-weight: 600;
                 background-color: $primary-color;
                 color: $secondary-color;

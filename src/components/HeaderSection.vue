@@ -105,7 +105,7 @@ header {
     z-index: 1000;
     
     nav {
-        margin-top: 15px;
+        margin-top: 12px;
         width: 90%;
         display: flex;
         align-items: center;

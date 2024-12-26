@@ -11,6 +11,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
     "bootstrap": "^5.3.3",
+    "gsap": "^3.12.5",
     "sass": "^1.77.1",
     "vue": "^3.4.21",
     "vue-router": "^4.3.2",
