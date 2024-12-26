@@ -45,11 +45,11 @@
                     <!-- Tipo di progetto -->
                     <div v-if="activeTab === 'type'" class="program">
                         <div class="type">
-                            <button class="single-type">{{ project.type }}</button>
+                            <span class="single-type">{{ project.type }}</span>
                         </div>
                     </div>
                     <!-- Links -->
-                    <div v-if="activeTab === 'links'" class="links">
+                    <div v-if="activeTab === 'links'" class="links d-flex flex-column">
                         <a :href="project.site" class="btn btn-sm site" v-if="project.site"><i
                                 class="fas fa-display me-2"></i>Visualizza Progetto</a>
                         <a :href="project.link_github" class="btn btn-sm github"><i
@@ -129,12 +129,12 @@ export default {
     position: relative;
 
     .btn {
-        padding: 1rem 2rem;
+        padding: 0.4rem 1.4rem;
         font-size: 1.4rem;
         border-radius: 25px;
         font-weight: 600;
         position: absolute;
-        bottom: 16px;
+        bottom: 25px;
         left: 70px;
 
         &.back {
@@ -143,13 +143,16 @@ export default {
             color: $secondary-color;
 
             &:hover {
-                background-color: $primary-color;
+                background-color: lighten($primary-color, 20%);
+                border: none;
+                scale: 1.2;
+                transition: .3s;
             }
         }
     }
 
     .intro {
-        font-size: 6rem;
+        font-size: 5rem;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 3px;
@@ -171,14 +174,11 @@ export default {
     display: flex;
     justify-content: center;
     margin: 2rem 0;
-    width: 100%;
-    padding: 0;
 
     .tab-background {
         position: relative;
         display: flex;
         background-color: $primary-color;
-        padding: 0.1rem;
         border-radius: 25px;
         overflow: hidden;
 
@@ -194,8 +194,8 @@ export default {
 
     .tab-button {
         position: relative;
-        padding: 0.5rem 1.5rem;
-        font-size: 1.6rem;
+        padding: 0.5rem 1.4rem;
+        font-size: 1.3rem;
         font-weight: bold;
         color: $secondary-color;
         background-color: transparent;
@@ -237,12 +237,13 @@ export default {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            flex-direction: column;
 
             .single-skill {
-                padding: 1rem 2rem;
-                margin-bottom: 1rem;
-                margin-right: 1rem;
+                padding: 0.4rem 1.4rem;
                 font-size: 1.4rem;
+                margin-right: 1.5rem;
+                margin-bottom: 1rem;
                 font-weight: 600;
                 background-color: $primary-color;
                 color: $secondary-color;
@@ -257,9 +258,7 @@ export default {
             justify-content: center;
 
             .single-type {
-                padding: 1rem 2rem;
-                margin-bottom: 1rem;
-                margin-right: 1rem;
+                padding: 0.4rem 1.4rem;
                 font-size: 1.4rem;
                 font-weight: 600;
                 background-color: $primary-color;
@@ -271,18 +270,20 @@ export default {
         }
 
         .btn {
-            padding: 1rem 2rem;
+            padding: 0.4rem 1.4rem;
             font-size: 1.4rem;
             border-radius: 25px;
             font-weight: 600;
-            margin-right: 1.5rem;
+            margin-bottom: 1.5rem;
 
             &.site {
                 background-color: $primary-color;
                 color: $secondary-color;
 
                 &:hover {
-                    background-color: $blue-color;
+                    background-color: lighten($primary-color, 20%);
+                    scale: 1.2;
+                    transition: .3s;
                 }
             }
 
@@ -292,8 +293,10 @@ export default {
                 border: 2px solid $primary-color;
 
                 &:hover {
-                    background-color: $blue-color;
+                    background-color: lighten($primary-color, 20%);
                     border: none;
+                    scale: 1.2;
+                    transition: .3s;
                 }
             }
 
@@ -303,7 +306,10 @@ export default {
                 color: $secondary-color;
 
                 &:hover {
-                    background-color: $primary-color;
+                    background-color: lighten($primary-color, 20%);
+                    scale: 1.2;
+                    transition: .3s;
+                    border: none;
                 }
             }
         }
@@ -323,8 +329,8 @@ export default {
     }
 
     .content {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
     .content .links {
