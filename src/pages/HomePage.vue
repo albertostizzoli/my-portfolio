@@ -186,7 +186,6 @@ export default {
             scrollTrigger: {
                 trigger: "#about-me",
                 start: "top center",
-                end: "bottom center", 
                 toggleActions: "play reverse play reverse",
             },
             opacity: 0,
@@ -198,7 +197,6 @@ export default {
             scrollTrigger: {
                 trigger: "#about-me .image",
                 start: "top center",
-                end: "bottom center",
                 toggleActions: "play reverse play reverse",
             },
             scale: 0.8,
@@ -211,7 +209,6 @@ export default {
             scrollTrigger: {
                 trigger: "#skills",
                 start: "top center",
-                end: "bottom center",
                 toggleActions: "play reverse play reverse",
             },
             opacity: 0,
@@ -224,7 +221,6 @@ export default {
             scrollTrigger: {
                 trigger: "#experience",
                 start: "top center",
-                end: "bottom center",
                 toggleActions: "play reverse play reverse",
             },
             opacity: 0,
@@ -236,7 +232,6 @@ export default {
             scrollTrigger: {
                 trigger: "#experience",
                 start: "top center",
-                end: "bottom center",
                 toggleActions: "play reverse play reverse",
             },
             opacity: 0,
@@ -248,7 +243,6 @@ export default {
             scrollTrigger: {
                 trigger: "#experience",
                 start: "top center",
-                end: "bottom center",
                 toggleActions: "play reverse play reverse",
             },
             opacity: 0,
@@ -261,7 +255,6 @@ export default {
             scrollTrigger: {
                 trigger: "#projects",
                 start: "top center",
-                end: "bottom center",
                 toggleActions: "play reverse play reverse",
             },
             opacity: 0,
@@ -273,7 +266,6 @@ export default {
             scrollTrigger: {
                 trigger: "#projects",
                 start: "top center",
-                end: "bottom center",
                 toggleActions: "play reverse play reverse",
             },
             opacity: 0,
@@ -285,7 +277,6 @@ export default {
             scrollTrigger: {
                 trigger: "#projects",
                 start: "top center",
-                end: "bottom center",
                 toggleActions: "play reverse play reverse",
             },
             y: -50,

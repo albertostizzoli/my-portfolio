@@ -27,64 +27,35 @@ import { defineComponent } from 'vue';
 import { Carousel, Navigation, Slide, Pagination } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
 import { store } from '../store.js';
-import { gsap } from "gsap"; 
-import { ScrollTrigger } from "gsap/ScrollTrigger"; 
-gsap.registerPlugin(ScrollTrigger); // registro i plugin di ScrollTrigger per usare le animazioni legate allo scroll
 
 export default {
     name: 'CarouselSkills',
     data() {
         return {
-            store,
-            // Configurazione delle impostazioni di base del Carousel
+            store, // Dati importati dallo store (presumibilmente contenenti le skill)
             settings: {
-                itemsToShow: 1,
-                snapAlign: 'center',
+                itemsToShow: 1, // Numero di elementi da mostrare per slide
+                snapAlign: 'center', // Allineamento degli elementi al centro
             },
-            // Definizione dei breakpoint per adattare il Carousel a diverse dimensioni dello schermo
             breakpoints: {
-                1660: { itemsToShow: 3, snapAlign: 'center' },
+                1660: { itemsToShow: 3, snapAlign: 'center' }, // Configurazione per schermi più grandi
                 1400: { itemsToShow: 2.8, snapAlign: 'center' },
                 1000: { itemsToShow: 2, snapAlign: 'center' },
                 768: { itemsToShow: 1.5, snapAlign: 'center' },
-                576: { itemsToShow: 1, snapAlign: 'center' },
-                0: { itemsToShow: 0.5, snapAlign: 'center' },
+                576: { itemsToShow: 1, snapAlign: 'center' }, // Configurazione per schermi più piccoli
+                0: { itemsToShow: 0.5, snapAlign: 'center' }, // Configurazione per schermi molto piccoli
             }
         };
     },
-    mounted() {
-        // Animazioni GSAP
-        this.animateSkills();
-    },
-    methods: {
-        animateSkills() {
-            this.$nextTick(() => {
-                // Animazione per ogni elemento .type-skill
-                gsap.utils.toArray('.type-skill').forEach((skill, index) => {
-                    gsap.from(skill, {
-                        scrollTrigger: {
-                            trigger: skill, // L'elemento che attiva l'animazione.
-                            start: "top center", // Indica quando iniziare l'animazione
-                            end: "bottom center", // Indica quando finire l'animazione
-                            toggleActions: "play reverse play reverse", // Animazione sia avanti che indietro
-                        },
-                        opacity: 0,
-                        scale: 0.9, // Grandezza dell'elemento
-                        duration: 1.6,
-                    });
-                });
-            });
-        }
-    },
     components: {
-        // Dichiarazione dei componenti utilizzati nel template
-        Carousel,
-        Slide,
-        Navigation,
-        Pagination,
+        Carousel, // Componente per il carosello
+        Slide,    // Componente per ogni singolo slide
+        Navigation, // Componente per la navigazione del carosello
+        Pagination, // Componente per la paginazione del carosello
     }
 };
 </script>
+
 
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
