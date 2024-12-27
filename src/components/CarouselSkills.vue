@@ -23,38 +23,69 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-import { Carousel, Navigation, Slide, Pagination } from 'vue3-carousel';
+import { defineComponent, onMounted } from 'vue';
+import { Carousel, Slide, Pagination } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
 import { store } from '../store.js';
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
     name: 'CarouselSkills',
     data() {
         return {
-            store, // Dati importati dallo store (presumibilmente contenenti le skill)
+            store,
             settings: {
-                itemsToShow: 1, // Numero di elementi da mostrare per slide
-                snapAlign: 'center', // Allineamento degli elementi al centro
+                itemsToShow: 1,
+                snapAlign: 'center',
             },
             breakpoints: {
-                1660: { itemsToShow: 3, snapAlign: 'center' }, // Configurazione per schermi più grandi
+                1660: { itemsToShow: 3, snapAlign: 'center' },
                 1400: { itemsToShow: 2.8, snapAlign: 'center' },
                 1000: { itemsToShow: 2, snapAlign: 'center' },
                 768: { itemsToShow: 1.5, snapAlign: 'center' },
-                576: { itemsToShow: 1, snapAlign: 'center' }, // Configurazione per schermi più piccoli
-                0: { itemsToShow: 0.5, snapAlign: 'center' }, // Configurazione per schermi molto piccoli
-            }
+                576: { itemsToShow: 1, snapAlign: 'center' },
+                0: { itemsToShow: 0.5, snapAlign: 'center' },
+            },
         };
     },
+    mounted() {
+        // Inizializza le animazioni con ScrollTrigger
+        this.initScrollAnimations();
+    },
+    methods: {
+        initScrollAnimations() {
+            // Seleziona tutti gli elementi con la classe .type-skill
+            const skillElements = document.querySelectorAll('.type-skill');
+
+            skillElements.forEach((element) => {
+                gsap.fromTo(
+                    element,
+                    { scale: 0.8, opacity: 0 },
+                    {
+                        scale: 1,
+                        opacity: 1,
+                        duration: 1.5,
+                        scrollTrigger: {
+                            trigger: element, 
+                            start: 'top center', 
+                            toggleActions: 'play none play reverse', 
+                        },
+                    }
+                );
+            });
+        },
+    },
     components: {
-        Carousel, // Componente per il carosello
-        Slide,    // Componente per ogni singolo slide
-        Navigation, // Componente per la navigazione del carosello
-        Pagination, // Componente per la paginazione del carosello
-    }
+        Carousel,
+        Slide,
+        Pagination,
+    },
 };
 </script>
+
 
 
 <style lang="scss" scoped>

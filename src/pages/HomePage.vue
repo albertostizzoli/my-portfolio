@@ -151,19 +151,19 @@ export default {
                 toggleActions: "play none play none",
             },
             opacity: 0,
-            duration: 1,
+            duration: 1.5,
             x: -100,
         });
 
-         // Animazioni GSAP per l'immagine
-         gsap.from(".image", {
+        // Animazioni GSAP per l'immagine
+        gsap.from(".image", {
             scrollTrigger: {
                 trigger: ".image",
                 start: "top center",
                 toggleActions: "play none play none",
             },
             opacity: 0,
-            duration: 1,
+            duration: 1.5,
             scale: 0.5,
         });
 
@@ -175,20 +175,32 @@ export default {
                 toggleActions: "play none play none",
             },
             opacity: 0,
-            duration: 1,
+            duration: 1.5,
             x: 100,
         });
 
-         // Animazioni GSAP per Chi Sono (paragrafo)
-         gsap.from(".paragraph", {
+        // Animazioni GSAP per Chi Sono (paragrafo)
+        gsap.from(".paragraph", {
             scrollTrigger: {
                 trigger: ".paragraph",
                 start: "top center",
                 toggleActions: "play none play none",
             },
             opacity: 0,
-            duration: 1,
+            duration: 1.5,
             x: -100,
+        });
+
+        // Animazioni GSAP per Esperienze (Select)
+        gsap.from(".select", {
+            scrollTrigger: {
+                trigger: ".select",
+                start: "top center",
+                toggleActions: "play none play none",
+            },
+            opacity: 0,
+            duration: 1.5,
+            scale: 0.8,
         });
 
         // Animazioni GSAP per Esperienze
@@ -199,8 +211,20 @@ export default {
                 toggleActions: "play none play none",
             },
             opacity: 0,
-            duration: 1,
+            duration: 1.5,
             y: 50,
+        });
+
+        // Animazioni GSAP per Progetti (Select)
+        gsap.from(".select-container", {
+            scrollTrigger: {
+                trigger: ".select-container",
+                start: "top center",
+                toggleActions: "play none play none",
+            },
+            opacity: 0,
+            duration: 1.5,
+            scale: 0.8,
         });
 
         // Animazioni GSAP per Progetti
@@ -211,8 +235,23 @@ export default {
                 toggleActions: "play none play none",
             },
             opacity: 0,
-            duration: 1,
+            duration: 1.5,
             y: 50,
+        });
+
+        // Animazione per i titoli
+        gsap.utils.toArray("h2.intro").forEach((title) => {
+            gsap.from(title, {
+                scrollTrigger: {
+                    trigger: title, 
+                    start: "top 80%", 
+                    end: "bottom 50%", 
+                    toggleActions: "play none play none", 
+                },
+                opacity: 0, 
+                scale: 0.8, 
+                duration: 1.5, 
+            });
         });
     },
     computed: {
