@@ -16,7 +16,7 @@
                     </div>
                     <div class="col-lg-7 ps-lg-3 col-md-12 pt-3">
                         <!-- presentazione -->
-                        <div class="pb-2">
+                        <div class="pb-3">
                             <h2 class="presentation">🌟 Il mio percorso</h2>
                             <p class="paragraph">
                                 Ho iniziato ad avvicinarmi al mondo della programmazione spinto dalla pura
@@ -117,6 +117,9 @@
 <script>
 import CarouselSkills from '../components/CarouselSkills.vue';
 import { store } from '../store.js';
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 export default {
     components: {
         CarouselSkills,
@@ -139,6 +142,78 @@ export default {
     mounted() {
         // Chiama il metodo 'isActive' passando l'attuale valore di 'is_active'
         this.isActive(this.is_active);
+
+        // Animazioni GSAP per l'intro
+        gsap.from("#home .hello, #home .name, #home .job", {
+            scrollTrigger: {
+                trigger: "#home",
+                start: "top center",
+                toggleActions: "play none play none",
+            },
+            opacity: 0,
+            duration: 1,
+            x: -100,
+        });
+
+         // Animazioni GSAP per l'immagine
+         gsap.from(".image", {
+            scrollTrigger: {
+                trigger: ".image",
+                start: "top center",
+                toggleActions: "play none play none",
+            },
+            opacity: 0,
+            duration: 1,
+            scale: 0.5,
+        });
+
+        // Animazioni GSAP per Chi Sono (titolo)
+        gsap.from(".presentation", {
+            scrollTrigger: {
+                trigger: ".presentation",
+                start: "top center",
+                toggleActions: "play none play none",
+            },
+            opacity: 0,
+            duration: 1,
+            x: 100,
+        });
+
+         // Animazioni GSAP per Chi Sono (paragrafo)
+         gsap.from(".paragraph", {
+            scrollTrigger: {
+                trigger: ".paragraph",
+                start: "top center",
+                toggleActions: "play none play none",
+            },
+            opacity: 0,
+            duration: 1,
+            x: -100,
+        });
+
+        // Animazioni GSAP per Esperienze
+        gsap.from(".description", {
+            scrollTrigger: {
+                trigger: ".description",
+                start: "top center",
+                toggleActions: "play none play none",
+            },
+            opacity: 0,
+            duration: 1,
+            y: 50,
+        });
+
+        // Animazioni GSAP per Progetti
+        gsap.from(".box-card", {
+            scrollTrigger: {
+                trigger: ".box-card",
+                start: "top center",
+                toggleActions: "play none play none",
+            },
+            opacity: 0,
+            duration: 1,
+            y: 50,
+        });
     },
     computed: {
         // Proprietà calcolata per filtrare i progetti in base al tipo selezionato

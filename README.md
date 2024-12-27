@@ -16,6 +16,8 @@ Ciao! Mi chiamo **Alberto Stizzoli** e sono un **Web & Software Developer**. Ben
 
  - FONTAWESOME: FontAwesome è una libreria di icone vettoriali che offre una vasta gamma di icone scalabili, facilmente personalizzabili con CSS. È spesso usata per aggiungere icone visive nei progetti web, migliorando l'interfaccia utente e l'accessibilità.
 
+ - GSAP: GSAP (GreenSock Animation Platform) è una libreria JavaScript potente e flessibile per creare animazioni ad alte prestazioni nel browser. Permette di animare proprietà CSS, SVG, posizione, scala, rotazione, colore, opacità 
+
 
 ## Struttura del Portfolio
 
