@@ -47,6 +47,8 @@ footer {
 
         &:hover {
           color: $primary-color;
+          scale: 1.5;
+          transition: .3s;
         }
 
       }

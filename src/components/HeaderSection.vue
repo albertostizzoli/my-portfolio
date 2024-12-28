@@ -4,8 +4,10 @@
             <div class="wrapper">
                 <ul>
                     <li><a href="https://github.com/albertostizzoli"><i class="fa-brands fa-github fa-2x "></i></a></li>
-                    <li><a href="https://drive.google.com/file/d/1wAk8-dR9JLRhjfM7XAVcHdX81sc7C6-z/view?usp=drive_link"><i class="fa-solid fa-file fa-2x"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/alberto-stizzoli-82a676260/"><i class="fa-brands fa-linkedin-in fa-2x "></i></a></li>  
+                    <li><a href="https://drive.google.com/file/d/1wAk8-dR9JLRhjfM7XAVcHdX81sc7C6-z/view?usp=drive_link"><i
+                                class="fa-solid fa-file fa-2x"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/alberto-stizzoli-82a676260/"><i
+                                class="fa-brands fa-linkedin-in fa-2x "></i></a></li>
                 </ul>
             </div>
             <div id="navbar-list">
@@ -74,6 +76,7 @@
 
 
 <script>
+import { gsap } from "gsap";
 export default {
     data() {
         return {
@@ -86,7 +89,16 @@ export default {
             // Inverte il valore booleano di 'is_active_menu'
             this.is_active_menu = !this.is_active_menu;
         }
-    }
+    },
+    mounted() {
+
+        // Animazione GSAP
+        gsap.from("header", {
+            opacity: 0,
+            duration: 1.5,
+            scale: 0.5,
+        });
+    },
 }
 </script>
 
@@ -103,7 +115,7 @@ header {
     position: fixed;
     top: 0;
     z-index: 1000;
-    
+
     nav {
         margin-top: 12px;
         width: 90%;
@@ -135,6 +147,8 @@ header {
 
                         &:hover {
                             color: $primary-color;
+                            scale: 1.5;
+                            transition: .3s;
                         }
                     }
                 }
