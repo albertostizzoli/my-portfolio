@@ -63,7 +63,7 @@ export default {
             skillElements.forEach((element) => {
                 gsap.fromTo(
                     element,
-                    { scale: 0.8, opacity: 0 },
+                    { scale: 0.5, opacity: 0 },
                     {
                         scale: 1,
                         opacity: 1,
@@ -71,7 +71,7 @@ export default {
                         scrollTrigger: {
                             trigger: element, 
                             start: 'top center', 
-                            toggleActions: 'play none play reverse', 
+                            toggleActions: 'play none play none', 
                         },
                     }
                 );

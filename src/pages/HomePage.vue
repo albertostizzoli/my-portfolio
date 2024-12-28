@@ -152,7 +152,7 @@ export default {
             },
             opacity: 0,
             duration: 1.5,
-            x: -100,
+            scale: 0.5,
         });
 
         // Animazioni GSAP per l'immagine
@@ -176,7 +176,7 @@ export default {
             },
             opacity: 0,
             duration: 1.5,
-            x: 100,
+            scale: 0.5,
         });
 
         // Animazioni GSAP per Chi Sono (paragrafo)
@@ -188,7 +188,8 @@ export default {
             },
             opacity: 0,
             duration: 1.5,
-            x: -100,
+            scale: 0.5,
+            stagger: 0.2,
         });
 
         // Animazioni GSAP per Esperienze (Select)
@@ -200,7 +201,7 @@ export default {
             },
             opacity: 0,
             duration: 1.5,
-            scale: 0.8,
+            scale: 0.5,
         });
 
         // Animazioni GSAP per Esperienze
@@ -212,7 +213,7 @@ export default {
             },
             opacity: 0,
             duration: 1.5,
-            y: 50,
+            scale: 0.5,
         });
 
         // Animazioni GSAP per Progetti (Select)
@@ -224,7 +225,7 @@ export default {
             },
             opacity: 0,
             duration: 1.5,
-            scale: 0.8,
+            scale: 0.5,
         });
 
         // Animazioni GSAP per Progetti
@@ -236,21 +237,22 @@ export default {
             },
             opacity: 0,
             duration: 1.5,
-            y: 50,
+            scale: 0.5,
+            stagger: 0.2,
         });
 
         // Animazione per i titoli
         gsap.utils.toArray("h2.intro").forEach((title) => {
             gsap.from(title, {
                 scrollTrigger: {
-                    trigger: title, 
-                    start: "top 80%", 
-                    end: "bottom 50%", 
-                    toggleActions: "play none play none", 
+                    trigger: title,
+                    start: "top 80%",
+                    end: "bottom 50%",
+                    toggleActions: "play none play none",
                 },
-                opacity: 0, 
-                scale: 0.8, 
-                duration: 1.5, 
+                opacity: 0,
+                scale: 0.5,
+                duration: 1.5,
             });
         });
     },
