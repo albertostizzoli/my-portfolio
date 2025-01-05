@@ -47,7 +47,6 @@
                                 abbia una soluzione creativa, e mi impegno sempre a trovarla.
                             </p>
                         </div>
-
                     </div>
                 </div>
             </div>
