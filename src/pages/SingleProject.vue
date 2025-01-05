@@ -153,7 +153,7 @@ export default {
 /*-- BOTTONE INDIETRO E TITOLO PROGETTO --*/
 .info {
     color: $secondary-color;
-    padding-top: 8rem;
+    padding-top: 5rem;
     padding-bottom: 2rem;
     position: relative;
 

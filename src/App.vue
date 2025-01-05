@@ -5,7 +5,7 @@
 </div>
 <!--mostra il contenuto solo se la variabile 'loading' è false e la proprietà 'portfolio' dello store è true -->
 <div v-else :class="store.portfolio ? 'appearance' : ''">
-    <HeaderSection></HeaderSection>
+    <HeaderSection v-if="showHeader"></HeaderSection>
     <main>
       <router-view></router-view>
     </main>
@@ -18,35 +18,45 @@ import { store } from './store.js';
 import LoaderComponent from './components/LoaderComponent.vue';
 import HeaderSection from './components/HeaderSection.vue';
 import FooterSection from './components/FooterSection.vue';
+import { onMounted, ref, watch } from 'vue';
+import { useRoute } from 'vue-router';
+
 export default {
   components: {
     LoaderComponent,
     HeaderSection,
     FooterSection,
   },
-  data() {
-    return {
-      store,
-      loading: true,
-    }
-  },
-  methods: {
+  setup() {
+    const loading = ref(true);
+    const showHeader = ref(true);
+    const route = useRoute(); // Hook per accedere alla route corrente
+
+    // Uso il watch per nascondere l'header ogni volta cha vado nella SingleProject
+    watch(
+      () => route.name,
+      (newRoute) => {
+        showHeader.value = newRoute !== 'project'; // Nasconde l'header per la route 'project'
+      }
+    );
+
     // Metodo per disattivare il caricamento dopo un ritardo
-    loader() {
-      // Imposta un timeout che disabilita la proprietà 'loading' dopo 3 secondi (3000 millisecondi)
+    const loader = () => {
       setTimeout(() => {
-        this.loading = false;
+        loading.value = false;
       }, 3000);
-    }
+    };
+
+    // Chiama il metodo loader quando la pagina è caricata
+    onMounted(loader);
+
+    return {
+      loading,
+      showHeader,
+      store,
+    };
   },
-  // Ciclo di vita del componente: metodo eseguito quando il componente è montato
-  mounted() {
-    // Chiama il metodo 'loader' per avviare il timeout
-    this.loader();
-  }
-
-
-}
+};
 </script>
 
 <style lang="scss" scoped>

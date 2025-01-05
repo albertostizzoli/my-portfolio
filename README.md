@@ -1,6 +1,6 @@
 # Benvenuto
 
-Ciao! Mi chiamo **Alberto Stizzoli** e sono un **Web & Software Developer**. Benvenuto nel mio portfolio!
+Ciao! Mi chiamo **Alberto Stizzoli** e sono un **Full-Stack Web Developer**. Benvenuto nel mio portfolio!
 
 ---
 ## Tecnologie Usate
@@ -28,8 +28,7 @@ Il portfolio è composto da due pagine principali:
 ### **Home Page**
 
 La Home Page include:  
-- Una **Navbar** che consente di navigare facilmente tra le sezioni.  
-- Un **wrapper laterale** sulla sinistra con i collegamenti ai miei profili **LinkedIn**, **GitHub** e al mio **CV**.
+- Una **Navbar** che consente di navigare facilmente tra le sezioni sulla destra e sulla sinistra con i collegamenti ai miei profili **LinkedIn**, **GitHub** e al mio **CV**.
 
 ---
 

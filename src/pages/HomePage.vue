@@ -4,7 +4,7 @@
         <section id="home" class="content">
             <p class="hello">Mi chiamo</p>
             <h1 class="name">Alberto Stizzoli</h1>
-            <p class="job">e sono un Web Developer</p>
+            <p class="job">e sono un Full-Stack Web Developer</p>
         </section>
         <!-- chi sono -->
         <section id="about-me">
@@ -17,34 +17,33 @@
                     <div class="col-lg-7 ps-lg-3 col-md-12 pt-3">
                         <!-- presentazione -->
                         <div class="pb-3">
-                            <h2 class="presentation">🌟 Il mio percorso</h2>
+                            <h2 class="presentation">🌟  Il mio percorso</h2>
                             <p class="paragraph">
                                 Ho iniziato ad avvicinarmi al mondo della programmazione spinto dalla pura
                                 curiosità, ma con il tempo mi sono appassionato nel creare esperienze digitali che
-                                siano funzionali, intuitive e visivamente accattivanti. Oltre alla programmazione,
-                                amo esplorare passioni che mi aiutano a sviluppare competenze trasversali e a
-                                rimanere ispirato, in particolare il mondo dello UX/UI Designer e infatti nel mio
-                                tempo libero sperimento con strumenti di design come Figma e li applico anche a
-                                livello di codice.
+                                siano funzionali, intuitive e visivamente accattivanti.
+                            </p>
+                        </div>
+                        <div class="pb-3">
+                            <h2 class="presentation">🚀 Cosa mi motiva</h2>
+                            <p class="paragraph">
+                                Quello che amo dello sviluppo web è la possibilità di trasformare idee in realtà. La
+                                soddisfazione di vedere un'applicazione prendere forma e funzionare esattamente come
+                                previsto è ciò che mi spinge a migliorarmi ogni giorno. Credo che ogni problema
+                                abbia una soluzione creativa, e mi impegno sempre a trovarla. Grazie allo sviluppo web,
+                                mi sto ora appassionando al mondo del Design, in particolare UX/UI e il mio tempo libero
+                                lo utilizzo per progettare interfacce che non solo soddisfano i bisogni degli utenti, ma
+                                offrono anche un'esperienza coinvolgente. Questa passione si riflette nel mio lavoro di
+                                sviluppo, dove applico le competenze di design direttamente al codice.
                             </p>
                         </div>
                         <div class="pb-3">
                             <h2 class="presentation">🤝 Il lavoro di squadra</h2>
                             <p class="paragraph">
-                                Nel corso in Web Development di Boolean Careers ho imparato a collaborare con gli
-                                altri e credere fermamente nel valore del lavoro di squadra. Sono tuttora convinto
-                                che le migliori soluzioni nascano dal confronto e dalla condivisione di idee
-                                diverse, mi impegno a offrire idee innovative e supporto concreto per raggiungere
+                                Lavorando in team, ho scoperto quanto il confronto e la condivisione di idee siano
+                                fondamentali per trovare le migliori soluzioni. Credo fermamente che il successo nasca
+                                dal lavoro di squadra e mi impegno a offrire supporto e idee innovative per raggiungere
                                 obiettivi comuni.
-                            </p>
-                        </div>
-                        <div class="pb-3">
-                            <h2 class="presentation">🚀Cosa mi motiva</h2>
-                            <p class="paragraph">
-                                Quello che amo dello sviluppo web è la possibilità di trasformare idee in realtà. La
-                                soddisfazione di vedere un'applicazione prendere forma e funzionare esattamente come
-                                previsto è ciò che mi spinge a migliorarmi ogni giorno. Credo che ogni problema
-                                abbia una soluzione creativa, e mi impegno sempre a trovarla.
                             </p>
                         </div>
                     </div>
