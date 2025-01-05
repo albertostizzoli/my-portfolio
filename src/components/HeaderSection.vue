@@ -280,7 +280,7 @@ header {
     }
 
     .offcanvas {
-        background: linear-gradient(to left, rgb(0, 74, 173), rgb(116, 157, 235));
+        background: linear-gradient(to left, rgb(9, 88, 178), rgb(61, 173, 211));
 
         &.offcanvas-end {
             width: 50%;
