@@ -114,28 +114,32 @@ export default {
         gsap.from(".info", {
             opacity: 0,
             duration: 1.5,
-            scale: 0.5,
+            scale: 0.2,
+            stagger: 0.5
         });
 
         // Animazioni GSAP per l'immagine
         gsap.from(".image", {
             opacity: 0,
             duration: 1.5,
-            scale: 0.5,
+            scale: 0.2,
+            stagger: 0.5
         });
 
         // Animazioni GSAP per il selettore di Tab
         gsap.from(".tab-selector", {
             opacity: 0,
             duration: 1.5,
-            scale: 0.5,
+            scale: 0.2,
+            stagger: 0.5
         });
 
         // Animazioni GSAP per il contenuto
         gsap.from(".content", {
             opacity: 0,
             duration: 1.5,
-            scale: 0.5,
+            scale: 0.2,
+            stagger: 0.5
         });
 
     },

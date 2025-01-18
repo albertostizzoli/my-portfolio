@@ -193,7 +193,6 @@ export default {
             opacity: 0,
             duration: 1.5,
             scale: 0.2,
-            stagger: 0.2,
             stagger: 0.5
         });
 
