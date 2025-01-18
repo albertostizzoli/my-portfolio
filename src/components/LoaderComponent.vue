@@ -32,39 +32,31 @@ export default {
     max-width: 400px;
 
     #animated-text {
-      font-family: Roboto, sans-serif;
+      font-family:  "Outfit", serif;
       font-size: 80px;
       font-weight: bold;
-      fill: none; /* Nessun colore interno inizialmente */
-      stroke: $primary-color; /* Colore del contorno blu */
+      fill: none; 
       stroke-width: 4;
       stroke-dashoffset: 3100;
       stroke-dasharray: 3100;
-      animation: stroke_animation 2.5s ease-in forwards, fill_animation 2.5s ease-in-out 0s forwards;
+      animation:  fill_animation 1.5s ease-in-out 0s forwards;
     }
   }
 }
 
-@keyframes stroke_animation {
-  0% {
-    stroke-dashoffset: 3100; /* Contorno completamente nascosto */
-  }
-  100% {
-    stroke-dashoffset: 0; /* Contorno completato */
-  }
-}
+
 
 @keyframes fill_animation {
   0% {
     fill: none; /* Nessun riempimento */
   }
 
-  20% {
-    fill: rgba(255, 255, 255, 0.2);
+  40% {
+    fill: rgba(255, 255, 255, 0.6);
   }
 
-  60% {
-    fill: rgba(255, 255, 255, 0.9);
+  80% {
+    fill: rgba(255, 255, 255, 0.8);
   }
 
   100% {

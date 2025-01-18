@@ -17,11 +17,15 @@
                     <div class="col-lg-7 ps-lg-3 col-md-12 pt-3">
                         <!-- presentazione -->
                         <div class="pb-3">
-                            <h2 class="presentation">🌟  Il mio percorso</h2>
+                            <h2 class="presentation">🌟 Il mio percorso</h2>
                             <p class="paragraph">
-                                Ho iniziato ad avvicinarmi al mondo della programmazione spinto dalla pura
-                                curiosità, ma con il tempo mi sono appassionato nel creare esperienze digitali che
-                                siano funzionali, intuitive e visivamente accattivanti.
+                                Ho iniziato ad avvicinarmi al mondo della programmazione spinto dalla pura curiosità, ma
+                                con il tempo mi sono appassionato nel creare esperienze digitali funzionali e intuitive.
+                                Per approfondire le mie conoscenze, ho seguito un corso di Web Development, che mi ha
+                                fornito una solida base nelle tecnologie fondamentali per lo sviluppo web. Questa
+                                esperienza si è consolidata lavorando su una varietà di progetti, che mi ha permesso di
+                                approfondire diverse tecnologie e approcci, sviluppando un'abilità nel creare soluzioni
+                                scalabili e robuste.
                             </p>
                         </div>
                         <div class="pb-3">
@@ -29,12 +33,11 @@
                             <p class="paragraph">
                                 Quello che amo dello sviluppo web è la possibilità di trasformare idee in realtà. La
                                 soddisfazione di vedere un'applicazione prendere forma e funzionare esattamente come
-                                previsto è ciò che mi spinge a migliorarmi ogni giorno. Credo che ogni problema
-                                abbia una soluzione creativa, e mi impegno sempre a trovarla. Grazie allo sviluppo web,
-                                mi sto ora appassionando al mondo del Design, in particolare UX/UI e il mio tempo libero
-                                lo utilizzo per progettare interfacce che non solo soddisfano i bisogni degli utenti, ma
-                                offrono anche un'esperienza coinvolgente. Questa passione si riflette nel mio lavoro di
-                                sviluppo, dove applico le competenze di design direttamente al codice.
+                                previsto è ciò che mi spinge a migliorarmi ogni giorno. Sono motivato dalla continua
+                                possibilità di apprendere e applicare nuove tecnologie per creare soluzioni sempre più
+                                efficienti e innovative. Ogni progetto rappresenta una nuova sfida, un'opportunità di
+                                esplorare e risolvere problemi complessi, che mi stimola a crescere professionalmente e
+                                ad adattarmi rapidamente ai cambiamenti del settore.
                             </p>
                         </div>
                         <div class="pb-3">
@@ -342,6 +345,7 @@ export default {
             flex-direction: column;
             justify-content: start;
             align-items: center;
+            margin-top: 15px;
 
             img {
                 width: 400px;
