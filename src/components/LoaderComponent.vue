@@ -44,11 +44,13 @@ export default {
   }
 }
 
-
-
 @keyframes fill_animation {
   0% {
     fill: none; /* Nessun riempimento */
+  }
+
+  20% {
+    fill: rgba(255, 255, 255, 0.2);
   }
 
   40% {
