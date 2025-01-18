@@ -63,7 +63,7 @@ export default {
             skillElements.forEach((element) => {
                 gsap.fromTo(
                     element,
-                    { scale: 0.5, opacity: 0 },
+                    { scale: 0.2, opacity: 0 },
                     {
                         scale: 1,
                         opacity: 1,

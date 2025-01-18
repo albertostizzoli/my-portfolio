@@ -153,7 +153,8 @@ export default {
             },
             opacity: 0,
             duration: 1.5,
-            scale: 0.5,
+            scale: 0.2,
+            stagger: 0.5
         });
 
         // Animazioni GSAP per l'immagine
@@ -165,7 +166,8 @@ export default {
             },
             opacity: 0,
             duration: 1.5,
-            scale: 0.5,
+            scale: 0.2,
+            stagger: 0.5
         });
 
         // Animazioni GSAP per Chi Sono (titolo)
@@ -177,7 +179,8 @@ export default {
             },
             opacity: 0,
             duration: 1.5,
-            scale: 0.5,
+            scale: 0.2,
+            stagger: 0.5
         });
 
         // Animazioni GSAP per Chi Sono (paragrafo)
@@ -189,8 +192,9 @@ export default {
             },
             opacity: 0,
             duration: 1.5,
-            scale: 0.5,
+            scale: 0.2,
             stagger: 0.2,
+            stagger: 0.5
         });
 
         // Animazioni GSAP per Esperienze (Select)
@@ -202,7 +206,8 @@ export default {
             },
             opacity: 0,
             duration: 1.5,
-            scale: 0.5,
+            scale: 0.2,
+            stagger: 0.5
         });
 
         // Animazioni GSAP per Esperienze
@@ -214,7 +219,8 @@ export default {
             },
             opacity: 0,
             duration: 1.5,
-            scale: 0.5,
+            scale: 0.2,
+            stagger: 0.5
         });
 
         // Animazioni GSAP per Progetti (Select)
@@ -226,7 +232,8 @@ export default {
             },
             opacity: 0,
             duration: 1.5,
-            scale: 0.5,
+            scale: 0.2,
+            stagger: 0.5
         });
 
         // Animazioni GSAP per Progetti
@@ -238,8 +245,8 @@ export default {
             },
             opacity: 0,
             duration: 1.5,
-            scale: 0.5,
-            stagger: 0.2,
+            scale: 0.2,
+            stagger: 0.5,
         });
 
         // Animazione per i titoli
@@ -252,8 +259,9 @@ export default {
                     toggleActions: "play none play none",
                 },
                 opacity: 0,
-                scale: 0.5,
+                scale: 0.2,
                 duration: 1.5,
+                stagger: 0.5
             });
         });
     },
