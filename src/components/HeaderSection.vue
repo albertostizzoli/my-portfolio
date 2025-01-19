@@ -19,7 +19,7 @@
                     </li>
                     <li>
                         <router-link :to="{ name: 'home', hash: '#skills' }">
-                            <span class="index">02.</span>Skills
+                            <span class="index">02.</span>Linguaggi e Framework
                         </router-link>
                     </li>
                     <li>
@@ -54,7 +54,7 @@
                         </li>
                         <li data-bs-dismiss="offcanvas">
                             <router-link :to="{ name: 'home', hash: '#skills' }" @click.prevent="isActive">
-                                <span class="index">02.</span>Skills
+                                <span class="index">02.</span>Linguaggi e Framework
                             </router-link>
                         </li>
                         <li data-bs-dismiss="offcanvas">

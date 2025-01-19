@@ -55,12 +55,12 @@
         </section>
         <!-- skills -->
         <section id="skills">
-            <h2 class="intro pb-5 text-white"><i><span class="index">02.</span>LE MIE SKILLS</i></h2>
+            <h2 class="intro pb-5 text-white"><i><span class="index">02.</span>LINGUAGGI E FRAMEWORK</i></h2>
             <CarouselSkills></CarouselSkills>
         </section>
         <!-- esperienze-->
         <section id="experience">
-            <h2 class="intro pb-5"><i><span class="index">03.</span>LE MIE ESPERIENZE</i></h2>
+            <h2 class="intro pb-5"><i><span class="index">03.</span>ESPERIENZE</i></h2>
             <div class="container p-0">
                 <div class="row d-flex justify-content-center">
                     <div class="col-12 col-md-10">
@@ -84,7 +84,7 @@
         </section>
         <!-- progetti -->
         <section id="projects">
-            <h2 class="intro pb-5 text-white"><i><span class="index">04.</span>I MIEI PROGETTI</i></h2>
+            <h2 class="intro pb-5 text-white"><i><span class="index">04.</span>PROGETTI</i></h2>
             <div class="container p-0">
                 <div class="select-container mb-4">
                     <select class="form-select fs-4 select" v-model="selectedType">
@@ -378,7 +378,7 @@ export default {
 
         .select {
             background-color: $primary-color;
-            border: 2px solid $blue-color;
+            border: 2px solid $primary-color;
             font-weight: 600;
             color: $secondary-color;
         }
@@ -399,7 +399,7 @@ export default {
 
             .select {
                 background-color: $primary-color;
-                border: 2px solid $blue-color;
+                border: 2px solid $primary-color;
                 font-weight: 600;
                 color: $secondary-color;
             }

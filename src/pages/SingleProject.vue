@@ -167,7 +167,7 @@ export default {
         border-radius: 25px;
         font-weight: 600;
         position: absolute;
-        bottom: 25px;
+        bottom: 20px;
         left: 70px;
 
         &.back {
