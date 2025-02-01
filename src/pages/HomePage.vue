@@ -16,7 +16,7 @@
                     </div>
                     <div class="col-lg-7 ps-lg-3 col-md-12 pt-3">
                         <!-- presentazione -->
-                        <div class="pb-3">
+                        <div class="pb-5 mt-3">
                             <h2 class="presentation">🌟 Il mio percorso</h2>
                             <p class="paragraph">
                                 Ho iniziato ad avvicinarmi al mondo della programmazione spinto dalla pura curiosità, ma
@@ -38,15 +38,6 @@
                                 efficienti e innovative. Ogni progetto rappresenta una nuova sfida, un'opportunità di
                                 esplorare e risolvere problemi complessi, che mi stimola a crescere professionalmente e
                                 ad adattarmi rapidamente ai cambiamenti del settore.
-                            </p>
-                        </div>
-                        <div class="pb-3">
-                            <h2 class="presentation">🤝 Il lavoro di squadra</h2>
-                            <p class="paragraph">
-                                Lavorando in team, ho scoperto quanto il confronto e la condivisione di idee siano
-                                fondamentali per trovare le migliori soluzioni. Credo fermamente che il successo nasca
-                                dal lavoro di squadra e mi impegno a offrire supporto e idee innovative per raggiungere
-                                obiettivi comuni.
                             </p>
                         </div>
                     </div>
