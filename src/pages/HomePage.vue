@@ -4,7 +4,7 @@
         <section id="home" class="content">
             <p class="hello">Mi chiamo</p>
             <h1 class="name">Alberto Stizzoli</h1>
-            <p class="job">e sono un Full-Stack Web Developer</p>
+            <p class="job">e sono un Full-Stack Developer</p>
         </section>
         <!-- chi sono -->
         <section id="about-me">
@@ -46,7 +46,7 @@
         </section>
         <!-- skills -->
         <section id="skills">
-            <h2 class="intro pb-5 text-white"><i><span class="index">02.</span>LINGUAGGI E FRAMEWORK</i></h2>
+            <h2 class="intro pb-5 text-white"><i><span class="index">02.</span>SKILLS</i></h2>
             <CarouselSkills></CarouselSkills>
         </section>
         <!-- esperienze-->
