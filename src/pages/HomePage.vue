@@ -16,7 +16,7 @@
                     </div>
                     <div class="col-lg-7 ps-lg-3 col-md-12 pt-3">
                         <!-- presentazione -->
-                        <div class="pb-5 mt-3">
+                        <div class="pb-4">
                             <h2 class="presentation">🌟 Il mio percorso</h2>
                             <p class="paragraph">
                                 Ho iniziato ad avvicinarmi al mondo della programmazione spinto dalla pura curiosità, ma
@@ -28,7 +28,7 @@
                                 scalabili e robuste.
                             </p>
                         </div>
-                        <div class="pb-3">
+                        <div class="pb-4">
                             <h2 class="presentation">🚀 Cosa mi motiva</h2>
                             <p class="paragraph">
                                 Quello che amo dello sviluppo web è la possibilità di trasformare idee in realtà. La
@@ -348,7 +348,7 @@ export default {
             img {
                 width: 400px;
                 border: 10px solid $primary-color;
-                border-radius: 25px;
+                border-radius: 30px;
             }
         }
     }
@@ -401,7 +401,7 @@ export default {
             height: 100%;
             background-color: $primary-color;
             backdrop-filter: blur(5px);
-            border-radius: 25px;
+            border-radius: 30px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -442,7 +442,7 @@ export default {
         .preview {
             min-height: 150px;
             width: 100%;
-            border-radius: 20px;
+            border-radius: 30px;
             background-size: cover;
         }
 
@@ -457,12 +457,12 @@ export default {
                 background-color: $secondary-color;
                 font-weight: 600;
                 font-size: 1.2rem;
-                border-radius: 25px;
+                border-radius: 30px;
 
                 &:hover {
                     scale: 1.2;
                     transition: .3s;
-                    background-color: $blue-color;
+                    background: linear-gradient(135deg, lighten($primary-color, 15%), lighten($primary-color, 30%));
                     color: $secondary-color;
                 }
             }

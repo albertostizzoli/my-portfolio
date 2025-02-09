@@ -164,7 +164,7 @@ export default {
     .btn {
         padding: 0.4rem 1.4rem;
         font-size: 1.4rem;
-        border-radius: 25px;
+        border-radius: 30px;
         font-weight: 600;
         position: absolute;
         bottom: 20px;
@@ -176,7 +176,7 @@ export default {
             color: $secondary-color;
 
             &:hover {
-                background-color: lighten($primary-color, 20%);
+                background: linear-gradient(135deg, lighten($primary-color, 15%), lighten($primary-color, 30%));
                 border: none;
                 scale: 1.2;
                 transition: .3s;
@@ -288,7 +288,7 @@ export default {
                 font-weight: 600;
                 background-color: $primary-color;
                 color: $secondary-color;
-                border-radius: 25px;
+                border-radius: 30px;
                 text-transform: uppercase;
             }
         }
@@ -304,7 +304,7 @@ export default {
                 font-weight: 600;
                 background-color: $primary-color;
                 color: $secondary-color;
-                border-radius: 25px;
+                border-radius: 30px;
                 text-transform: uppercase;
                 border: none;
             }
@@ -313,7 +313,7 @@ export default {
         .btn {
             padding: 0.4rem 1.4rem;
             font-size: 1.4rem;
-            border-radius: 25px;
+            border-radius: 30px;
             font-weight: 600;
             margin-bottom: 1.5rem;
 
@@ -322,7 +322,7 @@ export default {
                 color: $secondary-color;
 
                 &:hover {
-                    background-color: lighten($primary-color, 20%);
+                    background: linear-gradient(135deg, lighten($primary-color, 15%), lighten($primary-color, 30%));
                     scale: 1.2;
                     transition: .3s;
                 }
@@ -334,7 +334,7 @@ export default {
                 border: 2px solid $primary-color;
 
                 &:hover {
-                    background-color: lighten($primary-color, 20%);
+                    background: linear-gradient(135deg, lighten($primary-color, 15%), lighten($primary-color, 30%));
                     border: none;
                     scale: 1.2;
                     transition: .3s;
@@ -347,7 +347,7 @@ export default {
                 color: $secondary-color;
 
                 &:hover {
-                    background-color: lighten($primary-color, 20%);
+                    background: linear-gradient(135deg, lighten($primary-color, 15%), lighten($primary-color, 30%));
                     scale: 1.2;
                     transition: .3s;
                     border: none;
