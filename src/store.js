@@ -38,6 +38,10 @@ export const store = reactive({
             icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vuejs-colored.svg"
         },
         {
+            name: "EXT",
+            icon: "https://avatars.githubusercontent.com/u/78110?s=200&v=4"
+        },
+        {
             name: "SASS",
             icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
         },
@@ -48,6 +52,10 @@ export const store = reactive({
         {
             name: "MySQL",
             icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+        },
+        {
+            name: "PostgreSQL",
+            icon: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgresql/postgresql.png?size=48"
         },
         {
             name: "LARAVEL",
@@ -65,40 +73,61 @@ export const store = reactive({
             title: "Validus S.R.L.",
             name: "Developer ExtJS / PHP / PostgreSQL",
             period: " Dicembre 2024 - Presente",
-            description: "Attualmente in Formazione ho appreso le seguenti competenze: " +
-            "<ul class=\"ps-4\">" +
-            "<li><strong>Linux & Nginx:</strong>Configurazione e gestione del sistema operativo Linux e del web server Nginx;</li>" +
-            "<li><strong>PostgreSQL & PL/pgSQL:</strong>  Gestione del database relazionale PostgreSQL, scrittura delle funzioni in PL/pgSQL e ottimizzazione delle query;</li>" +
-            "<li><strong>CakePHP 2:</strong>  Sviluppo di applicazioni CakePHP v.2.10 lato MVC;</li>" +
-            "<li><strong>ExtJS:</strong>  Sviluppo di interfacce utente dinamiche e reattive con ExtJS v.7.8.0 sia lato MVC che MVVM;</li>" +
-            "<li><strong>SOAP & SoapUI:</strong>  Implementazione e testing di WebServices;</li>" +
-            "<li><strong>Web Scraping:</strong>  Processo di estrazione dati;</li>" +
-            "<li><strong>WebSockets:</strong>  Comunicazione in tempo reale tra client e server</li>" +
-            "</ul>"
+            description: " <h4>COMPETENZE</h4> " +
+                "<ul class=\"ms-3\">" +
+                "<li><strong>Linux & Nginx:</strong><br> <small>Configurazione e gestione del sistema operativo Linux e del web server Nginx;</small></li>" +
+                "<li><strong>PostgreSQL & PL/pgSQL:</strong> <br> <small>Gestione del database relazionale PostgreSQL, scrittura delle funzioni in PL/pgSQL e ottimizzazione delle query;</small></li>" +
+                "<li><strong>CakePHP 2:</strong> <br> <small>Sviluppo di applicazioni CakePHP v.2 lato MVC;</small></li>" +
+                "<li><strong>ExtJS:</strong> <br> <small>Sviluppo di interfacce utente dinamiche e reattive con ExtJS v.7.8 sia lato MVC che MVVM;</small></li>" +
+                "<li><strong>SOAP & SoapUI:</strong> <br> <small> Implementazione e testing di WebServices;</small></li>" +
+                "<li><strong>Web Scraping:</strong> <br> <small>Processo di estrazione dati;</small></li>" +
+                "<li><strong>WebSockets:</strong> <br> <small>Comunicazione in tempo reale tra client e server</small></li>" +
+                "</ul>"
         },
         {
             title: "Experis Academy",
             name: "Java Developer",
             period: "Marzo 2024 - Maggio 2024",
-            description: " Percorso formativo della durata di 6 settimane, durante le quali ho avuto l'opportunità di approfondire i concetti fondamentali della programmazione orientata agli oggetti (OOP) utilizzando il linguaggio JAVA. Le lezioni teoriche, strutturate in modo da fornire una base solida sulle principali nozioni di OOP, sono state integrate da esercitazioni pratiche pomeridiane che ho svolto in autonomia, permettendomi di mettere in pratica quanto appreso e sviluppare una comprensione più profonda delle tematiche trattate. Il corso ha incluso anche attività di problem-solving e revisione del codice, utili per consolidare le competenze acquisite e per affrontare situazioni reali di sviluppo software.",
+            description: " Percorso formativo della durata di 6 settimane, durante le quali ho avuto l'opportunità di approfondire i concetti fondamentali della programmazione orientata agli oggetti (OOP) utilizzando il linguaggio JAVA. Le lezioni teoriche, strutturate in modo da fornire una base solida sulle principali nozioni di OOP, sono state integrate da esercitazioni pratiche pomeridiane che ho svolto in autonomia, permettendomi di mettere in pratica quanto appreso e sviluppare una comprensione più profonda delle tematiche trattate. Il corso ha incluso anche attività di problem-solving e revisione del codice, utili per consolidare le competenze acquisite e per affrontare situazioni reali di sviluppo software." +
+                "<div class=\"p-2\">" +
+                "<h4>COMPETENZE</h4>" +
+                "<ul class=\"ms-3\">" +
+                "<li><strong>Java v.8:</strong><br> <small>Programmazione con Java SE 8</small></li>" +
+                "<li><strong>OOP:</strong> <br> <small>Principi di programmazione orientata agli oggetti</small></li>" +
+                "<li><strong>JDK:</strong><br> <small>Ambiente di sviluppo Java (Java Development Kit)</small></li>" +
+                "<li><strong>Maven:</strong><br> <small>Gestione delle dipendenze e automazione di build</small></li>" +
+                "</ul>" +
+                "</div>"
         },
         {
             title: "Boolean",
             name: "Jr Full Stack Web Developer Trainee",
             period: "Agosto 2023 - Febbraio 2024",
-            description: "Esperienza formativa di 700 ore, caratterizzata da un forte approccio pratico, durante la quale ho studiato tecnologie sia dal lato Front-End che dal lato Back-End. Questo percorso mi ha permesso di sviluppare una solida mentalità da programmatore, affinando le mie capacità di problem-solving e approccio logico alla risoluzione delle sfide tecniche. Inoltre, ho avuto l'opportunità di collaborare attivamente in un team, partecipando allo sviluppo completo di un sito web, il che mi ha consentito di acquisire competenze non solo tecniche, ma anche relazionali, come la gestione del lavoro di squadra, la coordinazione e il rispetto delle scadenze. Grazie a questa esperienza, ho potuto migliorare la mia capacità di lavorare in modo efficace in un ambiente collaborativo e di affrontare progetti complessi in modo organizzato e orientato al risultato."
+            description: "Esperienza formativa di 700 ore, caratterizzata da un forte approccio pratico, durante la quale ho studiato tecnologie sia dal lato Front-End che dal lato Back-End. Questo percorso mi ha permesso di sviluppare una solida mentalità da programmatore, affinando le mie capacità di problem-solving e approccio logico alla risoluzione delle sfide tecniche. Inoltre, ho avuto l'opportunità di collaborare attivamente in un team, partecipando allo sviluppo completo di un sito web, il che mi ha consentito di acquisire competenze non solo tecniche, ma anche relazionali, come la gestione del lavoro di squadra, la coordinazione e il rispetto delle scadenze. Grazie a questa esperienza, ho potuto migliorare la mia capacità di lavorare in modo efficace in un ambiente collaborativo e di affrontare progetti complessi in modo organizzato e orientato al risultato." +
+            "<div class=\"p-2\">" +
+                "<h4>COMPETENZE</h4>" +
+                "<ul class=\"ms-3\">" +
+                "<li><strong>HTML</strong><br> <small>Linguaggio di markup per la creazione di pagine web</small></li>" +
+                "<li><strong>CSS</strong><br> <small>Stilizzazione e layout per il design di siti web</small></li>" +
+                "<li><strong>JavaScript</strong><br> <small>Linguaggio Front-End per interfacce utente dinamiche e reattive</small></li>" +
+                "<li><strong>Vue.js v.3</strong><br> <small>Framework Front-End reattivo scritto in JavaScript</small></li>" +
+                "<li><strong>PHP v.8</strong><br> <small>Linguaggio di programmazione server-side</small></li>" +
+                "<li><strong>MySQL v.5</strong><br> <small>Database relazionale per la gestione dei dati</small></li>" +
+                "<li><strong>Laravel v.9 v.10</strong><br> <small>Framework PHP per lo sviluppo web in MVC</small></li>" +
+                "</ul>" +
+                "</div>"
         },
         {
             title: "Stizzoli S.P.A",
             name: "Addetto al magazzino filatura / Smacchinatore di macchine da maglieria (Shima Seiki)",
             period: "Marzo 2014 - Settembre 2019",
             description:
-            "<ul class=\"ps-4\">" +
-            "<li>Responsabile della preparazione delle serie di capi da mandare in produzione e controllo dell’entrata e uscita delle materie prime attraverso l’azienda;</li>" +
-            "<li>Risolvere problemi legati alla produzione;</li>" +
-            "<li>Responsabile della produzione di serie di capi con controllo qualità e quantità del prodotto in modo da poter rispettare le esigenze del cliente;</li>" +
-            "<li>Manutenzione e pulizia durante la stagione estiva delle macchine da maglieria;</li>" +
-            "</ul>"
+                "<ul class=\"ps-4\">" +
+                "<li>Responsabile della preparazione delle serie di capi da mandare in produzione e controllo dell’entrata e uscita delle materie prime attraverso l’azienda;</li>" +
+                "<li>Risolvere problemi legati alla produzione;</li>" +
+                "<li>Responsabile della produzione di serie di capi con controllo qualità e quantità del prodotto in modo da poter rispettare le esigenze del cliente;</li>" +
+                "<li>Manutenzione e pulizia durante la stagione estiva delle macchine da maglieria;</li>" +
+                "</ul>"
         },
     ],
 
