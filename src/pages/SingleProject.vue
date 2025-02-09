@@ -212,16 +212,19 @@ export default {
         position: relative;
         display: flex;
         background-color: $primary-color;
-        border-radius: 25px;
+        border-radius: 30px;
         overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 
         .tab-indicator {
             position: absolute;
             bottom: 0;
             height: 100%;
-            background-color: lighten($primary-color, 20%);
-            border-radius: 25px;
-            transition: left 0.3s ease, width 0.3s ease;
+            background: linear-gradient(135deg, lighten($primary-color, 15%), lighten($primary-color, 30%));
+            border-radius: 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            transition: left 0.4s ease-in-out, width 0.4s ease-in-out;
+            border: 1px solid darken($primary-color, 20%);
         }
     }
 
@@ -235,10 +238,15 @@ export default {
         border: none;
         cursor: pointer;
         z-index: 1000;
-        transition: color 0.3s;
+        transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        
+        &:hover {
+            transform: scale(1.05);
+        }
 
         &.active {
             color: $secondary-color;
+            transform: scale(1.1);
         }
     }
 }
