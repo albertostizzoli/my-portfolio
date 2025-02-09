@@ -62,6 +62,21 @@ export const store = reactive({
     // Array di oggetti contenente le esperienze
     experiences: [
         {
+            title: "Validus S.R.L.",
+            name: "Developer ExtJS / PHP / PostgreSQL",
+            period: " Dicembre 2024 - Presente",
+            description: "Attualmente in Formazione ho appreso le seguenti competenze: " +
+            "<ul class=\"ps-4\">" +
+            "<li><strong>Linux & Nginx:</strong>Configurazione e gestione del sistema operativo Linux e del web server Nginx;</li>" +
+            "<li><strong>PostgreSQL & PL/pgSQL:</strong>  Gestione del database relazionale PostgreSQL, scrittura delle funzioni in PL/pgSQL e ottimizzazione delle query;</li>" +
+            "<li><strong>CakePHP 2:</strong>  Sviluppo di applicazioni CakePHP v.2.10 lato MVC;</li>" +
+            "<li><strong>ExtJS:</strong>  Sviluppo di interfacce utente dinamiche e reattive con ExtJS v.7.8.0 sia lato MVC che MVVM;</li>" +
+            "<li><strong>SOAP & SoapUI:</strong>  Implementazione e testing di WebServices;</li>" +
+            "<li><strong>Web Scraping:</strong>  Processo di estrazione dati;</li>" +
+            "<li><strong>WebSockets:</strong>  Comunicazione in tempo reale tra client e server</li>" +
+            "</ul>"
+        },
+        {
             title: "Experis Academy",
             name: "Java Developer",
             period: "Marzo 2024 - Maggio 2024",

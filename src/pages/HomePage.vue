@@ -4,7 +4,7 @@
         <section id="home" class="content">
             <p class="hello">Mi chiamo</p>
             <h1 class="name">Alberto Stizzoli</h1>
-            <p class="job">e sono un Full-Stack Developer</p>
+            <p class="job">e sono un Full-Stack Web Developer</p>
         </section>
         <!-- chi sono -->
         <section id="about-me">
