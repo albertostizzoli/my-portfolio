@@ -71,26 +71,27 @@ export const store = reactive({
     experiences: [
         {
             title: "Validus S.R.L.",
-            name: "Developer ExtJS / PHP / PostgreSQL",
-            period: " Dicembre 2024 - Presente",
-            description: " <h4>COMPETENZE</h4> " +
+            name: "Programmatore Informatico ( Percorso di Formazione)",
+            period: " Dicembre 2024 - Maggio 2025",
+            description: "Durante la mia esperienza in Validus Srl ho seguito un percorso di formazione che mi ha permesso di acquisire competenze pratiche nello sviluppo software, in particolare:" +
+                "<div class=\"p-2\">" +
                 "<ul class=\"ms-3\">" +
-                "<li><strong>Linux & Nginx:</strong><br> <small>Configurazione e gestione del sistema operativo Linux e del web server Nginx;</small></li>" +
-                "<li><strong>PostgreSQL & PL/pgSQL:</strong> <br> <small>Gestione del database relazionale PostgreSQL, scrittura delle funzioni in PL/pgSQL e ottimizzazione delle query;</small></li>" +
-                "<li><strong>CakePHP 2:</strong> <br> <small>Sviluppo di applicazioni CakePHP v.2 lato MVC;</small></li>" +
-                "<li><strong>ExtJS:</strong> <br> <small>Sviluppo di interfacce utente dinamiche e reattive con ExtJS v.7.8 sia lato MVC che MVVM;</small></li>" +
-                "<li><strong>SOAP & SoapUI:</strong> <br> <small> Implementazione e testing di WebServices;</small></li>" +
-                "<li><strong>Web Scraping:</strong> <br> <small>Processo di estrazione dati;</small></li>" +
-                "<li><strong>WebSockets:</strong> <br> <small>Comunicazione in tempo reale tra client e server</small></li>" +
-                "</ul>"
+                "<li><strong>Front-End:</strong> <br> <small>Sviluppo di interfacce dinamiche e reattive con il framework Sencha ExtJS v.7.8.0 sia lato MVC che MVVM;</small></li>" +
+                "<li><strong>Back-End:</strong> <br> <small>utilizzo del framework CakePHP v.2 (lato MVC) per la gestione della logica server-side;</small></li>" +
+                "<li><strong>Database:</strong> <br> <small>Gestione del database relazionale PostgreSQL;</small></li>" +
+                "<li><strong>Linux & Nginx:</strong><br> <small>Configurazione e gestione del sistema operativo Linux e del web server NGINX;</small></li>" +
+                "<li><strong>SOAP & SoapUI:</strong> <br> <small> Implementazione e testing di servizi SOAP tramite SOAP e SoapUI;</small></li>" +
+                "<li><strong>Web Scraping:</strong> <br> <small> Estrazione automatizzata di dati da siti web tramite script PHP;</small></li>" +
+                "<li><strong>WebSockets:</strong> <br> <small> Implementazione di comunicazioni in tempo reale tra client e server;</small></li>" +
+                "</ul>" +
+                "</div>"
         },
         {
             title: "Experis Academy",
             name: "Java Developer",
             period: "Marzo 2024 - Maggio 2024",
-            description: " Percorso formativo della durata di 6 settimane, durante le quali ho avuto l'opportunità di approfondire i concetti fondamentali della programmazione orientata agli oggetti (OOP) utilizzando il linguaggio JAVA. Le lezioni teoriche, strutturate in modo da fornire una base solida sulle principali nozioni di OOP, sono state integrate da esercitazioni pratiche pomeridiane che ho svolto in autonomia, permettendomi di mettere in pratica quanto appreso e sviluppare una comprensione più profonda delle tematiche trattate. Il corso ha incluso anche attività di problem-solving e revisione del codice, utili per consolidare le competenze acquisite e per affrontare situazioni reali di sviluppo software." +
+            description: " Percorso formativo della durata di 6 settimane, durante le quali ho avuto l'opportunità di approfondire i concetti fondamentali della programmazione orientata agli oggetti (OOP) utilizzando il linguaggio JAVA. Le lezioni teoriche, strutturate in modo da fornire una base solida sulle principali nozioni di OOP, sono state integrate da esercitazioni pratiche pomeridiane che ho svolto in autonomia, permettendomi di mettere in pratica quanto appreso e sviluppare una comprensione più profonda delle tematiche trattate. Il corso ha incluso anche attività di problem-solving e revisione del codice, utili per consolidare le competenze acquisite e per affrontare situazioni reali di sviluppo software, in particolare:" +
                 "<div class=\"p-2\">" +
-                "<h4>COMPETENZE</h4>" +
                 "<ul class=\"ms-3\">" +
                 "<li><strong>Java v.8:</strong><br> <small>Programmazione con Java SE 8</small></li>" +
                 "<li><strong>OOP:</strong> <br> <small>Principi di programmazione orientata agli oggetti</small></li>" +
@@ -116,18 +117,6 @@ export const store = reactive({
                 "<li><strong>Laravel v.9 v.10</strong><br> <small>Framework PHP per lo sviluppo web in MVC</small></li>" +
                 "</ul>" +
                 "</div>"
-        },
-        {
-            title: "Stizzoli S.P.A",
-            name: "Addetto al magazzino filatura / Smacchinatore di macchine da maglieria (Shima Seiki)",
-            period: "Marzo 2014 - Settembre 2019",
-            description:
-                "<ul class=\"ps-4\">" +
-                "<li>Responsabile della preparazione delle serie di capi da mandare in produzione e controllo dell’entrata e uscita delle materie prime attraverso l’azienda;</li>" +
-                "<li>Risolvere problemi legati alla produzione;</li>" +
-                "<li>Responsabile della produzione di serie di capi con controllo qualità e quantità del prodotto in modo da poter rispettare le esigenze del cliente;</li>" +
-                "<li>Manutenzione e pulizia durante la stagione estiva delle macchine da maglieria;</li>" +
-                "</ul>"
         },
     ],
 

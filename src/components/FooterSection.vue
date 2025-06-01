@@ -2,7 +2,7 @@
   <footer class="text-center">
     <ul>
       <li class="me-3"><a href="https://github.com/albertostizzoli"><i class="fa-brands fa-github fa-3x"></i></a></li>
-      <li class="me-3"><a href="https://drive.google.com/file/d/1wAk8-dR9JLRhjfM7XAVcHdX81sc7C6-z/view?usp=drive_link"><i class="fa-solid fa-file fa-3x"></i></a></li>
+      <li class="me-3"><a href="https://drive.google.com/file/d/1iwa3AqCfSV55telDP7L0vFEeOu4oM9_L/view?usp=drive_link"><i class="fa-solid fa-file fa-3x"></i></a></li>
       <li class="me-3"><a href="https://www.linkedin.com/in/alberto-stizzoli-82a676260/"><i class="fa-brands fa-linkedin-in fa-3x"></i></a></li>
     </ul>
     <h2 class="text-white mb-5">©{{ currentYear }} Alberto Stizzoli</h2>
