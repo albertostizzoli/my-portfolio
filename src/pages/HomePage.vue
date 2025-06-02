@@ -79,7 +79,7 @@
             <div class="container p-0">
                 <div class="select-container mb-4">
                     <select class="form-select fs-4 select" v-model="selectedType">
-                        <option value="">Tutti i progetti</option>
+                        <option value="">Tutti</option>
                         <option value="FRONT-END">Front-End</option>
                         <option value="BACK-END">Back-End</option>
                         <option value="FULL-STACK">Full-Stack</option>

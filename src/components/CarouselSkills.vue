@@ -1,8 +1,16 @@
 <template>
+    <div class="select-container mb-5">
+        <select class="form-select fs-4 select" v-model="selectedType">
+            <option value="">Tutte</option>
+            <option value="FRONT-END">Front-End</option>
+            <option value="BACK-END">Back-End</option>
+            <option value="DATABASE">Database</option>
+        </select>
+    </div>
     <!-- Definizione del componente Carousel con alcune proprietà -->
     <Carousel :autoplay="2000" :items-to-show="2.5" :wrap-around="true" :breakpoints="breakpoints">
         <!-- Iterazione su ogni elemento nell'array store.skills per creare uno Slide per ciascuno -->
-        <Slide v-for="(item, index) in store.skills" :key="item.name">
+        <Slide v-for="(item, index) in filteredSkills" :key="item.name">
             <!-- Struttura di base per il contenuto di uno Slide -->
             <div class="container p-0">
                 <div class="row">
@@ -37,6 +45,7 @@ export default {
     data() {
         return {
             store,
+            selectedType: '',
             settings: {
                 itemsToShow: 1,
                 snapAlign: 'center',
@@ -55,6 +64,18 @@ export default {
         // Inizializza le animazioni con ScrollTrigger
         this.initScrollAnimations();
     },
+    computed: {
+        // Proprietà calcolata per filtrare le skills in base al tipo selezionato
+        filteredSkills() {
+            // Controlla se esiste un tipo selezionato
+            if (this.selectedType) {
+                // Filtra i progetti nello store in base al tipo selezionato
+                return this.store.skills.filter(skill => skill.type === this.selectedType);
+            }
+            // Se non c'è un tipo selezionato, restituisce tutte le skills nello store
+            return this.store.skills;
+        }
+    },
     methods: {
         initScrollAnimations() {
             // Seleziona tutti gli elementi con la classe .type-skill
@@ -69,9 +90,9 @@ export default {
                         opacity: 1,
                         duration: 1.5,
                         scrollTrigger: {
-                            trigger: element, 
-                            start: 'top center', 
-                            toggleActions: 'play none play none', 
+                            trigger: element,
+                            start: 'top center',
+                            toggleActions: 'play none play none',
                         },
                     }
                 );
@@ -90,6 +111,19 @@ export default {
 
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
+
+.select-container {
+    max-width: 200px;
+    margin-left: 0;
+    padding-left: 15px;
+
+    .select {
+        background-color: $primary-color;
+        border: 2px solid $primary-color;
+        font-weight: 600;
+        color: $secondary-color;
+    }
+}
 
 .type-skill {
     font-weight: 600;
@@ -121,4 +155,3 @@ export default {
     color: $secondary-color;
 }
 </style>
-

@@ -4,7 +4,7 @@
             <div class="wrapper">
                 <ul>
                     <li><a href="https://github.com/albertostizzoli"><i class="fa-brands fa-github fa-2x "></i></a></li>
-                    <li><a href="https://drive.google.com/file/d/1iwa3AqCfSV55telDP7L0vFEeOu4oM9_L/view?usp=drive_link"><i
+                    <li><a href="https://drive.google.com/file/d/1ZnpeD9uZK3dg8FuJspQMEL7kkKfL3M0k/view?usp=drive_link"><i
                                 class="fa-solid fa-file fa-2x"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/alberto-stizzoli-82a676260/"><i
                                 class="fa-brands fa-linkedin-in fa-2x "></i></a></li>

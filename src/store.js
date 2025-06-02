@@ -11,59 +11,78 @@ export const store = reactive({
     skills: [
         {
             name: "HTML",
-            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg"
+            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg",
+            type: "FRONT-END",
         },
         {
             name: "CSS",
-            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg"
-        },
-        {
-            name: "BOOTSTRAP",
-            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/bootstrap-colored.svg"
-        },
-        {
-            name: "TAILWIND",
-            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg"
-        },
-        {
-            name: "JAVASCRIPT",
-            icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-        },
-        {
-            name: "REACT",
-            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg"
-        },
-        {
-            name: "VUE",
-            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vuejs-colored.svg"
-        },
-        {
-            name: "EXT",
-            icon: "https://avatars.githubusercontent.com/u/78110?s=200&v=4"
+            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg",
+            type: "FRONT-END",
         },
         {
             name: "SASS",
-            icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg"
+            icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg",
+            type: "FRONT-END",
+        },
+        {
+            name: "BOOTSTRAP",
+            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/bootstrap-colored.svg",
+            type: "FRONT-END",
+        },
+        {
+            name: "TAILWIND",
+            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg",
+            type: "FRONT-END",
+        },
+        {
+            name: "JAVASCRIPT",
+            icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+            type: "FRONT-END",
+        },
+        {
+            name: "REACT",
+            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg",
+            type: "FRONT-END",
+        },
+        {
+            name: "VUE",
+            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vuejs-colored.svg",
+            type: "FRONT-END",
+        },
+        {
+            name: "EXT",
+            icon: "https://avatars.githubusercontent.com/u/78110?s=200&v=4",
+            type: "FRONT-END",
         },
         {
             name: "PHP",
-            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg"
-        },
-        {
-            name: "MySQL",
-            icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
-        },
-        {
-            name: "PostgreSQL",
-            icon: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgresql/postgresql.png?size=48"
+            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/php-colored.svg",
+            type: "BACK-END",
         },
         {
             name: "LARAVEL",
-            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/laravel-colored.svg"
+            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/laravel-colored.svg",
+            type: "BACK-END",
+        },
+        {
+            name: 'cakePHP',
+            icon: "https://avatars.githubusercontent.com/u/23666?s=240&v=4",
+            type: "BACK-END",
         },
         {
             name: "JAVA",
-            icon: "https://www.vectorlogo.zone/logos/java/java-icon.svg"
+            icon: "https://www.vectorlogo.zone/logos/java/java-icon.svg",
+            type: "BACK-END",
+        },
+        {
+            name: "MySQL",
+            icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
+            type: "DATABASE",
+        },
+        {
+            name: "PostgreSQL",
+            icon: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgresql/postgresql.png?size=48",
+            type: "DATABASE",
         },
     ],
 
@@ -105,7 +124,7 @@ export const store = reactive({
             name: "Jr Full Stack Web Developer Trainee",
             period: "Agosto 2023 - Febbraio 2024",
             description: "Esperienza formativa di 700 ore, caratterizzata da un forte approccio pratico, durante la quale ho studiato tecnologie sia dal lato Front-End che dal lato Back-End. Questo percorso mi ha permesso di sviluppare una solida mentalità da programmatore, affinando le mie capacità di problem-solving e approccio logico alla risoluzione delle sfide tecniche. Inoltre, ho avuto l'opportunità di collaborare attivamente in un team, partecipando allo sviluppo completo di un sito web, il che mi ha consentito di acquisire competenze non solo tecniche, ma anche relazionali, come la gestione del lavoro di squadra, la coordinazione e il rispetto delle scadenze. Grazie a questa esperienza, ho potuto migliorare la mia capacità di lavorare in modo efficace in un ambiente collaborativo e di affrontare progetti complessi in modo organizzato e orientato al risultato." +
-            "<div class=\"p-2\">" +
+                "<div class=\"p-2\">" +
                 "<h4>COMPETENZE</h4>" +
                 "<ul class=\"ms-3\">" +
                 "<li><strong>HTML</strong><br> <small>Linguaggio di markup per la creazione di pagine web</small></li>" +
