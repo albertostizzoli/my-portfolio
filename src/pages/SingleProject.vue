@@ -223,9 +223,8 @@ export default {
 
         &.active {
             color: $secondary-color;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-            border-radius: 16px;
+            border-radius: 30px;
             background: rgba(255, 255, 255, 0.03); 
             transition: all 0.25s ease-in-out;
         }

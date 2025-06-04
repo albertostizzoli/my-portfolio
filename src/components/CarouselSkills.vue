@@ -38,7 +38,6 @@ import 'vue3-carousel/dist/carousel.css';
 import { store } from '../store.js';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import { ref, watch } from 'vue';
 
 gsap.registerPlugin(ScrollTrigger);
 
