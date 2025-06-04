@@ -53,22 +53,20 @@
         <section id="experience">
             <h2 class="intro pb-5"><i><span class="index">03.</span>ESPERIENZE</i></h2>
             <div class="container p-0">
-                <div class="row d-flex justify-content-center">
-                    <div class="col-12 col-md-10">
-                        <div class="col-lg-3">
-                            <select class="form-select fs-4 select" @click="isActive($event.target.value)">
-                                <option v-for="(item, index) in store.experiences" :value="'btn-' + index">
-                                    {{ item.title }}
-                                </option>
-                            </select>
-                        </div>
-                        <div class="pt-4" v-for="(item, index) in store.experiences" :key="index"
-                            :class="this.is_active == 'btn-' + index ? 'd-block' : 'd-none'">
-                            <p class="description bold">{{ item.name }}</p>
-                            <p class="description">{{ item.period }}</p>
-                            <hr>
-                            <p class="description" v-html="item.description"></p>
-                        </div>
+                <div class="row d-flex justify-content-start">
+                    <div class="select-container mb-4">
+                        <select class="form-select fs-4 select" @click="isActive($event.target.value)">
+                            <option v-for="(item, index) in store.experiences" :value="'btn-' + index">
+                                {{ item.title }}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="pt-4" v-for="(item, index) in store.experiences" :key="index"
+                        :class="this.is_active == 'btn-' + index ? 'd-block' : 'd-none'">
+                        <p class="description bold">{{ item.name }}</p>
+                        <p class="description">{{ item.period }}</p>
+                        <hr>
+                        <p class="description" v-html="item.description"></p>
                     </div>
                 </div>
             </div>
@@ -356,6 +354,19 @@ export default {
     /*--- ESPERIENZE ---*/
     #experience {
         color: $secondary-color;
+
+        .select-container {
+            max-width: 250px;
+            margin-left: 0;
+            padding-left: 15px;
+
+            .select {
+                background-color: $primary-color;
+                border: 2px solid $primary-color;
+                font-weight: 600;
+                color: $secondary-color;
+            }
+        }
 
         .description {
             font-size: 1.4rem;
