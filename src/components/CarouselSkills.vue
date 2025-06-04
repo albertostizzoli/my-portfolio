@@ -8,7 +8,7 @@
         </select>
     </div>
     <!-- Definizione del componente Carousel con alcune proprietà -->
-    <Carousel ref="carouselRef" :autoplay="autoplayDelay" :items-to-show="2.5" :wrap-around="true"
+    <Carousel :autoplay="autoplayDelay" :items-to-show="2.5" :wrap-around="true"
         :breakpoints="breakpoints">
         <!-- Iterazione su ogni elemento nell'array store.skills per creare uno Slide per ciascuno -->
         <Slide v-for="(item, index) in filteredSkills" :key="item.name">
@@ -62,17 +62,6 @@ export default {
                 0: { itemsToShow: 0.5, snapAlign: 'center' },
             },
         };
-    },
-    watch: {
-        selectedType() {
-            this.$nextTick(() => {
-                const carousel = this.$refs.carouselRef;
-                if (carousel && typeof carousel.slideTo === 'function') {
-                    carousel.slideTo(0);
-                }
-                this.initScrollAnimations(); // resetta le animazioni
-            });
-        }
     },
     mounted() {
         // Inizializza le animazioni con ScrollTrigger
