@@ -8,7 +8,8 @@
         </select>
     </div>
     <!-- Definizione del componente Carousel con alcune proprietà -->
-    <Carousel :autoplay="2000" :items-to-show="2.5" :wrap-around="true" :breakpoints="breakpoints">
+    <Carousel ref="carouselRef" :autoplay="autoplayDelay" :items-to-show="2.5" :wrap-around="true"
+        :breakpoints="breakpoints">
         <!-- Iterazione su ogni elemento nell'array store.skills per creare uno Slide per ciascuno -->
         <Slide v-for="(item, index) in filteredSkills" :key="item.name">
             <!-- Struttura di base per il contenuto di uno Slide -->
@@ -37,6 +38,7 @@ import 'vue3-carousel/dist/carousel.css';
 import { store } from '../store.js';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { ref, watch } from 'vue';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,6 +48,7 @@ export default {
         return {
             store,
             selectedType: '',
+            autoplayDelay: 0,
             settings: {
                 itemsToShow: 1,
                 snapAlign: 'center',
@@ -60,9 +63,21 @@ export default {
             },
         };
     },
+    watch: {
+        selectedType() {
+            this.$nextTick(() => {
+                const carousel = this.$refs.carouselRef;
+                if (carousel && typeof carousel.slideTo === 'function') {
+                    carousel.slideTo(0);
+                }
+                this.initScrollAnimations(); // resetta le animazioni
+            });
+        }
+    },
     mounted() {
         // Inizializza le animazioni con ScrollTrigger
         this.initScrollAnimations();
+        this.setupCarouselScrollTrigger();
     },
     computed: {
         // Proprietà calcolata per filtrare le skills in base al tipo selezionato
@@ -78,7 +93,6 @@ export default {
     },
     methods: {
         initScrollAnimations() {
-            // Seleziona tutti gli elementi con la classe .type-skill
             const skillElements = document.querySelectorAll('.type-skill');
 
             skillElements.forEach((element) => {
@@ -98,7 +112,21 @@ export default {
                 );
             });
         },
+
+        setupCarouselScrollTrigger() {
+            const carouselEl = document.querySelector('.type-skill');
+
+            ScrollTrigger.create({
+                trigger: carouselEl,
+                start: 'top 80%',
+                once: true,
+                onEnter: () => {
+                    this.autoplayDelay = 2000; // attiva autoplay solo viene raggiunto con il mouse
+                },
+            });
+        }
     },
+
     components: {
         Carousel,
         Slide,

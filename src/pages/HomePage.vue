@@ -133,120 +133,38 @@ export default {
         // Chiama il metodo 'isActive' passando l'attuale valore di 'is_active'
         this.isActive(this.is_active);
 
-        // Animazioni GSAP per l'intro
-        gsap.from("#home .hello, #home .name, #home .job", {
-            scrollTrigger: {
-                trigger: "#home",
-                start: "top center",
-                toggleActions: "play none play none",
-            },
-            opacity: 0,
-            duration: 1.5,
-            scale: 0.2,
-            stagger: 0.5
-        });
-
-        // Animazioni GSAP per l'immagine
-        gsap.from(".image", {
-            scrollTrigger: {
-                trigger: ".image",
-                start: "top center",
-                toggleActions: "play none play none",
-            },
-            opacity: 0,
-            duration: 1.5,
-            scale: 0.2,
-            stagger: 0.5
-        });
-
-        // Animazioni GSAP per Chi Sono (titolo)
-        gsap.from(".presentation", {
-            scrollTrigger: {
-                trigger: ".presentation",
-                start: "top center",
-                toggleActions: "play none play none",
-            },
-            opacity: 0,
-            duration: 1.5,
-            scale: 0.2,
-            stagger: 0.5
-        });
-
-        // Animazioni GSAP per Chi Sono (paragrafo)
-        gsap.from(".paragraph", {
-            scrollTrigger: {
-                trigger: ".paragraph",
-                start: "top center",
-                toggleActions: "play none play none",
-            },
-            opacity: 0,
-            duration: 1.5,
-            scale: 0.2,
-            stagger: 0.5
-        });
-
-        // Animazioni GSAP per Esperienze (Select)
-        gsap.from(".select", {
-            scrollTrigger: {
-                trigger: ".select",
-                start: "top center",
-                toggleActions: "play none play none",
-            },
-            opacity: 0,
-            duration: 1.5,
-            scale: 0.2,
-            stagger: 0.5
-        });
-
-        // Animazioni GSAP per Esperienze
-        gsap.from(".description", {
-            scrollTrigger: {
-                trigger: ".description",
-                start: "top center",
-                toggleActions: "play none play none",
-            },
-            opacity: 0,
-            duration: 1.5,
-            scale: 0.2,
-            stagger: 0.5
-        });
-
-        // Animazioni GSAP per Progetti (Select)
-        gsap.from(".select-container", {
-            scrollTrigger: {
-                trigger: ".select-container",
-                start: "top center",
-                toggleActions: "play none play none",
-            },
-            opacity: 0,
-            duration: 1.5,
-            scale: 0.2,
-            stagger: 0.5
-        });
-
-        // Animazioni GSAP per Progetti
-        gsap.from(".box-card", {
-            scrollTrigger: {
-                trigger: ".box-card",
-                start: "top center",
-                toggleActions: "play none play none",
-            },
-            opacity: 0,
-            duration: 1.5,
-            scale: 0.2,
-            stagger: 0.5,
-        });
-
-        // Animazione per i titoli
-        gsap.utils.toArray("h2.intro").forEach((title) => {
-            gsap.from(title, {
+        // funzione riutilizzabile per animare con GSAP + ScrollTrigger
+        function animateOnScroll(selector, triggerSelector = selector, options = {}) {
+            gsap.from(selector, {
                 scrollTrigger: {
-                    trigger: title,
-                    start: "top 80%",
-                    end: "bottom 50%",
-                    toggleActions: "play none play none",
+                    trigger: triggerSelector,
+                    start: options.start || "top center",
+                    toggleActions: options.toggleActions || "play none play none"
                 },
-                opacity: 0,
+                opacity: options.opacity || 0,
+                duration: options.duration || 1.5,
+                scale: options.scale || 0.2,
+                stagger: options.stagger || 0.5
+            });
+        }
+
+        // uso la funzione nei vari selettori
+        animateOnScroll("#home .hello, #home .name, #home .job", "#home");
+
+        [
+            ".image",
+            ".presentation",
+            ".paragraph",
+            ".select",
+            ".description",
+            ".select-container",
+            ".box-card"
+        ].forEach(selector => animateOnScroll(selector));
+
+        // animazioni GSAP per i titoli
+        gsap.utils.toArray("h2.intro").forEach((title) => {
+            animateOnScroll(title, title, {
+                start: "top 80%",
                 scale: 0.2,
                 duration: 1.5,
                 stagger: 0.5

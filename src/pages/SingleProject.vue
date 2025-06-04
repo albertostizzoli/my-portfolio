@@ -75,6 +75,7 @@ export default {
             store,
             project: null, // Oggetto che conterrà i dati del progetto selezionato
             activeTab: 'description', // Tab attivo iniziale (di default)
+            activeTabIndex: 0, // Indice iniziale corrispondente a 'description'
             indicatorLeft: '0px', // Posizione orizzontale dell'indicatore iniziale
             indicatorWidth: '0px', // Larghezza dell'indicatore iniziale
             tabs: [ // Elenco delle schede disponibili
@@ -106,36 +107,12 @@ export default {
     },
     mounted() {
         this.$nextTick(() => {
-            // Aggiorna l'indicatore dopo il rendering iniziale del DOM
+            this.activeTabIndex = this.tabs.findIndex(tab => tab.id === this.activeTab);
             this.updateIndicator();
         });
-        
-        // Animazioni GSAP per l'intro
-        gsap.from(".info", {
-            opacity: 0,
-            duration: 1.5,
-            scale: 0.2,
-            stagger: 0.5
-        });
 
-        // Animazioni GSAP per l'immagine
-        gsap.from(".image", {
-            opacity: 0,
-            duration: 1.5,
-            scale: 0.2,
-            stagger: 0.5
-        });
-
-        // Animazioni GSAP per il selettore di Tab
-        gsap.from(".tab-selector", {
-            opacity: 0,
-            duration: 1.5,
-            scale: 0.2,
-            stagger: 0.5
-        });
-
-        // Animazioni GSAP per il contenuto
-        gsap.from(".content", {
+        // Animazioni GSAP 
+        gsap.from(".info, .image, .tab-selector, .content", {
             opacity: 0,
             duration: 1.5,
             scale: 0.2,
@@ -239,15 +216,20 @@ export default {
         cursor: pointer;
         z-index: 1000;
         transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
-        
+
         &:hover {
             transform: scale(1.05);
         }
 
         &.active {
             color: $secondary-color;
-            transform: scale(1.1);
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.03); 
+            transition: all 0.25s ease-in-out;
         }
+
     }
 }
 
