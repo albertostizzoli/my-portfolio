@@ -4,7 +4,7 @@
         <section id="home" class="content">
             <p class="hello">Mi chiamo</p>
             <h1 class="name">Alberto Stizzoli</h1>
-            <p class="job">e sono un Full-Stack Web Developer</p>
+            <p class="job">{{ displayText }}</p>
         </section>
         <!-- chi sono -->
         <section id="about-me">
@@ -119,6 +119,11 @@ export default {
             store,
             is_active: 'btn-0',
             selectedType: '',
+            text: 'e sono un Full Stack Web Developer',
+            displayText: '',
+            index: 0,
+            typingInterval: null,
+            resetTimeout: null,
         }
     },
     methods: {
@@ -127,11 +132,27 @@ export default {
             // Imposta la variabile 'is_active' con il valore dell'ID passato come argomento
             this.is_active = id;
         },
+        startTyping() {
+            this.index = 0; // Resetta l'indice per la digitazione
+            this.displayText = ''; // Resetta il testo visualizzato
+            this.typingInterval = setInterval(this.typeLetter, 80); // Imposta l'intervallo di digitazione
+        },
+        typeLetter() {
+            
+            if (this.index < this.text.length) { // Controlla se ci sono ancora lettere da digitare
+                this.displayText += this.text[this.index]; // Aggiunge la lettera corrente al testo visualizzato
+                this.index++; // Incrementa l'indice per la prossima lettera
+            } else {
+                // Se il testo è stato completamente digitato, ferma l'intervallo di digitazione
+                clearInterval(this.typingInterval);
+            }
+        }
     },
     // Ciclo di vita del componente: metodo eseguito quando il componente è montato
     mounted() {
         // Chiama il metodo 'isActive' passando l'attuale valore di 'is_active'
         this.isActive(this.is_active);
+        this.startTyping(); // chiamo la funzione startTyping per iniziare la digitazione del testo
 
         // funzione riutilizzabile per animare con GSAP + ScrollTrigger
         function animateOnScroll(selector, triggerSelector = selector, options = {}) {
@@ -149,7 +170,7 @@ export default {
         }
 
         // uso la funzione nei vari selettori
-        animateOnScroll("#home .hello, #home .name, #home .job", "#home");
+        animateOnScroll();
 
         [
             ".image",
