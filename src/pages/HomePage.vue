@@ -2,9 +2,9 @@
     <div class="full-content">
         <!-- home page -->
         <section id="home" class="content">
-            <p class="hello">Mi chiamo</p>
-            <h1 class="name">Alberto Stizzoli</h1>
-            <p class="job">{{ displayText }}</p>
+            <p class="hello">{{ typedHello }}</p>
+            <h1 class="name">{{ typedName }}</h1>
+            <p class="job">{{ typedJob }}</p>
         </section>
         <!-- chi sono -->
         <section id="about-me">
@@ -119,11 +119,13 @@ export default {
             store,
             is_active: 'btn-0',
             selectedType: '',
-            text: 'e sono un Full Stack Web Developer',
-            displayText: '',
-            index: 0,
-            typingInterval: null,
-            resetTimeout: null,
+            phrases: ['Mi chiamo', 'Alberto Stizzoli', 'e sono un Full Stack Web Developer'],
+            currentPhraseIndex: 0,
+            charIndex: 0,
+            typedHello: '',
+            typedName: '',
+            typedJob: '',
+            typingInterval: null
         }
     },
     methods: {
@@ -132,19 +134,38 @@ export default {
             // Imposta la variabile 'is_active' con il valore dell'ID passato come argomento
             this.is_active = id;
         },
+        // Metodo per iniziare la digitazione delle frasi
         startTyping() {
-            this.index = 0; // Resetta l'indice per la digitazione
-            this.displayText = ''; // Resetta il testo visualizzato
-            this.typingInterval = setInterval(this.typeLetter, 80); // Imposta l'intervallo di digitazione
+            this.currentPhraseIndex = 0; // indice frase
+            this.charIndex = 0; // indice carattere
+            this.typedHello = ''; // testo "Mi chiamo"
+            this.typedName = ''; // testo "Alberto Stizzoli"
+            this.typedJob = ''; // testo "e sono un Full Stack Web Developer"
+            this.typingInterval = setInterval(this.typeLetter, 80); // intervallo
         },
+        // Metodo per digitare un carattere alla volta
         typeLetter() {
-            
-            if (this.index < this.text.length) { // Controlla se ci sono ancora lettere da digitare
-                this.displayText += this.text[this.index]; // Aggiunge la lettera corrente al testo visualizzato
-                this.index++; // Incrementa l'indice per la prossima lettera
+            const currentText = this.phrases[this.currentPhraseIndex]; // testo corrente da digitare
+            const currentChar = currentText[this.charIndex]; // carattere corrente da digitare
+            // Controlla se ci sono ancora caratteri da digitare nella frase corrente
+            if (this.charIndex < currentText.length) {
+                if (this.currentPhraseIndex === 0) {
+                    this.typedHello += currentChar;
+                } else if (this.currentPhraseIndex === 1) {
+                    this.typedName += currentChar;
+                } else if (this.currentPhraseIndex === 2) {
+                    this.typedJob += currentChar;
+                }
+                this.charIndex++;
             } else {
-                // Se il testo è stato completamente digitato, ferma l'intervallo di digitazione
-                clearInterval(this.typingInterval);
+                // Passa alla frase successiva
+                this.charIndex = 0;
+                this.currentPhraseIndex++;
+
+                // Se tutte le frasi sono finite, ferma l'intervallo
+                if (this.currentPhraseIndex >= this.phrases.length) {
+                    clearInterval(this.typingInterval);
+                }
             }
         }
     },
