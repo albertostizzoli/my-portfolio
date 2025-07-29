@@ -75,6 +75,11 @@ export const store = reactive({
             type: "BACK-END",
         },
         {
+            name: "PYTHON",
+            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg",
+            type: "BACK-END",
+        },
+        {
             name: "MySQL",
             icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
             type: "DATABASE",
@@ -90,7 +95,7 @@ export const store = reactive({
     experiences: [
         {
             title: "Validus S.R.L.",
-            name: "Programmatore Informatico ( Percorso di Formazione)",
+            name: "Developer ExtJS / cakePHP / PostgreSQL",
             period: " Dicembre 2024 - Maggio 2025",
             description: "Durante la mia esperienza in Validus Srl ho seguito un percorso di formazione che mi ha permesso di acquisire competenze pratiche nello sviluppo software, in particolare:" +
                 "<div class=\"p-2\">" +
