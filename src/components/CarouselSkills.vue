@@ -5,6 +5,7 @@
             <option value="FRONT-END">Front-End</option>
             <option value="BACK-END">Back-End</option>
             <option value="DATABASE">Database</option>
+            <option value="DEVOPS & TOOLS">DevOps & Tools</option>
         </select>
     </div>
     <!-- Definizione del componente Carousel con alcune proprietà -->

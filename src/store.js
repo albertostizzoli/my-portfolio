@@ -25,32 +25,32 @@ export const store = reactive({
             type: "FRONT-END",
         },
         {
-            name: "BOOTSTRAP",
+            name: "Bootstrap",
             icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/bootstrap-colored.svg",
             type: "FRONT-END",
         },
         {
-            name: "TAILWIND",
+            name: "Tailwind",
             icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg",
             type: "FRONT-END",
         },
         {
-            name: "JAVASCRIPT",
+            name: "JavaScript",
             icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
             type: "FRONT-END",
         },
         {
-            name: "REACT",
+            name: "ReactJS",
             icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg",
             type: "FRONT-END",
         },
         {
-            name: "VUE",
+            name: "VueJS",
             icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/vuejs-colored.svg",
             type: "FRONT-END",
         },
         {
-            name: "EXT",
+            name: "ExtJS",
             icon: "https://avatars.githubusercontent.com/u/78110?s=200&v=4",
             type: "FRONT-END",
         },
@@ -60,23 +60,38 @@ export const store = reactive({
             type: "BACK-END",
         },
         {
-            name: "LARAVEL",
-            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/laravel-colored.svg",
-            type: "BACK-END",
-        },
-        {
-            name: 'cakePHP',
+            name: 'CakePHP',
             icon: "https://avatars.githubusercontent.com/u/23666?s=240&v=4",
             type: "BACK-END",
         },
         {
-            name: "JAVA",
+            name: "Laravel",
+            icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/laravel-colored.svg",
+            type: "BACK-END",
+        },
+        {
+            name: "Java",
             icon: "https://www.vectorlogo.zone/logos/java/java-icon.svg",
             type: "BACK-END",
         },
         {
-            name: "PYTHON",
+            name: "Python",
             icon: "https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/python-colored.svg",
+            type: "BACK-END",
+        },
+        {
+            name: "FastAPI",
+            icon: "https://avatars.githubusercontent.com/u/156354296?s=242&v=4",
+            type: "BACK-END",
+        },
+        {
+            name: "C#",
+            icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/384px-Logo_C_sharp.svg.png?20221121173824",
+            type: "BACK-END",
+        },
+        {
+            name: "C++",
+            icon: "https://avatars.githubusercontent.com/u/13841574?s=242&v=4",
             type: "BACK-END",
         },
         {
@@ -88,6 +103,21 @@ export const store = reactive({
             name: "PostgreSQL",
             icon: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/postgresql/postgresql.png?size=48",
             type: "DATABASE",
+        },
+        {
+            name: "Git",
+            icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/git.webp",
+            type: "DEVOPS & TOOLS",
+        },
+                {
+            name: "NGINX",
+            icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/nginx.webp",
+            type: "DEVOPS & TOOLS",
+        },
+                {
+            name: "Linux Fedora",
+            icon: "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/fedora.webp",
+            type: "DEVOPS & TOOLS",
         },
     ],
 
