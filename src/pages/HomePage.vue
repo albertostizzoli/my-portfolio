@@ -119,7 +119,7 @@ export default {
             store,
             is_active: 'btn-0',
             selectedType: '',
-            phrases: ['Mi chiamo', 'Alberto Stizzoli', 'e sono un Full Stack Web Developer'],
+            phrases: ['Mi chiamo', 'Alberto Stizzoli', 'e sono un Full Stack Web Developer / Python Developer'],
             currentPhraseIndex: 0,
             charIndex: 0,
             typedHello: '',
@@ -140,7 +140,7 @@ export default {
             this.charIndex = 0; // indice carattere
             this.typedHello = ''; // testo "Mi chiamo"
             this.typedName = ''; // testo "Alberto Stizzoli"
-            this.typedJob = ''; // testo "e sono un Full Stack Web Developer"
+            this.typedJob = ''; // testo "e sono un Full Stack Web Developer / Python Developer"
             this.typingInterval = setInterval(this.typeLetter, 80); // intervallo
         },
         // Metodo per digitare un carattere alla volta
