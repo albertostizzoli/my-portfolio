@@ -85,16 +85,6 @@ export const store = reactive({
             type: "BACK-END",
         },
         {
-            name: "C#",
-            icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/384px-Logo_C_sharp.svg.png?20221121173824",
-            type: "BACK-END",
-        },
-        {
-            name: "C++",
-            icon: "https://avatars.githubusercontent.com/u/13841574?s=242&v=4",
-            type: "BACK-END",
-        },
-        {
             name: "MySQL",
             icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
             type: "DATABASE",
