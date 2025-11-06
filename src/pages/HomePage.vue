@@ -119,7 +119,7 @@ export default {
             store,
             is_active: 'btn-0',
             selectedType: '',
-            phrases: ['Mi chiamo', 'Alberto Stizzoli', 'e sono un Full Stack Web Developer / Python Developer'],
+            phrases: ['Mi chiamo', 'Alberto Stizzoli', 'e sono un Web Developer'],
             currentPhraseIndex: 0,
             charIndex: 0,
             typedHello: '',
