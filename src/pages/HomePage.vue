@@ -40,6 +40,15 @@
                                 ad adattarmi rapidamente ai cambiamenti del settore.
                             </p>
                         </div>
+                        <div class="pb-4">
+                            <h2 class="presentation">💻 Esperienze Lavorative e Personali</h2>
+                            <p class="paragraph">
+                                Durante la mia prima formazione aziendale ho imparato lo sviluppo dei software e delle
+                                architetture utilizzate per la creazione di applicazioni gestionali. Nei miei progetti
+                                personali sperimento framework come React e sto ampliando le mie competenze in Python
+                                e Intelligenza Artificiale.
+                             </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,7 +128,7 @@ export default {
             store,
             is_active: 'btn-0',
             selectedType: '',
-            phrases: ['Mi chiamo', 'Alberto Stizzoli', 'e sono un Full Stack Web Developer / Python Developer'],
+            phrases: ['Mi chiamo', 'Alberto Stizzoli', 'e sono un Web Developer'],
             currentPhraseIndex: 0,
             charIndex: 0,
             typedHello: '',

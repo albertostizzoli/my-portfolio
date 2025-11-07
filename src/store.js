@@ -85,16 +85,6 @@ export const store = reactive({
             type: "BACK-END",
         },
         {
-            name: "C#",
-            icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/384px-Logo_C_sharp.svg.png?20221121173824",
-            type: "BACK-END",
-        },
-        {
-            name: "C++",
-            icon: "https://avatars.githubusercontent.com/u/13841574?s=242&v=4",
-            type: "BACK-END",
-        },
-        {
             name: "MySQL",
             icon: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
             type: "DATABASE",
@@ -124,24 +114,17 @@ export const store = reactive({
     // Array di oggetti contenente le esperienze
     experiences: [
         {
-            title: "Developer Trainee - Self-Study",
-            name: "Full-Stack Developer (C#, C++, Python)",
+            title: "Developer Trainee - Python",
+            name: "Python Developer",
             period: "Giugno 2025 - Presente",
-            description: "Approfondimento pratico e teorico di linguaggi di programmazione moderni, includendo:" +
+            description: "Approfondimento teorico e pratico in autonomia del linguaggio Python e del framework FastAPI con studio della sintassi, OOP e concetti chiave con creazione di alcuni progetti fra cui:" +
                 "<div class=\"p-2\">" +
-                "<ul class=\"ms-3\">" +
-                "<li><strong>C#:</strong> <br> <small>Studio approfondito della sintassi, OOP e concetti chiave;</small></li>" +
-                "<li><strong>C++:</strong> <br> <small>Studio di algoritmi, strutture dati e programmazione ad alte prestazioni;</small></li>" +
-                "<li><strong>Python + FastAPI:</strong> <br>" +
-                    "<small>Studio approfondito della sintassi, OOP e concetti chiave del linguaggio Python con la creazione di alcuni progetti, fra cui:</small>" +
                     "<ul class=\"ms-3\">" +
                         "<li><small>Applicazione grafica che simula il lancio di uno o più dadi realizzata con Python e Tkinter ;</small></li>" +
                         "<li><small>Applicazioe desktop semplice e intuitiva per convertire valute in tempo reale utilizzando l'ExchangeRate API realizzata con Python e Tkinter;</small></li>" +
                         "<li><small>Applicazione Python sviluppata con Tkinter che permette di selezionare casualmente un alunno da una classe.</small></li>" +
                         "<li><small>API REST realizzata con FastAPI per gestire post di tipo blog, salvandoli in un file JSON locale tramite le operazioni CRUD.</small></li>" +
                     "</ul>" +
-                "</li>" +
-                "</ul>" +
                 "</div>"
         },
         {
