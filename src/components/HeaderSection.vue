@@ -115,6 +115,7 @@ header {
     position: fixed;
     top: 0;
     z-index: 1000;
+    margin-top: 10px;
 
     nav {
         margin-top: 12px;

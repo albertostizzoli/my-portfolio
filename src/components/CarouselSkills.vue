@@ -33,7 +33,6 @@
 </template>
 
 <script>
-import { defineComponent, onMounted } from 'vue';
 import { Carousel, Slide, Pagination } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
 import { store } from '../store.js';
