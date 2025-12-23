@@ -42,6 +42,7 @@
 
 
 <script>
+import gsap from 'gsap';
 import { Carousel, Slide, Navigation, Pagination } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
 import { store } from '../store.js';
@@ -81,6 +82,25 @@ export default {
         },
         nextSlide() {
             this.$refs.carousel.next();
+        },
+        initZoomHover() {
+            document.querySelectorAll('.box-card').forEach(card => {
+                card.onmouseenter = () => {
+                    gsap.to(card, {
+                        scale: 1.10,
+                        duration: 0.3,
+                        ease: 'power2.out'
+                    });
+                };
+
+                card.onmouseleave = () => {
+                    gsap.to(card, {
+                        scale: 1,
+                        duration: 0.3,
+                        ease: 'power2.out'
+                    });
+                };
+            });
         }
     },
     computed: {
@@ -99,6 +119,19 @@ export default {
             return this.filteredProjects.length > 1 // evita doppioni quando filtro per tipo
         },
     },
+    mounted() {
+        this.$nextTick(() => {
+            this.initZoomHover();
+        });
+    },
+
+    watch: {
+        filteredProjects() {
+            this.$nextTick(() => {
+                this.initZoomHover();
+            });
+        }
+    },
 }
 </script>
 
@@ -107,16 +140,6 @@ export default {
 
 :deep(.carousel__slide) {
     padding: 20px 20px;
-    transition: transform 0.3s ease;
-}
-
-:deep(.carousel__slide--active) .box-card {
-    transform: scale(1.1); // ingrandisci la card centrale
-    z-index: 2; // porta davanti le card centrali
-}
-
-:deep(.carousel__slide:not(.carousel__slide--active) .box-card) {
-    transform: scale(0.95);
     transition: transform 0.3s ease;
 }
 
@@ -181,13 +204,14 @@ export default {
     flex-direction: column;
     justify-content: space-between;
     padding: 10px 20px;
+    will-change: transform;
 
     .box-card-top {
         display: flex;
         align-items: center;
 
     }
-    
+
 }
 
 .number {
