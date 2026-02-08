@@ -116,14 +116,15 @@ export const store = reactive({
         {
             title: "Developer Trainee - Python",
             name: "Python Developer",
-            period: "Giugno 2025 - Presente",
+            period: "Giugno 2025 - Dicembre 2025",
             description: "Approfondimento teorico e pratico in autonomia del linguaggio Python e del framework FastAPI con studio della sintassi, OOP e concetti chiave con creazione di alcuni progetti fra cui:" +
                 "<div class=\"p-2\">" +
                     "<ul class=\"ms-3\">" +
-                        "<li><small>Applicazione grafica che simula il lancio di uno o più dadi realizzata con Python e Tkinter ;</small></li>" +
+                        "<li><small>Applicazione grafica che simula il lancio di uno o più dadi realizzata con Python e Tkinter;</small></li>" +
                         "<li><small>Applicazioe desktop semplice e intuitiva per convertire valute in tempo reale utilizzando l'ExchangeRate API realizzata con Python e Tkinter;</small></li>" +
-                        "<li><small>Applicazione Python sviluppata con Tkinter che permette di selezionare casualmente un alunno da una classe.</small></li>" +
-                        "<li><small>API REST realizzata con FastAPI per gestire post di tipo blog, salvandoli in un file JSON locale tramite le operazioni CRUD.</small></li>" +
+                        "<li><small>Applicazione Python sviluppata con Tkinter che permette di selezionare casualmente un alunno da una classe;</small></li>" +
+                        "<li><small>API REST realizzata con FastAPI per gestire post di tipo blog, salvandoli in un file JSON locale tramite le operazioni CRUD;</small></li>" +
+                        "<li><small>TravelDiary realizzato con React e FastAPI, un diario digitale in cui l’utente può salvare i suoi viaggi e tappe, con l’aggiunta di una Chat con l’AI in cui l’utente puó ricevere consigli per i propri viaggi;</small></li>" +
                     "</ul>" +
                 "</div>"
         },

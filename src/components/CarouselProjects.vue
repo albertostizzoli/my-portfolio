@@ -158,19 +158,27 @@ export default {
     transform: translateY(-50%);
     width: 45px;
     height: 45px;
-    background-color: $secondary-color;
+    background-color: rgb(14, 147, 235);
+    color: $secondary-color;
     border-radius: 50%;
     z-index: 10;
+
+    &:hover {
+        transition: .3s;
+        background-color: $secondary-color;
+        color: black;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    }
 }
 
 /* sinistra */
 :deep(.carousel__prev) {
-    left: -20px;
+    left: -30px;
 }
 
 /* destra */
 :deep(.carousel__next) {
-    right: -20px;
+    right: -30px;
 }
 
 /* evita che tocchino il layout */
@@ -198,7 +206,6 @@ export default {
     width: 100%;
     height: 100%;
     background-color: $primary-color;
-    backdrop-filter: blur(5px);
     border-radius: 30px;
     display: flex;
     flex-direction: column;
@@ -209,7 +216,6 @@ export default {
     .box-card-top {
         display: flex;
         align-items: center;
-
     }
 
 }
@@ -264,6 +270,7 @@ export default {
             transition: .3s;
             background: linear-gradient(135deg, lighten($primary-color, 15%), lighten($primary-color, 30%));
             color: $secondary-color;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
         }
     }
 }

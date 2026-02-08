@@ -14,7 +14,7 @@
                     <div class="col-lg-5 pe-lg-3 col-md-12 p-md-0 image">
                         <img src="/img/myimage.jpg" alt="image-profile">
                     </div>
-                    <div class="col-lg-7 ps-lg-3 col-md-12 pt-3">
+                    <div class="col-lg-7 ps-lg-3 col-md-12 pt-3 mt-5">
                         <!-- presentazione -->
                         <div class="pb-4">
                             <h2 class="presentation">🌟 Il mio percorso</h2>
@@ -40,22 +40,13 @@
                                 ad adattarmi rapidamente ai cambiamenti del settore.
                             </p>
                         </div>
-                        <div class="pb-4">
-                            <h2 class="presentation">💻 Esperienze Lavorative e Personali</h2>
-                            <p class="paragraph">
-                                Durante la mia prima formazione aziendale ho imparato lo sviluppo dei software e delle
-                                architetture utilizzate per la creazione di applicazioni gestionali. Nei miei progetti
-                                personali sperimento framework come React e sto ampliando le mie competenze in Python
-                                e Intelligenza Artificiale.
-                             </p>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- skills -->
         <section id="skills">
-            <h2 class="intro pb-5 text-white"><i><span class="index">02.</span>SKILLS</i></h2>
+            <h2 class="intro pb-5 text-white"><i><span class="index">02.</span>COMPETENZE</i></h2>
             <CarouselSkills></CarouselSkills>
         </section>
         <!-- esperienze-->
