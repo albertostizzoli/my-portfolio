@@ -148,15 +148,15 @@ export default {
         left: 70px;
 
         &.back {
-            background-color: transparent;
-            border: 2px solid $primary-color;
+            background-color: $primary-color;
             color: $secondary-color;
 
             &:hover {
-                background: linear-gradient(135deg, lighten($primary-color, 15%), lighten($primary-color, 30%));
-                border: none;
                 scale: 1.2;
                 transition: .3s;
+                background: linear-gradient(135deg, lighten($primary-color, 15%), lighten($primary-color, 30%));
+                color: $secondary-color;
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
             }
         }
     }
@@ -173,11 +173,16 @@ export default {
 }
 
 /*-- IMMAGINE PROGETTO --*/
+.image {
+    padding-top: 40px;
+}
+
 .image img {
     width: 100%;
-    height: 100%;
-    padding-top: 30px;
+    display: block;
+    border-radius: 25px;
 }
+
 
 /*-- SELETTORE TAB-- */
 .tab-selector {
@@ -225,7 +230,7 @@ export default {
             color: $secondary-color;
             box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
             border-radius: 30px;
-            background: rgba(255, 255, 255, 0.03); 
+            background: rgba(255, 255, 255, 0.03);
             transition: all 0.25s ease-in-out;
         }
 
@@ -303,35 +308,37 @@ export default {
                 color: $secondary-color;
 
                 &:hover {
-                    background: linear-gradient(135deg, lighten($primary-color, 15%), lighten($primary-color, 30%));
                     scale: 1.2;
                     transition: .3s;
+                    background: linear-gradient(135deg, lighten($primary-color, 15%), lighten($primary-color, 30%));
+                    color: $secondary-color;
+                    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
                 }
             }
 
             &.github {
-                background-color: transparent;
-                color: white;
-                border: 2px solid $primary-color;
+                background-color: $primary-color;
+                color: $secondary-color;
 
                 &:hover {
-                    background: linear-gradient(135deg, lighten($primary-color, 15%), lighten($primary-color, 30%));
-                    border: none;
                     scale: 1.2;
                     transition: .3s;
+                    background: linear-gradient(135deg, lighten($primary-color, 15%), lighten($primary-color, 30%));
+                    color: $secondary-color;
+                    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
                 }
             }
 
             &.back {
-                background-color: transparent;
-                border: 2px solid $primary-color;
+                background-color: $primary-color;
                 color: $secondary-color;
 
                 &:hover {
-                    background: linear-gradient(135deg, lighten($primary-color, 15%), lighten($primary-color, 30%));
                     scale: 1.2;
                     transition: .3s;
-                    border: none;
+                    background: linear-gradient(135deg, lighten($primary-color, 15%), lighten($primary-color, 30%));
+                    color: $secondary-color;
+                    box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
                 }
             }
         }
